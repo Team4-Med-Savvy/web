@@ -46,6 +46,12 @@
                 </b-carousel>
                 </div>
         </div>
+        <div>
+            <h2 class="recommendations-title">Recommendations</h2>
+        </div>
+        <div>
+            <Recommendation/>
+        </div>
         <div class="footer">
             <Footer/>
         </div>
@@ -55,12 +61,14 @@
 import Navbar from './Navbar'
 import SubNavbar from './SubNavbar.vue'
 import Footer from './Footer.vue'
+import Recommendation from './Recommendation.vue'
 export default {
-  name: 'navigation-bar',
+  name: 'about',
   components: {
     Navbar,
     SubNavbar,
-    Footer
+    Footer,
+    Recommendation
   }
 }
 </script>
@@ -72,5 +80,9 @@ export default {
 }
 .footer{
     margin-top:150px;
+}
+.recommendations-title{
+    margin-left:100px;
+    margin-top:25px;
 }
 </style>
