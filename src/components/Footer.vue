@@ -18,7 +18,7 @@
                     <a href="https://vuejs.org/" class="text-white font-weight-bold pb-3 d-block">Refer VueJs Here</a>
                 </div>
                 <div class="col-12 col-md-4 pb-5">
-                  <p class="text-white font-weight-bold pb-3 h5 d-block">GITHUB LINK</p>
+                  <p class="text-white font-weight-bold pb-3 h5 d-block">SOURCE CODE</p>
                   <a class="bg-white text-black fa-2x" href="https://github.com/Team4-Med-Savvy/web"><i class="fab fa-github"></i></a>
                 </div>
             </div>

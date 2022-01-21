@@ -12,6 +12,8 @@
         </button>
             <div class="collapse navbar-collapse flex-grow-0" id="collapseNav">
                 <div class="navbar-nav"  >
+                  <input class="form-control my-0 py-1 amber-border" type="text" placeholder="Search.." name="search">
+                  <button type="submit" class="btn btn-secondary"><i class="fa fa-search"></i></button>
                   <a href="#" class="nav-item nav-link text-dark h6 mx-3 my-auto">About</a>
                   <a href="#" class="nav-item nav-link text-dark h6 mx-3 my-auto">Login/Register</a>
                   <a href="#"><img src="@/assets/cart.jpeg" alt="" height="50px" width="50px"></a>
