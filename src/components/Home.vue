@@ -47,9 +47,6 @@
                 </div>
         </div>
         <div>
-            <h2 class="recommendations-title">Recommendations</h2>
-        </div>
-        <div>
             <Recommendation/>
         </div>
         <div class="footer">
