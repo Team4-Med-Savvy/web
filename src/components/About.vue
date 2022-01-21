@@ -55,16 +55,21 @@
       </div>
     </div>
     </div>
+    <div class="footer">
+      <Footer/>
+    </div>
   </div>
 </template>
 <script>
 import Navbar from './Navbar'
 import SubNavbar from './SubNavbar.vue'
+import Footer from './Footer.vue'
 export default {
   name: 'navigation-bar',
   components: {
     Navbar,
-    SubNavbar
+    SubNavbar,
+    Footer
   }
 }
 </script>
@@ -142,5 +147,10 @@ img{
   padding-left:100px;
   display: flex;
   justify-content: space-between;
+
+}
+
+.footer{
+  margin-top: 100px;
 }
 </style>

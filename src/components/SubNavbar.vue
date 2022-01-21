@@ -30,8 +30,8 @@ export default {
 <style scoped>
 img{
     border-radius: 50%;
-    height: 100px;
-    width: 100px;
+    height: 75px;
+    width: 75px;
     border: 3px solid black;
 }
 p{

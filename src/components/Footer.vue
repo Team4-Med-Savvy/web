@@ -19,7 +19,7 @@
                 </div>
                 <div class="col-12 col-md-4 pb-5">
                   <p class="text-white font-weight-bold pb-3 h5 d-block">GITHUB LINK</p>
-                  <a class="bg-white text-black fa-2x" href="https://github.com"><i class="fab fa-github"></i></a>
+                  <a class="bg-white text-black fa-2x" href="https://github.com/Team4-Med-Savvy/web"><i class="fab fa-github"></i></a>
                 </div>
             </div>
         <div class="text-white font-weight-bold py-1">
@@ -29,6 +29,11 @@
     </footer>
   </div>
 </template>
+<script>
+export default {
+  name: 'Footer'
+}
+</script>
 <style scoped>
 p{
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
