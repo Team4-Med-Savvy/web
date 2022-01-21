@@ -7,14 +7,22 @@
         <SubNavbar/>
     </div>
     <div class="product-main">
-        <div class="product-image">
-            <img src="@/assets/covidessentials.jpeg" alt="" height="500px" width="500px">
-        </div>
-        <div>
-            <h2>Covid Essentials</h2>
-        </div>
-        <div>
-            <h3>$400</h3>
+        <div class="product-card">
+            <b-card no-body class="overflow-hidden" style="max-width: 1000px;">
+            <b-row no-gutters>
+            <b-col md="6">
+            <b-card-img src="https://picsum.photos/400/400/?image=20" alt="Image" class="rounded-0"></b-card-img>
+            </b-col>
+            <b-col md="6">
+            <b-card-body title="Covid Essentials">
+            <b-card-text>
+            This is a wider card with supporting text as a natural lead-in to additional content.
+            This content is a little bit longer.
+            </b-card-text>
+            </b-card-body>
+            </b-col>
+            </b-row>
+            </b-card>
         </div>
     </div>
     <div>
@@ -46,4 +54,13 @@ export default {
     margin-left: 100px;
     border: black 4px solid;
 }
+.membership{
+    display:flex;
+    align-items: center;
+    font-size: 20px;
+}
+.product-card{
+    margin-left: 200px;
+}
+
 </style>
