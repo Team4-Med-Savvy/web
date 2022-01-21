@@ -126,4 +126,7 @@ export default {
 .scrollbar::-webkit-scrollbar{
             display: none;
         }
+.conatainer{
+    margin-bottom:100px;
+}
 </style>

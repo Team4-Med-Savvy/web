@@ -60,7 +60,7 @@ import SubNavbar from './SubNavbar.vue'
 import Footer from './Footer.vue'
 import Recommendation from './Recommendation.vue'
 export default {
-  name: 'about',
+  name: 'home',
   components: {
     Navbar,
     SubNavbar,
@@ -76,7 +76,7 @@ export default {
     margin-right:100px
 }
 .footer{
-    margin-top:150px;
+    margin-top:75px;
 }
 .recommendations-title{
     margin-left:100px;

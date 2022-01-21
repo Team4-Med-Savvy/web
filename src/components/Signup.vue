@@ -22,7 +22,7 @@
                                     </div>
                                     <div class="form-group mt-3">
                                         <label>Confirm Password:</label>
-                                        <input type="password" class="form-control" placeholder="Enter Password">
+                                        <input type="password" class="form-control" placeholder="Re Enter Password">
                                     </div>
                                     <div class="text-center">
                                         <button type="submit" class="btn btn-primary mt-3">Submit</button>
