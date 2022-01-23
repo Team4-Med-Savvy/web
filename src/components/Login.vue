@@ -60,6 +60,17 @@
                       <img src="@/assets/google.png" /> Login with Google
                     </button>
                   </div>
+                  <div>
+                    <RuleBox>
+                    <Hr />
+                    <div style="text-align:center">
+                      <span>New to MedSavvy ?</span>
+                    </div>
+                    <div>
+                      <button style="border-radius:10px">Create your MedSavvy Account</button>
+                    </div>
+                  </RuleBox>
+                  </div>
                 </form>
               </div>
             </div>
@@ -96,5 +107,8 @@ export default {
 }
 .form-group {
   margin-bottom: 20px;
+}
+.register-button{
+  margin-top: 5px;
 }
 </style>
