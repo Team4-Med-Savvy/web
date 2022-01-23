@@ -59,7 +59,7 @@
                         <td id="total">Price</td>
                        </tr>
                     </table>
-                    <button type="button" class="btn btn-success">BUY NOW</button>
+                    <button type="button" class="btn btn-success">Checkout</button>
                 </div>
             </div>
       </div>
