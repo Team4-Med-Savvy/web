@@ -12,39 +12,9 @@
           <th>Total</th>
           <th>Remove</th>
         </tr>
-        <tr>
-          <td><img src="@/assets/covidessentials.jpeg"></td>
-          <td>Product Name</td>
-          <td>Price</td>
-          <td><button type="button" class="btn btn-secondary text-black">+</button>
-            <input class="qty-value" type="text" value="1">
-            <button type="button" class="btn btn-secondary text-black">-</button>
-          </td>
-          <td>Total Price</td>
-          <td><button type="button" class="btn btn-danger text-black">Remove</button></td>
-        </tr>
-        <tr>
-          <td><img src="@/assets/covidessentials.jpeg"></td>
-          <td>Product Name</td>
-          <td>Price</td>
-          <td><button type="button" class="btn btn-secondary text-black">+</button>
-            <input class="qty-value" type="text" value="1">
-            <button type="button" class="btn btn-secondary text-black">-</button>
-          </td>
-          <td>Total Price</td>
-          <td><button type="button" class="btn btn-danger text-black">Remove</button></td>
-        </tr>
-        <tr>
-          <td><img src="@/assets/covidessentials.jpeg"></td>
-          <td>Product Name</td>
-          <td>Price</td>
-          <td><button type="button" class="btn btn-secondary text-black">+</button>
-            <input class="qty-value" type="text" value="1">
-            <button type="button" class="btn btn-secondary text-black">-</button>
-          </td>
-          <td>Total Price</td>
-          <td><button type="button" class="btn btn-danger text-black">Remove</button></td>
-        </tr>
+        <CartComponent/>
+        <CartComponent/>
+        <CartComponent/>
      </table>
      <div class="container center-content">
             <div class="row">
@@ -71,20 +41,19 @@
 import Navbar from './Navbar'
 import SubNavbar from './SubNavbar.vue'
 import Footer from './Footer.vue'
+import CartComponent from './CartComponent.vue'
 export default {
   name: 'navigation-bar',
   components: {
     Navbar,
     SubNavbar,
-    Footer
+    Footer,
+    CartComponent
   }
 }
 </script>
 <style scoped>
 .center-content{
     text-align: center;
-}
-.qty-value {
-    max-width: 32pt;
 }
 </style>
