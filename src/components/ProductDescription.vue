@@ -14,20 +14,27 @@
             <div class="title-desc">
                 <h2 class="title">Covid Essentials</h2>
                 <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ab sit doloribus, dolorum molestias excepturi possimus incidunt expedita, totam at a sapiente, corporis iure facere dolore. Sequi consectetur itaque saepe.</p>
+                <h3>RATING</h3>
+                <div id="circle"></div>
+                <br>
+                <br>
+                <button type="button"
+                class="btn btn-default btn-sm">
+                <span class="glyphicon>
+                    glyphicon-shopping-cart">
+                </span><i class="fas fa-shopping-cart"></i>
+                <b> Add to Cart </b>
+                </button>
                 <button type="button"
                 class="btn btn-default btn-sm">
                 <span class="glyphicon>
                     glyphicon-shopping-cart">
                 </span>
-                <b> Add to Cart </b>
-            </button>
+                <b> Buy Now </b>
+                </button>
             </div>
             <div class="price">
                 <h2 class="price-tag">Free</h2>
-                <span class="glyphicon>
-                    glyphicon-shopping-cart">
-                </span>
-                <b> Add to Cart </b>
             </div>
         </div>
     </div>

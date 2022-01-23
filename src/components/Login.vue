@@ -66,9 +66,7 @@
                     <div style="text-align:center">
                       <span>New to MedSavvy ?</span>
                     </div>
-                    <div>
-                      <button style="border-radius:10px">Create your MedSavvy Account</button>
-                    </div>
+                    <a class="nav-item nav-link text-dark h6 mx-3 my-auto" id="register-button" href="http://localhost:8081/?#/signup">Create A New MedSavvy Account</a>
                   </RuleBox>
                   </div>
                 </form>
@@ -108,7 +106,7 @@ export default {
 .form-group {
   margin-bottom: 20px;
 }
-.register-button{
-  margin-top: 5px;
+a{
+  margin-left: 200px;
 }
 </style>
