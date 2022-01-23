@@ -1,12 +1,13 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import About from '@/components/About'
-import Login from '@/components/Login'
-import Home from '@/components/Home'
 import Signup from '@/components/Signup'
 import Cart from '@/components/Cart'
-import ProductDescription from '@/components/ProductDescription'
 import ProductList from '@/components/ProductList'
+import Home from '@/components/Home'
+import Login from '@/components/Login'
+import ProductDescription from '@/components/ProductDescription'
+
 Vue.use(Router)
 
 export default new Router({
@@ -17,7 +18,22 @@ export default new Router({
       component: About
     },
     {
-      path: '/',
+      path: '/signup',
+      name: 'Signup',
+      component: Signup
+    },
+    {
+      path: '/cart',
+      name: 'Cart',
+      component: Cart
+    },
+    {
+      path: '/productlist',
+      name: 'ProductList',
+      component: ProductList
+    },
+    {
+      path: '/home',
       name: 'Home',
       component: Home
     },
@@ -27,24 +43,9 @@ export default new Router({
       component: Login
     },
     {
-      path: '/signup',
-      name: 'Signup',
-      component: Signup
-    },
-    {
-      path: '/product',
-      name: 'Product',
+      path: '/productdescription',
+      name: 'ProductDescription',
       component: ProductDescription
-    },
-    {
-      path: '/productlist',
-      name: 'ProductList',
-      component: ProductList
-    },
-    {
-      path: '/cart',
-      name: 'Cart',
-      component: Cart
     }
   ]
 })
