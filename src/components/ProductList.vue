@@ -28,6 +28,13 @@
             <ProductItem/>
             <ProductItem/>
         </div>
+
+        <div class="row text-center py-5">
+            <ProductItem/>
+            <ProductItem/>
+            <ProductItem/>
+            <ProductItem/>
+        </div>
     </div>
         <div><Footer/></div>
     </div>
