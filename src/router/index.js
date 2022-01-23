@@ -4,6 +4,7 @@ import About from '@/components/About'
 import Login from '@/components/Login'
 import Home from '@/components/Home'
 import Signup from '@/components/Signup'
+import Cart from '@/components/Cart'
 import ProductDescription from '@/components/ProductDescription'
 import ProductList from '@/components/ProductList'
 Vue.use(Router)
@@ -39,6 +40,11 @@ export default new Router({
       path: '/productlist',
       name: 'ProductList',
       component: ProductList
+    },
+    {
+      path: '/cart',
+      name: 'Cart',
+      component: Cart
     }
   ]
 })

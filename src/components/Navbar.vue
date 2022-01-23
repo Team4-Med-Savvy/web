@@ -16,7 +16,7 @@
                   <button type="submit" class="btn btn-secondary"><i class="fa fa-search"></i></button>
                   <a href="http://localhost:8081/?#/about" class="nav-item nav-link text-dark h6 mx-3 my-auto">About</a>
                   <a href="http://localhost:8081/?#/login" class="nav-item nav-link text-dark h6 mx-3 my-auto">Login</a>
-                  <a href="#"><img src="@/assets/cart.jpeg" alt="" height="50px" width="50px"></a>
+                  <a href="http://localhost:8081/?#/cart"><img src="@/assets/cart.jpeg" alt="" height="50px" width="50px"></a>
               </div>
         </div>
       </div>
