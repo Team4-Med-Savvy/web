@@ -25,6 +25,7 @@
                       id="exampleInputEmail1"
                       aria-describedby="emailHelp"
                       placeholder="Enter email"
+                      v-model="loginForm.email"
                     />
                   </div>
                   <div class="form-group">
@@ -34,6 +35,7 @@
                       class="form-control"
                       id="exampleInputPassword1"
                       placeholder="Password"
+                      v-model="loginForm.password"
                     />
                   </div>
                   <div class="form-group">
@@ -43,10 +45,11 @@
                       class="form-control"
                       id="exampleInputPassword1"
                       placeholder="Password"
+                      v-model="loginForm.confirmpassword"
                     />
                   </div>
                   <div class="submit-button">
-                    <b-button type="submit" variant="outline-dark"
+                    <b-button type="submit" variant="outline-dark" v-on:click="hello"
                       >Log in</b-button
                     >
                   </div>
@@ -88,10 +91,25 @@ import Footer from '@/components/Footer'
 
 export default {
   name: 'nav-footer',
+  data () {
+    return {
+      loginForm: {
+        email: null,
+        password: null,
+        confirmpassword: null
+      }
+    }
+  },
   components: {
     Navbar,
     SubNavBar,
-    Footer}
+    Footer
+  },
+  methods: {
+    hello () {
+      console.log(this.loginForm.email, this.loginForm.password, this.confirmpassword)
+    }
+  }
 }
 </script>
 
