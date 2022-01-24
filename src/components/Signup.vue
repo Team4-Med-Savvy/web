@@ -10,19 +10,19 @@
                                 <form>
                                     <div class="form-group">
                                         <label>Full Name: </label>
-                                        <input type="text" class="form-control" id="name" placeholder="Enter Full name">
+                                        <input type="text" class="form-control" id="name" placeholder="Enter Full name" required>
                                     </div>
                                     <div class="form-group mt-3">
                                         <label>Email</label>
-                                        <input type="email" class="form-control" id="email" placeholder="Enter Email">
+                                        <input type="email" class="form-control" id="email" placeholder="Enter Email" required>
                                     </div>
                                     <div class="form-group mt-3">
                                         <label>Password:</label>
-                                        <input type="password" class="form-control" id="password" placeholder="Enter Password">
+                                        <input type="password" class="form-control" id="password" placeholder="Enter Password" required>
                                     </div>
                                     <div class="form-group mt-3">
                                         <label>Confirm Password:</label>
-                                        <input type="password" class="form-control" placeholder="Re Enter Password">
+                                        <input type="password" class="form-control" placeholder="Re Enter Password" required>
                                     </div>
                                     <div class="text-center">
                                         <button type="submit" class="btn btn-primary mt-3">Submit</button>

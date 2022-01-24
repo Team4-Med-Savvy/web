@@ -11,6 +11,7 @@ import Profile from '@/components/Profile'
 import ProductHistory from '@/components/ProductHistory'
 import Test from '@/components/test'
 import ProductTrial from '@/components/ProductTrial'
+
 Vue.use(Router)
 
 export default new Router({
@@ -46,7 +47,7 @@ export default new Router({
       component: Login
     },
     {
-      path: '/product',
+      path: '/productdescription',
       name: 'ProductDescription',
       component: ProductDescription
     },
