@@ -14,22 +14,22 @@
             <div class="title-desc">
                 <h2 class="title">Covid Essentials</h2>
                 <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ab sit doloribus, dolorum molestias excepturi possimus incidunt expedita, totam at a sapiente, corporis iure facere dolore. Sequi consectetur itaque saepe.</p>
-                <h3>RATING</h3>
-                <div id="circle"></div>
+                <h2 class="pt-3">Rating</h2>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
                 <br>
                 <br>
-                <button type="button"
-                class="btn btn-default btn-sm">
-                <span class="glyphicon>
-                    glyphicon-shopping-cart">
-                </span><i class="fas fa-shopping-cart"></i>
+                <button type="button" class="btn btn-info">
+                <span class="glyphicon> glyphicon-shopping-cart"></span>
+                <i class="fas fa-shopping-cart"></i>
                 <b> Add to Cart </b>
-                </button>
+                </button>&nbsp;&nbsp;&nbsp;
                 <button type="button"
-                class="btn btn-default btn-sm">
-                <span class="glyphicon>
-                    glyphicon-shopping-cart">
-                </span>
+                class="btn btn-success">
+                <span class="glyphicon>glyphicon-shopping-cart"></span>
                 <b> Buy Now </b>
                 </button>
             </div>
@@ -67,7 +67,7 @@ export default {
     border: black 4px solid;
 }
 .product-desc{
-    padding-left: 20px;
+    padding-left: 70px;
     display: flex;
     justify-content: space-between;
 }
@@ -98,10 +98,13 @@ export default {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 .container {
-            margin-top: 30px;
-            color: green;
-        }
-        span {
-            color: green;
-        }
+    margin-top: 30px;
+    color: green;
+}
+.checked{
+    color: teal;
+}
+h2{
+    font-family: 'Times New Roman', Times, serif;
+}
 </style>
