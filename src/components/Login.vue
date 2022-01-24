@@ -14,7 +14,6 @@
                     <input type="email" class="form-control" placeholder="Enter email" required/>
                   </div>
                   <div class="form-group">
-<<<<<<< HEAD
                     <div style="margin-bottom:10px"><label>Password: </label></div>
                     <input type="password" class="form-control" placeholder="Enter Password" required/>
                   </div>
@@ -24,7 +23,6 @@
                   </div>
                   <div class="submit-button">
                     <button type="submit" class="btn btn-secondary">Log in</button>
-=======
                     <div style="margin-bottom:10px"><label for="exampleInputPassword1">Password: </label></div>
                     <input
                       type="password"
@@ -46,7 +44,6 @@
                     <b-button type="submit" variant="outline-dark"
                       >Log in</b-button
                     >
->>>>>>> 1c894078e4a1028296a53af680c566812d7a883d
                   </div>
                   <Hr />
                   <div style="text-align:center">or</div>
@@ -61,12 +58,8 @@
                     <div style="text-align:center">
                       <span>New to MedSavvy ?</span>
                     </div>
-<<<<<<< HEAD
                     <a class="nav-item nav-link text-dark h6 mx-3 my-auto text-center" id="register-button" href="/#/signup">Create A New MedSavvy Account</a>
-=======
                     <a class="nav-item nav-link text-dark h6 mx-3 my-auto" id="register-button" href="http://localhost:8081/?#/signup">Create A New MedSavvy Account</a>
-                  </RuleBox>
->>>>>>> 1c894078e4a1028296a53af680c566812d7a883d
                   </div>
                 </form>
               </div>
