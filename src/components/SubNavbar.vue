@@ -1,23 +1,23 @@
 <template>
     <div class="subnav-bar">
         <div class="category-image">
-            <a href="http://localhost:8081/?#/productlist"><img src="@/assets/category_image/covid_essentials.jpeg" alt=""></a>
+            <a href="/#/productlist"><img src="@/assets/category_image/covid_essentials.jpeg" alt=""></a>
             <p>Covid Essentials</p>
         </div>
         <div class="category-image">
-            <a href="http://localhost:8081/?#/productlist"><img src="@/assets/category_image/ayurvedic_care.jpeg" alt=""></a>
+            <a href="/#/productlist"><img src="@/assets/category_image/ayurvedic_care.jpeg" alt=""></a>
             <p>Ayurvedic Care</p>
         </div>
         <div class="category-image">
-            <a href="http://localhost:8081/?#/productlist"><img src="@/assets/category_image/surgicals.jpeg" alt=""></a>
+            <a href="/#/productlist"><img src="@/assets/category_image/surgicals.jpeg" alt=""></a>
             <p>Surgicals</p>
         </div>
         <div class="category-image">
-            <a href="http://localhost:8081/?#/productlist"><img src="@/assets/category_image/skin_care.jpeg" alt=""></a>
+            <a href="/#/productlist"><img src="@/assets/category_image/skin_care.jpeg" alt=""></a>
             <p>Skin Care</p>
         </div>
         <div class="category-image">
-            <a href="http://localhost:8081/?#/productlist"><img src="@/assets/category_image/personal_care.jpeg" alt=""></a>
+            <a href="/#/productlist"><img src="@/assets/category_image/personal_care.jpeg" alt=""></a>
             <p>Personal Care</p>
         </div>
     </div>
