@@ -9,6 +9,8 @@ import Login from '@/components/Login'
 import ProductDescription from '@/components/ProductDescription'
 import Profile from '@/components/Profile'
 import ProductHistory from '@/components/ProductHistory'
+import Test from '@/components/test'
+import ProductTrial from '@/components/ProductTrial'
 Vue.use(Router)
 
 export default new Router({
@@ -57,6 +59,16 @@ export default new Router({
       path: '/producthistory',
       name: 'ProductHistory',
       component: ProductHistory
+    },
+    {
+      path: '/test',
+      name: 'Test',
+      component: Test
+    },
+    {
+      path: '/trail',
+      name: 'ProductTrial',
+      component: ProductTrial
     }
   ]
 })
