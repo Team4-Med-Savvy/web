@@ -7,7 +7,8 @@ import ProductList from '@/components/ProductList'
 import Home from '@/components/Home'
 import Login from '@/components/Login'
 import ProductDescription from '@/components/ProductDescription'
-
+import Profile from '@/components/Profile'
+import ProductHistory from '@/components/ProductHistory'
 Vue.use(Router)
 
 export default new Router({
@@ -33,7 +34,7 @@ export default new Router({
       component: ProductList
     },
     {
-      path: '/home',
+      path: '/',
       name: 'Home',
       component: Home
     },
@@ -43,9 +44,19 @@ export default new Router({
       component: Login
     },
     {
-      path: '/productdescription',
+      path: '/product',
       name: 'ProductDescription',
       component: ProductDescription
+    },
+    {
+      path: '/profile',
+      name: 'Profile',
+      component: Profile
+    },
+    {
+      path: '/producthistory',
+      name: 'ProductHistory',
+      component: ProductHistory
     }
   ]
 })

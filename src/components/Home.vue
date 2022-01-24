@@ -63,6 +63,7 @@ export default {
     Recommendation
   }
 }
+
 </script>
 <style scoped>
 .main-carousel{
