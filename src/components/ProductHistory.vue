@@ -1,11 +1,9 @@
 <template>
     <div class="product-history">
-        <div class="image">
-            <img src="@/assets/gandhi.jpeg" alt="" height="100px" width="100px">
-        </div>
+            <span><img src="@/assets/gandhi.jpeg" alt="" height="100px" width="100px"></span>
         <div class="details">
-            <h4>Title</h4>
-            <span>Price</span>
+            <p>Product Name - </p>
+            <p>Price - </p>
         </div>
     </div>
 </template>
@@ -18,12 +16,19 @@ export default {
 .product-history{
     height: 120px;
     display: flex;
-    justify-content: space-between;
 }
-.image{
-    padding-left: 20px;
+span{
+    padding-left: 50px;
 }
 .details{
-    padding-right: 1250px;
+    margin-left: 70px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+h4{
+    padding-bottom: 15px;
+}
+p{
+    padding-top: 7px;
+    font-size: 20px;
 }
 </style>

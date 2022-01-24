@@ -1,11 +1,7 @@
 <template>
     <div class="main-body">
-        <div>
-            <Navbar/>
-        </div>
-        <div>
-            <SubNavbar/>
-        </div>
+        <div><Navbar/></div>
+        <div><SubNavbar/></div>
         <div class="content-body">
             <div class="user-profile">
                 <div class="username"><h4>Username :-</h4><p> &nbsp; Gandhi Boi</p></div>
@@ -13,7 +9,7 @@
                 <div class="username"><h4>Points :-</h4><p> &nbsp; 1000</p></div>
                 <div class="username"><h4>Membership :-</h4><p> &nbsp; Platinum</p></div>
             </div>
-            <div class="product-history">
+            <div class="product-history mt-5">
                 <ProductHistory/>
                 <ProductHistory/>
                 <ProductHistory/>
@@ -35,9 +31,7 @@
                 <ProductHistory/>
             </div>
         </div>
-        <div class="footer">
-            <Footer/>
-        </div>
+        <div class="footer"><Footer/></div>
     </div>
 </template>
 <script>
@@ -46,7 +40,7 @@ import SubNavbar from './SubNavbar.vue'
 import Footer from './Footer.vue'
 import ProductHistory from './ProductHistory.vue'
 export default {
-  name: 'home',
+  name: 'profile',
   components: {
     Navbar,
     SubNavbar,
@@ -58,7 +52,6 @@ export default {
 <style scoped>
 .content-body{
     display: flex;
-    justify-content: space-between;
 }
 .user-profile{
     margin-left: 75px;
@@ -69,9 +62,13 @@ export default {
     padding-left: 50px;
     padding-bottom: 50px;
     padding-right: 50px;
-    width: 30%;
+    width: 450px;
+    height: 30%;
     border: red dotted 2px;
     border-radius: 10%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 130px;
 }
 h4{
     font-family: fantasy;
@@ -83,4 +80,9 @@ p{
     font-family: cursive;
     font-size: 20px;
 }
+.product-history{
+    padding-left: 50px;
+    margin-right: 100px;
+}
+
 </style>
