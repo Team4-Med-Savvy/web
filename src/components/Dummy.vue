@@ -3,10 +3,7 @@
         <div v-for="item in list" v-bind:key="item.id">
          <div class="col-12 col-md-3 " >
                 <div class="card shadow h-100">
-                   <div>
-                       {{item.image_url}}
-                   </div>
-                  <!-- <img class="card-img-top img-fluid" src="@/assets/covidessentials.jpeg" alt="carrot" height="200px"> -->
+                  <img class="card-img-top img-fluid" src="@/assets/covidessentials.jpeg" alt="carrot" height="200px">
                     <div class="card-body">
                         <div class="card-title" ><h5>{{item.employee_name}}</h5></div>
                         <div class="card-text" style="font-family: 'Trebuchet MS', sans-serif;">{{item.employee_salary}}</div>

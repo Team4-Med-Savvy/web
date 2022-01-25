@@ -9,6 +9,16 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faShoppingCart, faUserSecret } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import store from './store'
+
+import GAuth from 'vue-google-oauth2'
+const gauthOption = {
+  clientId: '745272238016-dq73nesqtusheohqibn8rjfn6rdtmdoi.apps.googleusercontent.com',
+  scope: 'profile email',
+  prompt: 'consent',
+  fetch_basic_profile: true
+}
+Vue.use(GAuth, gauthOption)
 
 Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
@@ -24,6 +34,7 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })
