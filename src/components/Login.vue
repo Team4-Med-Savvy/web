@@ -25,6 +25,8 @@
                       id="exampleInputEmail1"
                       aria-describedby="emailHelp"
                       placeholder="Enter email"
+                      v-model="loginForm.email"
+                      required
                     />
                   </div>
                   <div class="form-group">
@@ -34,9 +36,11 @@
                       class="form-control"
                       id="exampleInputPassword1"
                       placeholder="Password"
+                      v-model="loginForm.password"
+                      required
                     />
                   </div>
-                  <div class="form-group">
+                  <!-- <div class="form-group">
                      <div style="margin-bottom:10px"><label for="exampleInputPassword1">Confirm Password:</label></div>
                     <input
                       type="password"
@@ -44,30 +48,26 @@
                       id="exampleInputPassword1"
                       placeholder="Password"
                     />
-                  </div>
+                  </div> -->
                   <div class="submit-button">
-                    <b-button type="submit" variant="outline-dark"
+                    <b-button type="submit" variant="outline-dark" v-on:click="getLogin"
                       >Log in</b-button
                     >
                   </div>
-                  <RuleBox>
-                    <Hr />
-                    <div style="text-align:center">or</div>
-                    <Hr />
-                  </RuleBox>
+                  <hr>
                   <div class="submit-button">
                     <button variant="outline-dark">
                       <img src="@/assets/google.png" /> Login with Google
                     </button>
                   </div>
                   <div>
-                    <RuleBox>
-                    <Hr />
+                    <div>
+                    <hr>
                     <div style="text-align:center">
                       <span>New to MedSavvy ?</span>
                     </div>
-                    <a class="nav-item nav-link text-dark h6 mx-3 my-auto" id="register-button" href="http://localhost:8081/?#/signup">Create A New MedSavvy Account</a>
-                  </RuleBox>
+                    <a class="nav-item nav-link text-dark h6 mx-3 my-auto" id="register-button" href="/#/signup" style="text-align:center">Create A New MedSavvy Account</a>
+                  </div>
                   </div>
                 </form>
               </div>
@@ -87,11 +87,24 @@ import SubNavBar from '@/components/SubNavbar'
 import Footer from '@/components/Footer'
 
 export default {
-  name: 'nav-footer',
+  name: 'Login',
+  data () {
+    return {
+      loginForm: {
+        email: null,
+        password: null
+      }
+    }
+  },
   components: {
     Navbar,
     SubNavBar,
-    Footer}
+    Footer},
+  methods: {
+    getLogin () {
+      console.log('Logged in', this.loginForm)
+    }
+  }
 }
 </script>
 
