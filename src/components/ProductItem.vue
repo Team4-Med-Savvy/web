@@ -5,9 +5,8 @@
                     <div class="card-body">
                         <div class="card-title" ><h5>Title</h5></div>
                         <div class="card-text" style="font-family: 'Trebuchet MS', sans-serif;">Price</div>
-                        <div><button type="button" class="btn btn-success mt-2 py-1">More...</button></div>
                     </div>
-                    <a href="/#/product" class="stretched-link"></a>
+                    <div @click="onproduct" class="stretched-link"></div>
                 </div>
         </div>
 </template>
@@ -15,14 +14,17 @@
 import { mapGetters, mapActions } from 'vuex'
 export default {
   name: 'ProductItem',
+  methods: {
+    onproduct () {
+      this.$router.push('/product')
+      console.log(this.$router)
+    },
+    ...mapActions(['getProducts'])
+  },
   filters: {
     currency: function (value) {
       return '₹ ' + parseFloat(value).toFixed(2)
     }
-  },
-  methods: {
-    ...mapActions(['getProducts'])
-
   },
   computed: mapGetters(['allProducts']),
   created () {
@@ -30,3 +32,8 @@ export default {
   }
 }
 </script>
+<style scoped>
+.stretched-link{
+  cursor:pointer;
+}
+</style>

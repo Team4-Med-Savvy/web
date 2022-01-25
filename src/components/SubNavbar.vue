@@ -1,30 +1,36 @@
 <template>
     <div class="subnav-bar">
         <div class="category-image">
-            <a href="/#/productlist"><img src="@/assets/category_image/covid_essentials.jpeg" alt=""></a>
+            <div @click="goproductlist()"><img src="@/assets/category_image/covid_essentials.jpeg" alt=""></div>
             <p>Covid Essentials</p>
         </div>
         <div class="category-image">
-            <a href="/#/productlist"><img src="@/assets/category_image/ayurvedic_care.jpeg" alt=""></a>
+            <div @click="goproductlist()"><img src="@/assets/category_image/ayurvedic_care.jpeg" alt=""></div>
             <p>Ayurvedic Care</p>
         </div>
         <div class="category-image">
-            <a href="/#/productlist"><img src="@/assets/category_image/surgicals.jpeg" alt=""></a>
+            <div @click="goproductlist()"><img src="@/assets/category_image/surgicals.jpeg" alt=""></div>
             <p>Surgicals</p>
         </div>
         <div class="category-image">
-            <a href="/#/productlist"><img src="@/assets/category_image/skin_care.jpeg" alt=""></a>
+            <div @click="goproductlist()"><img src="@/assets/category_image/skin_care.jpeg" alt=""></div>
             <p>Skin Care</p>
         </div>
         <div class="category-image">
-            <a href="/#/productlist"><img src="@/assets/category_image/personal_care.jpeg" alt=""></a>
+            <div @click="goproductlist()"><img src="@/assets/category_image/personal_care.jpeg" alt=""></div>
             <p>Personal Care</p>
         </div>
     </div>
 </template>
 <script>
 export default {
-  name: 'SubNavbar'
+  name: 'SubNavbar',
+  methods: {
+    goproductlist () {
+      this.$router.push('/productlist')
+      console.log(this.$router)
+    }
+  }
 }
 </script>
 <style scoped>

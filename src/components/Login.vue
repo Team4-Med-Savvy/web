@@ -24,16 +24,16 @@
                   <div class="submit-button">
                     <button type="submit" class="btn btn-secondary">Log in</button>
                   </div>
-                  <Hr />
+                  <hr />
                   <div style="text-align:center">or</div>
-                  <Hr/>
+                  <hr/>
                   <div class="submit-button">
                     <button class="btn btn-secondary" @click="login()">
                       <img src="@/assets/google.png" />&nbsp;&nbsp;Login with Google
                     </button>
                   </div>
                   <div>
-                    <Hr />
+                    <hr />
                     <div style="text-align:center">
                       <span>New to MedSavvy ?</span>
                     </div>
