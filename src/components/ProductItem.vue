@@ -12,7 +12,21 @@
         </div>
 </template>
 <script>
+import { mapGetters, mapActions } from 'vuex'
 export default {
-  name: 'ProductItem'
+  name: 'ProductItem',
+  filters: {
+    currency: function (value) {
+      return '₹ ' + parseFloat(value).toFixed(2)
+    }
+  },
+  methods: {
+    ...mapActions(['getProducts'])
+
+  },
+  computed: mapGetters(['allProducts']),
+  created () {
+    this.getProducts()
+  }
 }
 </script>

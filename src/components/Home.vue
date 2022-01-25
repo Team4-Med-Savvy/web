@@ -53,12 +53,14 @@
 import Navbar from './Navbar'
 import SubNavbar from './SubNavbar.vue'
 import Footer from './Footer.vue'
+import Recommendation from './Recommendation.vue'
 export default {
   name: 'navigation-bar',
   components: {
     Navbar,
     SubNavbar,
-    Footer
+    Footer,
+    Recommendation
   }
 }
 </script>

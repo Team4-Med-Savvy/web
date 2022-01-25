@@ -42,6 +42,7 @@ export default {
   },
   methods: {
     ...mapActions(['getProducts'])
+
   },
   computed: mapGetters(['allProducts']),
   created () {
