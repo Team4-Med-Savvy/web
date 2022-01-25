@@ -8,19 +8,19 @@
             <div class="card rounded-0 shadow">
               <div class="card-body">
                 <h3 class="h3class">Log in</h3>
-                <form>
+                <form @submit="postData" method="post">
                   <div class="form-group">
                     <div style="margin-bottom:10px"><label>Email address:</label></div>
-                    <input type="email" class="form-control" placeholder="Enter email" required/>
+                    <input type="email" class="form-control" placeholder="Enter email" required v-model="posts.username"/>
                   </div>
                   <div class="form-group">
                     <div style="margin-bottom:10px"><label>Password: </label></div>
-                    <input type="password" class="form-control" placeholder="Enter Password" required/>
+                    <input type="password" class="form-control" placeholder="Enter Password" required v-model="posts.password"/>
                   </div>
-                  <div class="form-group">
+                  <!-- <div class="form-group">
                      <div style="margin-bottom:10px"><label>Confirm Password:</label></div>
                     <input type="password" class="form-control" placeholder="Re Enter Password" required/>
-                  </div>
+                  </div> -->
                   <div class="submit-button">
                     <button type="submit" class="btn btn-secondary">Log in</button>
                   </div>
@@ -52,12 +52,19 @@
 import Navbar from '@/components/Navbar'
 import SubNavBar from '@/components/SubNavbar'
 import Footer from '@/components/Footer'
-
+import Vue from 'vue'
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+Vue.use(VueAxios, axios)
 export default {
   name: 'App',
   data () {
     return {
-      isLogin: false
+      isLogin: false,
+      posts: {
+        'username': null,
+        'password': null
+      }
     }
   },
   methods: {
@@ -69,6 +76,13 @@ export default {
       console.log('getAuthResponse', googleUser.getAuthResponse())
       console.log('getAuthResponse$G', this.$gAuth.GoogleAuth.currentUser.get().getAuthResponse())
       this.isLogin = this.$gAuth.isAuthorized
+    },
+    postData (e) {
+      this.axios.post('http://localhost:8081/user/authenticate', this.posts)
+        .then((result) => {
+          console.warn(result)
+        })
+      e.preventDefault()
     }
 
   },
