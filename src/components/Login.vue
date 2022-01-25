@@ -23,27 +23,6 @@
                   </div>
                   <div class="submit-button">
                     <button type="submit" class="btn btn-secondary">Log in</button>
-                    <div style="margin-bottom:10px"><label for="exampleInputPassword1">Password: </label></div>
-                    <input
-                      type="password"
-                      class="form-control"
-                      id="exampleInputPassword1"
-                      placeholder="Password"
-                    />
-                  </div>
-                  <div class="form-group">
-                     <div style="margin-bottom:10px"><label for="exampleInputPassword1">Confirm Password:</label></div>
-                    <input
-                      type="password"
-                      class="form-control"
-                      id="exampleInputPassword1"
-                      placeholder="Password"
-                    />
-                  </div>
-                  <div class="submit-button">
-                    <b-button type="submit" variant="outline-dark"
-                      >Log in</b-button
-                    >
                   </div>
                   <Hr />
                   <div style="text-align:center">or</div>
@@ -59,7 +38,6 @@
                       <span>New to MedSavvy ?</span>
                     </div>
                     <a class="nav-item nav-link text-dark h6 mx-3 my-auto text-center" id="register-button" href="/#/signup">Create A New MedSavvy Account</a>
-                    <a class="nav-item nav-link text-dark h6 mx-3 my-auto" id="register-button" href="http://localhost:8081/?#/signup">Create A New MedSavvy Account</a>
                   </div>
                 </form>
               </div>

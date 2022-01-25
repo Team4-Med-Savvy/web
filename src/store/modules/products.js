@@ -8,7 +8,7 @@ const getters = {
 }
 const actions = {
   async getProducts ({commit}) {
-    const response = await axios.get('https://mocki.io/v1/d60902f4-662f-460e-b1c7-c33b5a7a46e6')
+    const response = await axios.get('https://mocki.io/v1/ee1dc741-2903-4caa-87eb-cd07f1e6680d')
     commit('setProducts', response.data)
   }
 }

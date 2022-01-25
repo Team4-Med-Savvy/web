@@ -10,10 +10,10 @@
         <div class="product-image">
             <img src="https://pbs.twimg.com/profile_images/1054208422600687616/K0cVBGHp_400x400.jpg" alt="">
         </div>
-        <div class="product-desc">
+        <div class="product-desc" v-for="product in allProducts" :key="product.id">
             <div class="title-desc">
-                <h2 class="title">Covid Essentials</h2>
-                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ab sit doloribus, dolorum molestias excepturi possimus incidunt expedita, totam at a sapiente, corporis iure facere dolore. Sequi consectetur itaque saepe.</p>
+                <h2 class="title">{{product.title}}</h2>
+                <p class="description">{{product.description}}</p>
                 <h2 class="pt-3">Rating</h2>
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>
@@ -34,7 +34,7 @@
                 </button>
             </div>
             <div class="price">
-                <h2 class="price-tag">Free</h2>
+                <h2 class="price-tag">{{product.price | currency}}</h2>
             </div>
         </div>
     </div>
@@ -44,15 +44,28 @@
     </div>
 </template>
 <script>
+import { mapGetters, mapActions } from 'vuex'
 import Navbar from './Navbar.vue'
 import SubNavbar from './SubNavbar.vue'
 import Footer from './Footer.vue'
 export default {
   name: 'about',
+  filters: {
+    currency: function (value) {
+      return '₹ ' + parseFloat(value).toFixed(2)
+    }
+  },
   components: {
     Navbar,
     SubNavbar,
     Footer
+  },
+  methods: {
+    ...mapActions(['getProducts'])
+  },
+  computed: mapGetters(['allProducts']),
+  created () {
+    this.getProducts()
   }
 }
 </script>
