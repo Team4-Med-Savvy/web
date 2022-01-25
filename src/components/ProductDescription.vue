@@ -8,7 +8,7 @@
     </div>
     <div class="product-main">
         <div class="product-image">
-            <img src="https://pbs.twimg.com/profile_images/1054208422600687616/K0cVBGHp_400x400.jpg" alt="">
+            <img src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202106/cover4_new_1200x768.jpeg?1ddh2wMj.1sWvDuJNNtgqjyvpihWf3BZ&size=1200:675" alt="">
         </div>
         <div class="product-desc" v-for="product in allProducts" :key="product.id">
             <div class="title-desc">
