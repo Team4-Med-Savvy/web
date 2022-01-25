@@ -53,17 +53,14 @@
 import Navbar from './Navbar'
 import SubNavbar from './SubNavbar.vue'
 import Footer from './Footer.vue'
-import Recommendation from './Recommendation.vue'
 export default {
-  name: 'home',
+  name: 'navigation-bar',
   components: {
     Navbar,
     SubNavbar,
-    Footer,
-    Recommendation
+    Footer
   }
 }
-
 </script>
 <style scoped>
 .main-carousel{

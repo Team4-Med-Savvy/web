@@ -10,15 +10,15 @@
                                 <form>
                                     <div class="form-group">
                                         <label>Full Name: </label>
-                                        <input type="text" class="form-control" id="name" placeholder="Enter Full name" required>
+                                        <input type="text" class="form-control" placeholder="Enter Full name" required>
                                     </div>
                                     <div class="form-group mt-3">
                                         <label>Email</label>
-                                        <input type="email" class="form-control" id="email" placeholder="Enter Email" required>
+                                        <input type="email" class="form-control" placeholder="Enter Email" required>
                                     </div>
                                     <div class="form-group mt-3">
                                         <label>Password:</label>
-                                        <input type="password" class="form-control" id="password" placeholder="Enter Password" required>
+                                        <input type="password" class="form-control" placeholder="Enter Password" required>
                                     </div>
                                     <div class="form-group mt-3">
                                         <label>Confirm Password:</label>
@@ -41,7 +41,7 @@ import Navbar from './Navbar'
 import SubNavbar from './SubNavbar.vue'
 import Footer from './Footer.vue'
 export default {
-  name: 'navigation-bar',
+  name: 'Signup',
   components: {
     Navbar,
     SubNavbar,
