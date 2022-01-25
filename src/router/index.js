@@ -7,7 +7,6 @@ import ProductList from '@/components/ProductList'
 import Home from '@/components/Home'
 import Login from '@/components/Login'
 import ProductDescription from '@/components/ProductDescription'
-import Dummy from '@/components/Dummy'
 import Profile from '@/components/Profile'
 import ProductHistory from '@/components/ProductHistory'
 import Test from '@/components/test'
@@ -51,11 +50,7 @@ export default new Router({
       path: '/product',
       name: 'ProductDescription',
       component: ProductDescription
-    },
-    {
-      path: '/dummy',
-      name: 'Dummy',
-      component: Dummy}, {
+    }, {
       path: '/profile',
       name: 'Profile',
       component: Profile

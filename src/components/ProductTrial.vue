@@ -14,6 +14,7 @@
                     </div>
                     <a href="/#/product" class="stretched-link"></a>
                 </div>
+
         </div>
         </div>
     </div>
@@ -41,7 +42,6 @@ export default {
   },
   methods: {
     ...mapActions(['getProducts'])
-
   },
   computed: mapGetters(['allProducts']),
   created () {
