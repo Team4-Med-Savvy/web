@@ -2,9 +2,9 @@
     <div>
         <div><Navbar/></div>
         <div><SubNavbar/></div>
-        <div class="container" v-for="product in allProducts" :key="product.id">
-            <div class="row text-center py-5 " id="divclass">
-                <div class="col-12 col-md-3">
+          <div class="container grid" >
+            <div class="row text-center py-5 " v-for="product in allProducts" :key="product.id" id="divclass">
+                <div class="product">
                 <div class="card shadow h-100">
                   <img class="card-img-top img-fluid" src="@/assets/covidessentials.jpeg" alt="carrot" height="200px">
                     <div class="card-body">
@@ -50,5 +50,13 @@ export default {
 }
 </script>
 <style scoped>
-
+.grid{
+  width: 100%;
+  display:flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.product{
+  width:350px;
+}
 </style>
