@@ -11,13 +11,24 @@
         </div>
 </template>
 <script>
+import { mapGetters, mapActions } from 'vuex'
 export default {
   name: 'ProductItem',
   methods: {
     onproduct () {
       this.$router.push('/product')
       console.log(this.$router)
+    },
+    ...mapActions(['getProducts'])
+  },
+  filters: {
+    currency: function (value) {
+      return '₹ ' + parseFloat(value).toFixed(2)
     }
+  },
+  computed: mapGetters(['allProducts']),
+  created () {
+    this.getProducts()
   }
 }
 </script>

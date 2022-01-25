@@ -4,7 +4,7 @@
         <div><SubNavbar/></div>
         <div class="container">
             <div class="row text-center py-5">
-                <ProductItem/>
+                <ProductItem />
                 <ProductItem/>
                 <ProductItem/>
                 <ProductItem/>

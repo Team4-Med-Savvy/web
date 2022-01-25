@@ -1,21 +1,32 @@
 <template>
-    <div>
-      <h1>hello</h1>
-    <ul>
-      <li  v-for="product in allProducts" :key="product.id">
-        {{product.price}} | {{product.title}}
-      </li>
-    </ul>
-    </div>
+  <div>
+    <form @submit="postData" method="post">
+      <input type="text" name="author" placeholder="author" v-model="posts.author"><br> <br>
+      <input type="text" name="title" placeholder="title" v-model="posts.title"><br> <br>
+      <button type="submit">Post</button>
+    </form>
+  </div>
 </template>
 <script>
-import { mapGetters } from 'vuex'
 import Vue from 'vue'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 Vue.use(VueAxios, axios)
 export default {
   name: 'Test',
-  computed: mapGetters(['allProducts'])
+  data () {
+    return {
+      posts: {
+        title: null,
+        author: null
+      }
+    }
+  },
+  methods: {
+    postData (e) {
+      this.axios.post()
+      e.preventDefault()
+    }
+  }
 }
 </script>
