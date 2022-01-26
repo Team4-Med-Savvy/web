@@ -11,6 +11,7 @@ import Profile from '@/components/Profile'
 import ProductHistory from '@/components/ProductHistory'
 import Test from '@/components/test'
 import ProductTrial from '@/components/ProductTrial'
+import UserProfile from '@/components/UserProfile'
 
 Vue.use(Router)
 
@@ -69,6 +70,11 @@ export default new Router({
       path: '/trail',
       name: 'ProductTrial',
       component: ProductTrial
+    },
+    {
+      path: '/userprofile',
+      name: 'UserProfile',
+      component: UserProfile
     }
   ]
 })

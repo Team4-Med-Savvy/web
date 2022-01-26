@@ -8,7 +8,7 @@
             <button type="button" class="btn btn-secondary text-black" @click="down('0')">-</button>
           </td>
           <td>Total Price</td>
-          <td><button type="button" id="down" class="btn btn-danger text-black">Remove</button></td>
+          <td><button type="button" id="down" class="btn btn-danger text-black" @click="remove()" >Remove</button></td>
     </tr>
 </template>
 <script>
@@ -26,6 +26,9 @@ export default {
       if (document.getElementById('myNumber').value >= parseInt(max)) {
         document.getElementById('myNumber').value = max
       }
+    },
+    remove () {
+      document.getElementById('myNumber').value = 0
     }
   }
 }
