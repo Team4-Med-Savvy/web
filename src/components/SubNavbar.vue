@@ -1,7 +1,7 @@
 <template>
     <div class="subnav-bar">
         <div class="category-image">
-            <div @click="goproductlist()"><img src="@/assets/category_image/covid_essentials.jpeg" alt=""></div>
+            <div @click="goproductCE()"><img src="@/assets/category_image/covid_essentials.jpeg" alt=""></div>
             <p>Covid Essentials</p>
         </div>
         <div class="category-image">
@@ -28,6 +28,10 @@ export default {
   methods: {
     goproductlist () {
       this.$router.push('/productlist')
+      console.log(this.$router)
+    },
+    goproductCE () {
+      this.$router.push('/trail')
       console.log(this.$router)
     }
   }

@@ -50,8 +50,7 @@ export default new Router({
       path: '/product',
       name: 'ProductDescription',
       component: ProductDescription
-    },
-    {
+    }, {
       path: '/profile',
       name: 'Profile',
       component: Profile

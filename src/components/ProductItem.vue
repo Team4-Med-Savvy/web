@@ -5,35 +5,14 @@
                     <div class="card-body">
                         <div class="card-title" ><h5>Title</h5></div>
                         <div class="card-text" style="font-family: 'Trebuchet MS', sans-serif;">Price</div>
+                        <div><button type="button" class="btn btn-success mt-2 py-1">More...</button></div>
                     </div>
-                    <div @click="onproduct" class="stretched-link"></div>
+                    <a href="/#/product" class="stretched-link"></a>
                 </div>
         </div>
 </template>
 <script>
-import { mapGetters, mapActions } from 'vuex'
 export default {
-  name: 'ProductItem',
-  methods: {
-    onproduct () {
-      this.$router.push('/product')
-      console.log(this.$router)
-    },
-    ...mapActions(['getProducts'])
-  },
-  filters: {
-    currency: function (value) {
-      return '₹ ' + parseFloat(value).toFixed(2)
-    }
-  },
-  computed: mapGetters(['allProducts']),
-  created () {
-    this.getProducts()
-  }
+  name: 'ProductItem'
 }
 </script>
-<style scoped>
-.stretched-link{
-  cursor:pointer;
-}
-</style>
