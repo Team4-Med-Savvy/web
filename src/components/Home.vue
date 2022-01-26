@@ -18,6 +18,7 @@
                     img-width="500"
                     img-height="200"
                 >
+<<<<<<< HEAD
                     <a href="/#/productlist"><b-carousel-slide
                     caption="Covid Essentials"
                     img-src="https://images.unsplash.com/photo-1583947215259-38e31be8751f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8Y292aWQlMjBwcm9kdWN0c3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
@@ -35,9 +36,28 @@
                     img-src="https://images.unsplash.com/photo-1631730486572-226d1f595b68?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=950&q=80"
                     ></b-carousel-slide></a>
                     <a href="/#/productlist"><b-carousel-slide
+=======
+                    <div @click="goproductlist()" class="clickclass"><b-carousel-slide
+                    caption="Covid Essentials"
+                    img-src="https://images.unsplash.com/photo-1583947215259-38e31be8751f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8Y292aWQlMjBwcm9kdWN0c3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
+                    ></b-carousel-slide></div>
+                    <div @click="goproductlist()" class="clickclass"><b-carousel-slide
+                    caption="Ayurvedic Care"
+                    img-src="https://media.istockphoto.com/photos/herbal-treatment-picture-id174676747?b=1&k=20&m=174676747&s=170667a&w=0&h=QKP8jnTgyYgojm4wiKpnk0jzXrvVSfWVpOGqJcOmQhc="
+                    ></b-carousel-slide></div>
+                    <div @click="goproductlist()" class="clickclass"><b-carousel-slide
+                    caption="Surgicals"
+                    img-src="https://media.istockphoto.com/photos/modern-operating-room-in-a-hospital-generated-digitally-picture-id1281627829?b=1&k=20&m=1281627829&s=170667a&w=0&h=Hm99xf7HqPEujo0zIyyLB1WqUhPLffNGi9IicfLoR1c="
+                    ></b-carousel-slide></div>
+                    <div @click="goproductlist()" class="clickclass"><b-carousel-slide
+                    caption="Skin Care"
+                    img-src="https://images.unsplash.com/photo-1631730486572-226d1f595b68?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=950&q=80"
+                    ></b-carousel-slide></div>
+                   <div @click="goproductlist()" class="clickclass"><b-carousel-slide
+>>>>>>> b3e64ed67dabf559f417d33bf6b95d43e70be925
                     caption="Personal Care"
                     img-src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGVyc29uYWwlMjBjYXJlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60"
-                    ></b-carousel-slide></a>
+                    ></b-carousel-slide></div>
                 </b-carousel>
                 </div>
         </div>
@@ -61,6 +81,12 @@ export default {
     SubNavbar,
     Footer,
     Recommendation
+  },
+  methods: {
+    goproductlist () {
+      this.$router.push('/productlist')
+      console.log(this.$router)
+    }
   }
 }
 </script>
@@ -76,5 +102,8 @@ export default {
 .recommendations-title{
     margin-left:100px;
     margin-top:25px;
+}
+.clickclass{
+    cursor:pointer;
 }
 </style>

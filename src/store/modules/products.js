@@ -12,7 +12,11 @@ const getters = {
 
 const actions = {
   async getProducts ({commit}) {
+<<<<<<< HEAD
     const response = await axios.get('https://jsonplaceholder.typicode.com/todos/')
+=======
+    const response = await axios.get('https://mocki.io/v1/afba2deb-e78d-452a-8edd-ccc06fd2e1b0')
+>>>>>>> b3e64ed67dabf559f417d33bf6b95d43e70be925
     commit('setProducts', response.data)
   },
   async getProductDescription ({commit}, id) {

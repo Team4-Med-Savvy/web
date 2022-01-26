@@ -9,7 +9,7 @@
                     <div class="card-body">
                         <div class="card-title" ><h4>Sanitizer</h4></div>
                         <div class="card-text" style="font-family: 'Trebuchet MS', sans-serif;">Some Description</div>
-                        <div><button type="button" class="btn btn-success mt-2">More...</button></div>
+                        <!-- <div><button type="button" class="btn btn-success mt-2">More...</button></div> -->
                     </div>
                     <a href="#" class="stretched-link"></a>
                 </div>
@@ -20,7 +20,7 @@
                     <div class="card-body">
                         <div class="card-text" ><h4>Sanitizer</h4></div>
                         <div class="card-text " style="font-family: 'Trebuchet MS', sans-serif;">Some Description</div>
-                        <div><button type="button" class="btn btn-success mt-2">More...</button></div>
+                        <!-- <div><button type="button" class="btn btn-success mt-2">More...</button></div> -->
                     </div>
                     <a href="#" class="stretched-link"></a>
                 </div>
@@ -31,7 +31,7 @@
                     <div class="card-body">
                         <div class="card-text"><h4>Sanitizer</h4></div>
                         <div class="card-text " style="font-family: 'Trebuchet MS', sans-serif;">Some Description</div>
-                        <div><button type="button" class="btn btn-success mt-2">More...</button></div>
+                        <!-- <div><button type="button" class="btn btn-success mt-2">More...</button></div> -->
                     </div>
                     <a href="#" class="stretched-link"></a>
                 </div>
@@ -42,7 +42,7 @@
                     <div class="card-body">
                         <div class="card-text"><h4>Sanitizer</h4></div>
                         <div class="card-text " style="font-family: 'Trebuchet MS', sans-serif;">Some Description</div>
-                        <div><button type="button" class="btn btn-success mt-2">More...</button></div>
+                        <!-- <div><button type="button" class="btn btn-success mt-2">More...</button></div> -->
                     </div>
                     <a href="#" class="stretched-link"></a>
                 </div>
@@ -53,7 +53,7 @@
                     <div class="card-body">
                         <div class="card-text"><h4>Sanitizer</h4></div>
                         <div class="card-text " style="font-family: 'Trebuchet MS', sans-serif;">Some Description</div>
-                        <div><button type="button" class="btn btn-success mt-2">More...</button></div>
+                        <!-- <div><button type="button" class="btn btn-success mt-2">More...</button></div> -->
                     </div>
                     <a href="#" class="stretched-link"></a>
                 </div>
@@ -64,7 +64,7 @@
                     <div class="card-body">
                         <div class="card-text"><h4>Sanitizer</h4></div>
                         <div class="card-text " style="font-family: 'Trebuchet MS', sans-serif;">Some Description</div>
-                        <div><button type="button" class="btn btn-success mt-2">More...</button></div>
+                        <!-- <div><button type="button" class="btn btn-success mt-2">More...</button></div> -->
                     </div>
                     <a href="#" class="stretched-link"></a>
                 </div>
@@ -75,7 +75,7 @@
                     <div class="card-body">
                         <div class="card-text"><h4>Sanitizer</h4></div>
                         <div class="card-text " style="font-family: 'Trebuchet MS', sans-serif;">Some Description</div>
-                        <div><button type="button" class="btn btn-success mt-2">More...</button></div>
+                        <!-- <div><button type="button" class="btn btn-success mt-2">More...</button></div> -->
                     </div>
                     <a href="#" class="stretched-link"></a>
                 </div>
@@ -86,7 +86,7 @@
                     <div class="card-body">
                         <div class="card-text"><h4>Sanitizer</h4></div>
                         <div class="card-text " style="font-family: 'Trebuchet MS', sans-serif;">Some Description</div>
-                        <div><button type="button" class="btn btn-success mt-2">More...</button></div>
+                        <!-- <div><button type="button" class="btn btn-success mt-2">More...</button></div> -->
                     </div>
                     <a href="#" class="stretched-link"></a>
                 </div>
@@ -97,7 +97,7 @@
                     <div class="card-body">
                         <div class="card-text"><h4>Sanitizer</h4></div>
                         <div class="card-text " style="font-family: 'Trebuchet MS', sans-serif;">Some Description</div>
-                        <div><button type="button" class="btn btn-success mt-2">More...</button></div>
+                        <!-- <div><button type="button" class="btn btn-success mt-2">More...</button></div> -->
                     </div>
                     <a href="#" class="stretched-link"></a>
                 </div>
@@ -108,7 +108,7 @@
                     <div class="card-body">
                         <div class="card-text"><h4>Sanitizer</h4></div>
                         <div class="card-text " style="font-family: 'Trebuchet MS', sans-serif;">Some Description</div>
-                        <div><button type="button" class="btn btn-success mt-2">More...</button></div>
+                        <!-- <div><button type="button" class="btn btn-success mt-2">More...</button></div> -->
                     </div>
                     <a href="#" class="stretched-link"></a>
                 </div>

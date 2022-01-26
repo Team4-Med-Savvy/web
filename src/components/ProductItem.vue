@@ -14,7 +14,11 @@
 </template>
 <script>
 export default {
+<<<<<<< HEAD
   name: 'ProductItem',
   props: ['product']
+=======
+  name: 'ProductItem'
+>>>>>>> b3e64ed67dabf559f417d33bf6b95d43e70be925
 }
 </script>

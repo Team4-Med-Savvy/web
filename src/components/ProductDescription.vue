@@ -1,10 +1,22 @@
 <template>
     <div>
+<<<<<<< HEAD
         <div><Navbar/></div>
         <div><SubNavbar/></div>
     <div class="row mt-5 pb-5 px-5" v-if="productDescription">
         <div class="col-4">
             <img src="https://pbs.twimg.com/profile_images/1054208422600687616/K0cVBGHp_400x400.jpg" alt="">
+=======
+        <div>
+        <Navbar/>
+    </div>
+    <div>
+        <SubNavbar/>
+    </div>
+    <div class="product-main">
+        <div class="product-image">
+            <img src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202106/cover4_new_1200x768.jpeg?1ddh2wMj.1sWvDuJNNtgqjyvpihWf3BZ&size=1200:675" alt="">
+>>>>>>> b3e64ed67dabf559f417d33bf6b95d43e70be925
         </div>
         <div class="col-8">
             <h1>Product Title - {{productDescription.title}}</h1>
