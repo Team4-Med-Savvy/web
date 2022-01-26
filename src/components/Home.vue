@@ -15,8 +15,6 @@
                     no-animation="false"
                     indicators
                     no-touch="false"
-                    img-width="500"
-                    img-height="200"
                 >
                     <div @click="goproductlist()" class="clickclass"><b-carousel-slide
                     caption="Covid Essentials"
@@ -85,5 +83,7 @@ export default {
 }
 .clickclass{
     cursor:pointer;
+    width: 100%;
+  height: 200px;
 }
 </style>
