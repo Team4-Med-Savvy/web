@@ -48,19 +48,12 @@ export default new Router({
       component: Login
     },
     {
-<<<<<<< HEAD
       path: '/product/:id',
       name: 'ProductDescription',
       component: ProductDescription,
       props: true
     },
     {
-=======
-      path: '/product',
-      name: 'ProductDescription',
-      component: ProductDescription
-    }, {
->>>>>>> b3e64ed67dabf559f417d33bf6b95d43e70be925
       path: '/profile',
       name: 'Profile',
       component: Profile
