@@ -2,10 +2,10 @@
     <div>
         <div><Navbar/></div>
         <div><SubNavbar/></div>
-          <div class="container grid">
              <div>
+               <div class="container grid">
             <div class="row text-center py-5 " v-for="product in allProducts" :key="product.id" id="divclass">
-               <div v-if="product.category == 'Covid_essential'">
+                <div v-if="product.category == 'Covid_essential'">
                 <div class="product">
                 <div class="card shadow h-100">
                   <img class="card-img-top img-fluid" src="@/assets/covidessentials.jpeg" alt="carrot" height="200px">
@@ -15,10 +15,9 @@
                         <div><button type="button" class="btn btn-success mt-2 py-1">{{product.category}}</button></div>
                     </div>
                     <a href="/#/product" class="stretched-link"></a>
-                </div>
-
-        </div>
-           </div>
+                 </div>
+                 </div>
+                 </div>
         </div>
         </div>
     </div>

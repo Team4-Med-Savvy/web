@@ -18,10 +18,6 @@
                   <b-nav-item class="nav-item nav-link text-dark h6 mx-3 my-auto" @click="goprofile()">Profile</b-nav-item>
                   <b-nav-item class="nav-item nav-link text-dark h6 mx-3 my-auto" @click="gologin()">Login</b-nav-item>
                   <div @click="gocart()" class="cart"><img src="@/assets/cart.jpeg" alt="" height="50px" width="50px"></div>
-                  <!-- <a href="/#/about" class="nav-item nav-link text-dark h6 mx-3 my-auto">About</a>
-                  <a href="/#/profile" class="nav-item nav-link text-dark h6 mx-3 my-auto">Profile</a>
-                  <a href="/#/login" class="nav-item nav-link text-dark h6 mx-3 my-auto">Login</a>href="/#/"
-                  <a href="/#/cart"><img src="@/assets/cart.jpeg" alt="" height="50px" width="50px"></a> -->
               </div>
         </div>
       </div>
