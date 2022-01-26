@@ -47,9 +47,10 @@ export default new Router({
       component: Login
     },
     {
-      path: '/product',
-      name: 'Product',
-      component: ProductDescription
+      path: '/product/:id',
+      name: 'ProductDescription',
+      component: ProductDescription,
+      props: true
     },
     {
       path: '/profile',

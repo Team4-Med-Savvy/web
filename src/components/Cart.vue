@@ -12,9 +12,18 @@
           <th>Total</th>
           <th>Remove</th>
         </tr>
-        <CartComponent/>
-        <CartComponent/>
-        <CartComponent/>
+        <tr class="center-content" v-for="item in cart" :key="item.productDescription.id">
+          <td><img src="@/assets/productimg.jpeg"></td>
+          <td>Title - {{item.productDescription.title}}</td>
+          <td>Price - {{item.productDescription.id}}</td>
+          <td><button type="button" id="up" class="btn btn-secondary text-black" @click="up('10')">+</button>
+            <span id='myNumber'>{{item.quantity}}</span>
+            <!-- <input class="qty-value" id="myNumber" type="text" value="1"> -->
+            <button type="button" class="btn btn-secondary text-black" @click="down('0')">-</button>
+          </td>
+          <td>Total Price</td>
+          <td><button type="button" id="down" class="btn btn-danger text-black">Remove</button></td>
+        </tr>
      </table>
      <div class="container center-content">
             <div class="row">
@@ -26,7 +35,7 @@
                        <tr>
                        <tr>
                         <td>Total</td>
-                        <td id="total">Price</td>
+                        <td id="total">Price : {{cartTotalPrice}}</td>
                        </tr>
                     </table>
                     <button type="button" class="btn btn-success">Checkout</button>
@@ -38,22 +47,42 @@
 </div>
 </template>
 <script>
+import {mapGetters} from 'vuex'
 import Navbar from './Navbar'
 import SubNavbar from './SubNavbar.vue'
 import Footer from './Footer.vue'
-import CartComponent from './CartComponent.vue'
 export default {
   name: 'navigation-bar',
+  computed: {
+    ...mapGetters(['cart']),
+    ...mapGetters(['cartTotalPrice'])
+  },
   components: {
     Navbar,
     SubNavbar,
-    Footer,
-    CartComponent
+    Footer
+  },
+  methods: {
+    down (min) {
+      document.getElementById('myNumber').value = parseInt(document.getElementById('myNumber').value) - 1
+      if (document.getElementById('myNumber').value <= parseInt(min)) {
+        document.getElementById('myNumber').value = min
+      }
+    },
+    up (max) {
+      document.getElementById('myNumber').value = parseInt(document.getElementById('myNumber').value) + 1
+      if (document.getElementById('myNumber').value >= parseInt(max)) {
+        document.getElementById('myNumber').value = max
+      }
+    }
   }
 }
 </script>
 <style scoped>
 .center-content{
     text-align: center;
+}
+.qty-value {
+    max-width: 40px;
 }
 </style>
