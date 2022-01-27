@@ -10,6 +10,8 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { faShoppingCart, faUserSecret } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import store from './store'
+import VueSweetalert2 from 'vue-sweetalert2'
+import 'sweetalert2/dist/sweetalert2.min.css'
 
 import GAuth from 'vue-google-oauth2'
 const gauthOption = {
@@ -22,6 +24,7 @@ Vue.use(GAuth, gauthOption)
 
 Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
+Vue.use(VueSweetalert2)
 /* add icons to the library */
 library.add(faUserSecret)
 library.add(faShoppingCart)

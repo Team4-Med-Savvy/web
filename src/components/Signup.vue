@@ -22,10 +22,10 @@
                                     </div>
                                     <div class="form-group mt-3">
                                         <label>Confirm Password:</label>
-                                        <input type="password" class="form-control" placeholder="Re Enter Password" required/>
+                                        <input type="password" class="form-control" placeholder="Re Enter Password" required>
                                     </div>
                                     <div class="text-center">
-                                        <button type="submit" class="btn btn-primary mt-3" v-on:click="signupuser">Submit</button>
+                                        <button type="submit" class="btn btn-primary mt-3">Submit</button>
                                     </div>
                                 </form>
                             </div>
@@ -53,7 +53,7 @@ export default {
         'email': null,
         'password': null,
         'merchant': false,
-        'points': 0
+        'points': '1000'
       }
     }
   },

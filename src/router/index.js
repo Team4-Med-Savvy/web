@@ -11,6 +11,10 @@ import Profile from '@/components/Profile'
 import ProductHistory from '@/components/ProductHistory'
 import Test from '@/components/test'
 import ProductTrial from '@/components/ProductTrial'
+import AyurvedicCare from '@/components/AyurvedicCare'
+import Surgicals from '@/components/Surgicals'
+import SkinCare from '@/components/SkinCare'
+import PersonalCare from '@/components/PersonalCare'
 
 Vue.use(Router)
 
@@ -37,6 +41,26 @@ export default new Router({
       component: ProductList
     },
     {
+      path: '/ayurvediccare',
+      name: 'AyurvedicCare',
+      component: AyurvedicCare
+    },
+    {
+      path: '/surgicals',
+      name: 'Surgicals',
+      component: Surgicals
+    },
+    {
+      path: '/skincare',
+      name: 'SkinCare',
+      component: SkinCare
+    },
+    {
+      path: '/personal',
+      name: 'PersonalCare',
+      component: PersonalCare
+    },
+    {
       path: '/',
       name: 'Home',
       component: Home
@@ -47,10 +71,12 @@ export default new Router({
       component: Login
     },
     {
-      path: '/product',
+      path: '/product/:id',
       name: 'ProductDescription',
-      component: ProductDescription
-    }, {
+      component: ProductDescription,
+      props: true
+    },
+    {
       path: '/profile',
       name: 'Profile',
       component: Profile

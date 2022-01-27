@@ -1,123 +1,68 @@
 <template>
     <div>
-        <div>
-        <Navbar/>
-    </div>
-    <div>
-        <SubNavbar/>
-    </div>
-    <div class="product-main">
-        <div class="product-image">
-            <img src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202106/cover4_new_1200x768.jpeg?1ddh2wMj.1sWvDuJNNtgqjyvpihWf3BZ&size=1200:675" alt="">
+        <div><Navbar/></div>
+        <div><SubNavbar/></div>
+    <div class="row mt-5 pb-5 px-5" v-if="productDescription">
+        <div class="col-4">
+            <img src="https://pbs.twimg.com/profile_images/1054208422600687616/K0cVBGHp_400x400.jpg" alt="">
         </div>
-        <div class="product-desc" v-for="product in allProducts" :key="product.id">
-            <div class="title-desc">
-                <h2 class="title">{{product.title}}</h2>
-                <p class="description">{{product.description}}</p>
-                <h2 class="pt-3">Rating</h2>
+        <div class="col-8">
+            <h1>Product Title - {{productDescription.title}}</h1>
+            <h3>Product price - {{productDescription.price}}</h3>
+            <p>Product Description - {{productDescription.title}}</p>
+            <h2 class="pt-3">Rating</h2>
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star"></span>
                 <span class="fa fa-star"></span>
-                <br>
-                <br>
-                <button type="button" class="btn btn-info">
+                <br><br>
+            <button type="button" @click="clickCart()" class="btn btn-info">
                 <span class="glyphicon> glyphicon-shopping-cart"></span>
                 <i class="fas fa-shopping-cart"></i>
                 <b> Add to Cart </b>
-                </button>&nbsp;&nbsp;&nbsp;
-                <button type="button"
+            </button>&nbsp;&nbsp;&nbsp;
+            <button type="button"
                 class="btn btn-success">
                 <span class="glyphicon>glyphicon-shopping-cart"></span>
                 <b> Buy Now </b>
-                </button>
-            </div>
-            <div class="price">
-                <h2 class="price-tag">{{product.price | currency}}</h2>
-            </div>
+            </button>
+
         </div>
+        <Merchants/>
     </div>
-    <div>
-        <Footer/>
-    </div>
+    <div><Footer/></div>
     </div>
 </template>
 <script>
-import { mapGetters, mapActions } from 'vuex'
+
+import {mapGetters} from 'vuex'
 import Navbar from './Navbar.vue'
 import SubNavbar from './SubNavbar.vue'
 import Footer from './Footer.vue'
+import Merchants from './Merchants.vue'
 export default {
-  name: 'about',
-  filters: {
-    currency: function (value) {
-      return '₹ ' + parseFloat(value).toFixed(2)
-    }
+  name: 'ProductDescription',
+  props: ['id'],
+  computed: mapGetters(['productDescription']),
+  mounted () {
+    // let id = this.$route.params.id
+    this.$store.dispatch('getProductDescription', this.id)
   },
   components: {
     Navbar,
     SubNavbar,
-    Footer
+    Footer,
+    Merchants
   },
   methods: {
-    ...mapActions(['getProducts'])
-  },
-  computed: mapGetters(['allProducts']),
-  created () {
-    this.getProducts()
+    clickCart () {
+      console.log('Hi')
+      this.$store.dispatch('addToCart', {
+        productDescription: this.productDescription,
+        quantity: 1
+      })
+    }
   }
 }
 </script>
-<style scoped>
-.product-main{
-    padding: 50px 50px 50px 50px ;
-    display: flex;
-    justify-content: space-between;
-    width: 1200px;
-}
-.product-image{
-    border: black 4px solid;
-}
-.product-desc{
-    padding-left: 70px;
-    display: flex;
-    justify-content: space-between;
-}
-.title{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
-.description{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
-#circle {
-      width: 50px;
-      height: 50px;
-      -webkit-border-radius: 25px;
-      -moz-border-radius: 25px;
-      border-radius: 25px;
-      background: rgb(165, 42, 42);
-    }
-
-.rating{
-    margin-top: 2px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-.price-tag{
-    padding-top:10px;
-    padding-left: 20px;
-    color: gold;
-    font-size: 25px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-.container {
-    margin-top: 30px;
-    color: green;
-}
-.checked{
-    color: teal;
-}
-h2{
-    font-family: 'Times New Roman', Times, serif;
-}
-</style>

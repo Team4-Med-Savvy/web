@@ -10,6 +10,7 @@
                 <div class="username"><h4>Membership :-</h4><p> &nbsp;</p></div>
                 </div>
             </div>
+<<<<<<< HEAD
             <!-- <div class="product-history mt-5">
                 <ProductHistory/>
                 <ProductHistory/>
@@ -31,6 +32,19 @@
                 <ProductHistory/>
                 <ProductHistory/>
             </div> -->
+=======
+            <div class="order-history">
+                <OrderHistory class="pb-4"/>
+                <OrderHistory class="pb-4"/>
+                <OrderHistory class="pb-4"/>
+                <OrderHistory class="pb-4"/>
+                <OrderHistory class="pb-4"/>
+                <OrderHistory class="pb-4"/>
+                <OrderHistory class="pb-4"/>
+
+            </div>
+        </div>
+>>>>>>> 22c0d80dea217222a704c00c5c998ef3c9f607e6
         <div class="footer"><Footer/></div>
     </div>
 </template>
@@ -39,12 +53,16 @@ import Navbar from './Navbar'
 import SubNavbar from './SubNavbar.vue'
 import Footer from './Footer.vue'
 import ProductHistory from './ProductHistory.vue'
+import OrderHistory from './OrderHistory.vue'
+import ProfileProduct from './ProductInfo.vue'
+
 export default {
   name: 'profile',
   components: {
     Navbar,
     SubNavbar,
     Footer,
+<<<<<<< HEAD
     ProductHistory
   },
   data () {
@@ -58,6 +76,11 @@ export default {
     this.name = sessionStorage.getItem('name')
     this.email = sessionStorage.getItem('email')
     this.points = sessionStorage.getItem('points')
+=======
+    ProductHistory,
+    OrderHistory,
+    ProfileProduct
+>>>>>>> 22c0d80dea217222a704c00c5c998ef3c9f607e6
   }
 }
 </script>
@@ -76,8 +99,8 @@ export default {
     padding-right: 50px;
     width: 450px;
     height: 30%;
-    border: red dotted 2px;
-    border-radius: 10%;
+    border: blue dotted 2px;
+    border-radius: 5%;
     position: -webkit-sticky;
     position: sticky;
     top: 130px;
@@ -92,8 +115,9 @@ p{
     font-family: cursive;
     font-size: 20px;
 }
-.product-history{
-    padding-left: 50px;
-    margin-right: 100px;
+.order-history{
+    margin-left: 150px;
+    margin-top: 80px;
+    margin-bottom: 45px;
 }
 </style>

@@ -1,34 +1,74 @@
 <template>
-    <div class="product-history">
-            <span><img src="@/assets/gandhi.jpeg" alt="" height="100px" width="100px"></span>
-        <div class="details">
-            <p>Product Name - </p>
-            <p>Price - </p>
+    <div class="main-body">
+        <div><Navbar/></div>
+        <div><SubNavbar/></div>
+        <div class="content-body">
+            <div class="user-profile">
+                <div class="username"><h4>Username :-</h4><p> &nbsp; Gandhi Boi</p></div>
+                <div class="username"><h4>Email :-</h4><p> &nbsp; gandhihatesgodse@gmail.com</p></div>
+                <div class="username"><h4>Points :-</h4><p> &nbsp; 1000</p></div>
+                <div class="username"><h4>Membership :-</h4><p> &nbsp; Platinum</p></div>
+            </div>
+            <div class="product-info">
+                <ProductInfo/>
+
+            </div>
         </div>
+        <div class="footer"><Footer/></div>
     </div>
 </template>
 <script>
+import Navbar from './Navbar'
+import SubNavbar from './SubNavbar.vue'
+import Footer from './Footer.vue'
+import ProductHistory from './ProductHistory.vue'
+import ProductInfo from './ProductInfo.vue'
+
 export default {
-  name: 'ProductHistory'
+  name: 'profile',
+  components: {
+    Navbar,
+    SubNavbar,
+    Footer,
+    ProductHistory,
+    ProductInfo
+  }
 }
 </script>
 <style scoped>
-.product-history{
-    height: 120px;
+.content-body{
     display: flex;
 }
-span{
+.user-profile{
+    margin-left: 75px;
+    margin-top: 75px;
+    margin-right: 75px;
+    margin-bottom: 75px;
+    padding-top: 50px;
     padding-left: 50px;
-}
-.details{
-    margin-left: 70px;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    padding-bottom: 50px;
+    padding-right: 50px;
+    width: 450px;
+    height: 30%;
+    border: blue dotted 2px;
+    border-radius: 10%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 130px;
 }
 h4{
-    padding-bottom: 15px;
+    font-family: fantasy;
+}
+.username{
+    display:flex;
 }
 p{
-    padding-top: 7px;
+    font-family: cursive;
     font-size: 20px;
 }
+.product-info{
+    margin-left: 50px;
+    margin-top: 40px;
+}
+
 </style>

@@ -2,7 +2,7 @@
     <div class="main-navbar">
       <nav class="navbar navbar-expand-sm fixed-top bg-light">
         <div class="container my-2">
-            <div class="navbar-brand text-dark font-weight-bold" @click="gohome()"><img src="@/assets/logo.jpeg" alt="" height="50px" width="50px"></div>
+            <div class="navbar-brand text-dark font-weight-bold" id="home" @click="gohome()"><img src="@/assets/logo.jpeg" alt="" height="50px" width="50px"></div>
             <button
           class="navbar-toggler"
           data-toggle="collapse"
@@ -61,6 +61,9 @@ img{
     margin-bottom: 100px;
 }
 .cart{
+  cursor: pointer;
+}
+#home{
   cursor: pointer;
 }
 </style>

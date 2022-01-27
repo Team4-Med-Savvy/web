@@ -1,23 +1,23 @@
 <template>
     <div class="subnav-bar">
         <div class="category-image">
-            <div @click="goproductCE()"><img src="@/assets/category_image/covid_essentials.jpeg" alt=""></div>
+            <div @click="goproductcovid()"><img src="@/assets/category_image/covid_essentials.jpeg" alt=""></div>
             <p>Covid Essentials</p>
         </div>
         <div class="category-image">
-            <div @click="goproductlist()"><img src="@/assets/category_image/ayurvedic_care.jpeg" alt=""></div>
+            <div @click="goproductayur()"><img src="@/assets/category_image/ayurvedic_care.jpeg" alt=""></div>
             <p>Ayurvedic Care</p>
         </div>
         <div class="category-image">
-            <div @click="goproductlist()"><img src="@/assets/category_image/surgicals.jpeg" alt=""></div>
+            <div @click="goproductsurgicals()"><img src="@/assets/category_image/surgicals.jpeg" alt=""></div>
             <p>Surgicals</p>
         </div>
         <div class="category-image">
-            <div @click="goproductlist()"><img src="@/assets/category_image/skin_care.jpeg" alt=""></div>
+            <div @click="goproductskin()"><img src="@/assets/category_image/skin_care.jpeg" alt=""></div>
             <p>Skin Care</p>
         </div>
         <div class="category-image">
-            <div @click="goproductlist()"><img src="@/assets/category_image/personal_care.jpeg" alt=""></div>
+            <div @click="goproductpersonal()"><img src="@/assets/category_image/personal_care.jpeg" alt=""></div>
             <p>Personal Care</p>
         </div>
     </div>
@@ -26,12 +26,24 @@
 export default {
   name: 'SubNavbar',
   methods: {
-    goproductlist () {
+    goproductcovid () {
       this.$router.push('/productlist')
       console.log(this.$router)
     },
-    goproductCE () {
-      this.$router.push('/trail')
+    goproductayur () {
+      this.$router.push('/ayurvediccare')
+      console.log(this.$router)
+    },
+    goproductsurgicals () {
+      this.$router.push('/surgicals')
+      console.log(this.$router)
+    },
+    goproductskin () {
+      this.$router.push('/skincare')
+      console.log(this.$router)
+    },
+    goproductpersonal () {
+      this.$router.push('/personal')
       console.log(this.$router)
     }
   }
