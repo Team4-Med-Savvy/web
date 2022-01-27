@@ -18,7 +18,7 @@ const actions = {
     commit('setProducts', response.data)
   },
   async getProductDescription ({commit}, id) {
-    const response = await axios.get(`https://jsonplaceholder.typicode.com/todos/${id}`)
+    const response = await axios.get(`http://localhost:8081/products/${id}`)
     commit('setProductDescription', response.data)
   },
   async getCategories ({commit}) {
