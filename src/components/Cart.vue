@@ -16,10 +16,10 @@
           <td><img src="@/assets/productimg.jpeg"></td>
           <td>Title - {{item.productDescription.title}} - {{item.productDescription.completed}}</td>
           <td>Price - {{item.productDescription.id}}</td>
-          <td><button type="button" id="up" class="btn btn-secondary text-black" @click="up('10')">+</button>
+          <td><button type="button" id="up" class="btn btn-secondary text-black" @click="increment(item.productDescription,item.quantity)">+</button>
             <span id='myNumber'>{{item.quantity}}</span>
             <!-- <input class="qty-value" id="myNumber" type="text" value="1"> -->
-            <button type="button" id="down" class="btn btn-secondary text-black" @click="down('0')">-</button>
+            <button type="button" id="down" class="btn btn-secondary text-black" @click="decrement(item.productDescription,item.quantity)">-</button>
           </td>
           <td>Total Price</td>
           <td><button type="button" @click.prevent="removeProduct(item.productDescription)" class="btn btn-danger text-black">Remove</button></td>
@@ -29,9 +29,9 @@
             <div class="row">
                 <div class="col-4"></div>
                 <div class="col-4"></div>
-                <div class="col-4">
+                <div class="col-4 bg-secondary text-white py-4">
                     <H2>CART TOTAL</H2>
-                    <table class="table cart-total-table" >
+                    <table class="table cart-total-table text-white " >
                        <tr>
                        <tr>
                         <td>Total</td>
@@ -64,18 +64,13 @@ export default {
   },
   methods: {
     removeProduct (productDescription) {
+      this.$store.dispatch('removeProduct', productDescription)
     },
-    down (min) {
-      document.getElementById('myNumber').value = parseInt(document.getElementById('myNumber').value) - 1
-      if (document.getElementById('myNumber').value <= parseInt(min)) {
-        document.getElementById('myNumber').value = min
-      }
+    increment (productDescription, quantity) {
+      this.$store.dispatch('increment', {productDescription, quantity})
     },
-    up (max) {
-      document.getElementById('myNumber').value = parseInt(document.getElementById('myNumber').value) + 1
-      if (document.getElementById('myNumber').value >= parseInt(max)) {
-        document.getElementById('myNumber').value = max
-      }
+    decrement (productDescription, quantity) {
+      this.$store.dispatch('decrement', {productDescription, quantity})
     }
   }
 }
@@ -87,4 +82,10 @@ export default {
 .qty-value {
     max-width: 40px;
 }
+th{
+    color: rgb(238, 226, 226);
+    background: rgb(243, 144, 114);
+    font-size: 20px;
+}
+
 </style>

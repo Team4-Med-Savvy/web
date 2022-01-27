@@ -18,6 +18,15 @@ const getters = {
 const actions = {
   async addToCart ({commit}, {productDescription, quantity}) {
     commit('setToCart', {productDescription, quantity})
+  },
+  async removeProduct ({commit}, productDescription) {
+    commit('removeFromCart', productDescription)
+  },
+  async increment ({commit}, {productDescription, quantity}) {
+    commit('incrementQuantity', {productDescription, quantity})
+  },
+  async decrement ({commit}, {productDescription, quantity}) {
+    commit('decrementQuantity', {productDescription, quantity})
   }
 
 }
@@ -32,6 +41,27 @@ const mutations = {
       return
     }
     state.cart.push({productDescription, quantity})
+  },
+  removeFromCart: (state, productDescription) => {
+    state.cart = state.cart.filter(item => {
+      return item.productDescription.id !== productDescription.id
+    })
+  },
+  incrementQuantity: (state, {productDescription, quantity}) => {
+    let productInCart = state.cart.find(item => {
+      return item.productDescription.id === productDescription.id
+    })
+    if (productInCart) {
+      productInCart.quantity += 1
+    }
+  },
+  decrementQuantity: (state, {productDescription, quantity}) => {
+    let productInCart = state.cart.find(item => {
+      return item.productDescription.id === productDescription.id
+    })
+    if (productInCart) {
+      productInCart.quantity -= 1
+    }
   }
 }
 

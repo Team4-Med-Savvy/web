@@ -9,26 +9,15 @@
                 <div class="username"><h4>Points :-</h4><p> &nbsp; 1000</p></div>
                 <div class="username"><h4>Membership :-</h4><p> &nbsp; Platinum</p></div>
             </div>
-            <div class="product-history mt-5">
-                <ProductHistory/>
-                <ProductHistory/>
-                <ProductHistory/>
-                <ProductHistory/>
-                <ProductHistory/>
-                <ProductHistory/>
-                <ProductHistory/>
-                <ProductHistory/>
-                <ProductHistory/>
-                <ProductHistory/>
-                <ProductHistory/>
-                <ProductHistory/>
-                <ProductHistory/>
-                <ProductHistory/>
-                <ProductHistory/>
-                <ProductHistory/>
-                <ProductHistory/>
-                <ProductHistory/>
-                <ProductHistory/>
+            <div class="order-history">
+                <OrderHistory class="pb-4"/>
+                <OrderHistory class="pb-4"/>
+                <OrderHistory class="pb-4"/>
+                <OrderHistory class="pb-4"/>
+                <OrderHistory class="pb-4"/>
+                <OrderHistory class="pb-4"/>
+                <OrderHistory class="pb-4"/>
+
             </div>
         </div>
         <div class="footer"><Footer/></div>
@@ -39,13 +28,18 @@ import Navbar from './Navbar'
 import SubNavbar from './SubNavbar.vue'
 import Footer from './Footer.vue'
 import ProductHistory from './ProductHistory.vue'
+import OrderHistory from './OrderHistory.vue'
+import ProfileProduct from './ProductInfo.vue'
+
 export default {
   name: 'profile',
   components: {
     Navbar,
     SubNavbar,
     Footer,
-    ProductHistory
+    ProductHistory,
+    OrderHistory,
+    ProfileProduct
   }
 }
 </script>
@@ -80,9 +74,10 @@ p{
     font-family: cursive;
     font-size: 20px;
 }
-.product-history{
-    padding-left: 50px;
-    margin-right: 100px;
+.order-history{
+    margin-left: 150px;
+    margin-top: 80px;
+    margin-bottom: 45px;
 }
 
 </style>
