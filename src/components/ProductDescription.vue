@@ -8,7 +8,7 @@
         </div>
         <div class="col-8">
             <h1>Product Title - {{productDescription.title}}</h1>
-            <h3>Product price - {{productDescription.completed}}</h3>
+            <h3>Product price - {{productDescription.price}}</h3>
             <p>Product Description - {{productDescription.title}}</p>
             <h2 class="pt-3">Rating</h2>
                 <span class="fa fa-star checked"></span>
@@ -29,7 +29,7 @@
             </button>
 
         </div>
-
+        <Merchants/>
     </div>
     <div><Footer/></div>
     </div>
@@ -40,6 +40,7 @@ import {mapGetters} from 'vuex'
 import Navbar from './Navbar.vue'
 import SubNavbar from './SubNavbar.vue'
 import Footer from './Footer.vue'
+import Merchants from './Merchants.vue'
 export default {
   name: 'ProductDescription',
   props: ['id'],
@@ -51,7 +52,8 @@ export default {
   components: {
     Navbar,
     SubNavbar,
-    Footer
+    Footer,
+    Merchants
   },
   methods: {
     clickCart () {

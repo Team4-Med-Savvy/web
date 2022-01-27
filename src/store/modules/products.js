@@ -14,17 +14,17 @@ const getters = {
 
 const actions = {
   async getProducts ({commit}) {
-    const response = await axios.get('https://mocki.io/v1/afba2deb-e78d-452a-8edd-ccc06fd2e1b0')
+    const response = await axios.get('http://localhost:8184/products/')
     commit('setProducts', response.data)
   },
   async getProductDescription ({commit}, id) {
-    const response = await axios.get(`http://localhost:8081/products/${id}`)
+    const response = await axios.get(`http://localhost:8184/products/${id}`)
     commit('setProductDescription', response.data)
-  },
-  async getCategories ({commit}) {
-    const response = await axios.get('https://mocki.io/v1/afba2deb-e78d-452a-8edd-ccc06fd2e1b0')
-    commit('setCategories', response.data)
   }
+  // async getCategories ({commit}) {
+  //   const response = await axios.get(' http://localhost:8184/products/')
+  //   commit('setCategories', response.data)
+  // }
 
 }
 const mutations = {

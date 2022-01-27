@@ -50,7 +50,7 @@ export default {
     padding-right: 50px;
     width: 450px;
     height: 30%;
-    border: red dotted 2px;
+    border: blue dotted 2px;
     border-radius: 10%;
     position: -webkit-sticky;
     position: sticky;

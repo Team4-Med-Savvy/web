@@ -9,7 +9,7 @@ const getters = {
   cartTotalPrice: state => {
     let sum = 0
     state.cart.forEach(item => {
-      sum += item.productDescription.id * item.quantity
+      sum += item.productDescription.price * item.quantity
     })
     return sum
   }
@@ -33,7 +33,7 @@ const actions = {
 const mutations = {
   setToCart: (state, {productDescription, quantity}) => {
     let productInCart = state.cart.find(item => {
-      return item.productDescription.id === productDescription.id
+      return item.productDescription._links.self.href.split('/')[4] === productDescription._links.self.href.split('/')[4]
     })
 
     if (productInCart) {
@@ -44,12 +44,12 @@ const mutations = {
   },
   removeFromCart: (state, productDescription) => {
     state.cart = state.cart.filter(item => {
-      return item.productDescription.id !== productDescription.id
+      return item.productDescription._links.self.href.split('/')[4] !== productDescription._links.self.href.split('/')[4]
     })
   },
   incrementQuantity: (state, {productDescription, quantity}) => {
     let productInCart = state.cart.find(item => {
-      return item.productDescription.id === productDescription.id
+      return item.productDescription._links.self.href.split('/')[4] === productDescription._links.self.href.split('/')[4]
     })
     if (productInCart) {
       productInCart.quantity += 1
@@ -57,7 +57,7 @@ const mutations = {
   },
   decrementQuantity: (state, {productDescription, quantity}) => {
     let productInCart = state.cart.find(item => {
-      return item.productDescription.id === productDescription.id
+      return item.productDescription._links.self.href.split('/')[4] === productDescription._links.self.href.split('/')[4]
     })
     if (productInCart) {
       productInCart.quantity -= 1

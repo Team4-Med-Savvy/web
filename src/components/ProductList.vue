@@ -2,8 +2,8 @@
     <div>
         <div><Navbar/></div>
         <div><SubNavbar/></div>
-        <div class="container text-center d-flex align-items-strech flex-wrap">
-            <product-item v-for="product in allProducts" :key="product.id" :product="product"/>
+        <div class="container text-center d-flex align-items-strech flex-wrap" >
+            <product-item v-for="product in allProducts._embedded.products" :key="product.id" :product="product"/>
         </div>
         <div><Footer/></div>
     </div>

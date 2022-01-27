@@ -12,10 +12,10 @@
           <th>Total</th>
           <th>Remove</th>
         </tr>
-        <tr class="center-content" v-for="item in cart" :key="item.productDescription.id">
+        <tr class="center-content" v-for="item in cart" :key="item.productDescription._links.self.href.split('/')[4]">
           <td><img src="@/assets/productimg.jpeg"></td>
           <td>Title - {{item.productDescription.title}} - {{item.productDescription.completed}}</td>
-          <td>Price - {{item.productDescription.id}}</td>
+          <td>Price - {{item.productDescription.price}}</td>
           <td><button type="button" id="up" class="btn btn-secondary text-black" @click="increment(item.productDescription,item.quantity)">+</button>
             <span id='myNumber'>{{item.quantity}}</span>
             <!-- <input class="qty-value" id="myNumber" type="text" value="1"> -->
@@ -38,7 +38,7 @@
                         <td id="total">Price : {{cartTotalPrice}}</td>
                        </tr>
                     </table>
-                    <button type="button" class="btn btn-success">Checkout</button>
+                    <button type="button" class="btn btn-success" @click="sweetAlert()">Checkout</button>
                 </div>
             </div>
       </div>
@@ -71,7 +71,11 @@ export default {
     },
     decrement (productDescription, quantity) {
       this.$store.dispatch('decrement', {productDescription, quantity})
-    }
+    },
+    sweetAlert () {
+      this.$swal('Congratulations', 'Your order was placed successfully', 'OK')
+    },
+    types: ['vue-sweetalert2']
   }
 }
 </script>
