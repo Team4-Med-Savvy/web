@@ -78,13 +78,16 @@ export default {
       this.isLogin = this.$gAuth.isAuthorized
     },
     postData (e) {
-      this.axios.post('http://localhost:8081/user/authenticate', this.posts)
+      this.axios.post('http://localhost:8183/user/authenticate', this.posts)
         .then((result) => {
+          localStorage.setItem('jwtToken', result.data.token)
+          sessionStorage.setItem('name', result.data.name)
+          sessionStorage.setItem('email', result.data.email)
+          sessionStorage.setItem('points', result.data.points)
           console.warn(result)
         })
       e.preventDefault()
     }
-
   },
   components: {
     Navbar,

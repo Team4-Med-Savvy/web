@@ -4,12 +4,13 @@
         <div><SubNavbar/></div>
         <div class="content-body">
             <div class="user-profile">
-                <div class="username"><h4>Username :-</h4><p> &nbsp; Gandhi Boi</p></div>
-                <div class="username"><h4>Email :-</h4><p> &nbsp; gandhihatesgodse@gmail.com</p></div>
-                <div class="username"><h4>Points :-</h4><p> &nbsp; 1000</p></div>
-                <div class="username"><h4>Membership :-</h4><p> &nbsp; Platinum</p></div>
+                    <div class="username"><h4>Name: {{name}}</h4><p> &nbsp;</p></div>
+                <div class="username"><h4>Email :- {{email}}</h4><p> &nbsp;</p></div>
+                <div class="username"><h4>Points :-{{points}}</h4><p> &nbsp;</p></div>
+                <div class="username"><h4>Membership :-</h4><p> &nbsp;</p></div>
+                </div>
             </div>
-            <div class="product-history mt-5">
+            <!-- <div class="product-history mt-5">
                 <ProductHistory/>
                 <ProductHistory/>
                 <ProductHistory/>
@@ -29,8 +30,7 @@
                 <ProductHistory/>
                 <ProductHistory/>
                 <ProductHistory/>
-            </div>
-        </div>
+            </div> -->
         <div class="footer"><Footer/></div>
     </div>
 </template>
@@ -46,6 +46,18 @@ export default {
     SubNavbar,
     Footer,
     ProductHistory
+  },
+  data () {
+    return {
+      name: null,
+      email: null,
+      points: null
+    }
+  },
+  created () {
+    this.name = sessionStorage.getItem('name')
+    this.email = sessionStorage.getItem('email')
+    this.points = sessionStorage.getItem('points')
   }
 }
 </script>
@@ -84,5 +96,4 @@ p{
     padding-left: 50px;
     margin-right: 100px;
 }
-
 </style>

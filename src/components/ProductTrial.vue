@@ -29,7 +29,7 @@ import { mapGetters, mapActions } from 'vuex'
 import Navbar from './Navbar'
 import SubNavbar from './SubNavbar.vue'
 import Footer from './Footer.vue'
-import ProductItem from './ProductItem.vue'
+// import ProductItem from './ProductItem.vue'
 export default {
   name: 'navigation-bar',
   filters: {
@@ -40,8 +40,8 @@ export default {
   components: {
     Navbar,
     SubNavbar,
-    Footer,
-    ProductItem
+    Footer
+    // ProductItem
   },
   methods: {
     ...mapActions(['getProducts'])

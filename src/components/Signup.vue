@@ -59,7 +59,7 @@ export default {
   },
   methods: {
     postData (e) {
-      this.axios.post('http://localhost:8081/user/register', this.posts)
+      this.axios.post('http://localhost:8080/user/register', this.posts)
         .then((result) => {
           console.warn(result)
         })
