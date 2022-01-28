@@ -21,11 +21,6 @@
                 <span class="glyphicon> glyphicon-shopping-cart"></span>
                 <i class="fas fa-shopping-cart"></i>
                 <b> Add to Cart </b>
-            </button>&nbsp;&nbsp;&nbsp;
-            <button type="button"
-                class="btn btn-success">
-                <span class="glyphicon>glyphicon-shopping-cart"></span>
-                <b> Buy Now </b>
             </button>
 
         </div>
