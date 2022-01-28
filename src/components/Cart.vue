@@ -10,7 +10,6 @@
           <th>Price</th>
           <th>Quantity</th>
           <th>Total</th>
-          <th>Remove</th>
         </tr>
         <tr class="center-content" v-for="item in cart.productList" :key="item.merchantId">
           <td><img :src="item.name" height="100px" width="100px"></td>
@@ -21,8 +20,6 @@
             <button type="button" id="down" @click="decrement(item.merchantId,item.quantity,item.productId,item.id, item.price)" class="btn btn-secondary text-black" >-</button>
           </td>
           <td>Total Price</td>
-          <!-- <td><button type="button" class="btn btn-danger text-black">Remove</button></td> -->
-          <td><button type="button" @click.prevent="removeProduct(item.productList)" class="btn btn-danger text-black">Remove</button></td>
         </tr>
      </table>
      <div class="container center-content">
@@ -70,9 +67,6 @@ export default {
     this.$store.dispatch('getCartItems', cartEmail)
   },
   methods: {
-    removeProduct (productDescription) {
-      this.$store.dispatch('removeProduct', productDescription)
-    },
     increment (merchantId, quantity, productId, id, price) {
       let email = this.$route.params.email
       console.log(merchantId, quantity, productId, email, id, price)

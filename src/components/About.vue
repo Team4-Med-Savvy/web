@@ -12,7 +12,7 @@
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim incidunt minima, ratione iste veritatis voluptas, molestias facilis at sit quos dicta atque cupiditate architecto, magnam quaerat non accusamus modi adipisci?</p>
       </div>
       <div class="content-image">
-        <img src="@/assets/logo.jpeg" alt="">
+        <img src="@/assets/logo2.png" class="company-logo" alt="" height="250px" width="300px">
       </div>
     </div>
     <div class="namelist-2">
@@ -74,8 +74,17 @@ export default {
 }
 </script>
 <style scoped>
-img{
-  border-radius: 50%;
+h1{
+  color: #9a1750;
+  font-weight: bold;
+  font-style: italic;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+p{
+  color: #ee4c7c;
+}
+.company-logo{
+  border-radius: 5%;
 }
 .content-area{
   margin:50px;
@@ -103,6 +112,7 @@ img{
   height: auto;
   transition: .5s ease;
   backface-visibility: hidden;
+  border-radius: 50%;
 }
 
 .middle {
@@ -125,10 +135,11 @@ img{
 }
 
 .text {
-  background-color: #000000;
-  color: white;
+  background-color: #5D001E;
+  color: #e3e2df;
   font-size: 12px;
   padding: 16px 32px;
+  border-radius: 10px;
 }
 .namelist-1{
   padding-left:100px;
@@ -152,5 +163,8 @@ img{
 
 .footer{
   margin-top: 100px;
+}
+.main-body{
+    background-color:#E3E2DF;
 }
 </style>

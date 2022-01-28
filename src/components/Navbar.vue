@@ -1,8 +1,8 @@
 <template>
     <div class="main-navbar">
-      <nav class="navbar navbar-expand-sm fixed-top bg-light">
+      <nav class="navbar navbar-expand-sm fixed-top">
         <div class="container my-2">
-            <div class="navbar-brand text-dark font-weight-bold" id="home" @click="gohome()"><img src="@/assets/logo.jpeg" alt="" height="50px" width="50px"></div>
+            <div class="navbar-brand text-dark font-weight-bold" id="home" @click="gohome()"><img src="@/assets/logo.jpeg" alt="" height="60px" width="60px"></div>
             <button
           class="navbar-toggler"
           data-toggle="collapse"
@@ -14,10 +14,10 @@
                 <div class="navbar-nav"  >
                   <input class="form-control my-0 py-1 amber-border" type="text" placeholder="Search.." name="search">
                   <button type="submit" class="btn btn-secondary"><i class="fa fa-search"></i></button>
-                  <b-nav-item class="nav-item nav-link text-dark h6 mx-3 my-auto" @click="goabout()">About</b-nav-item>
-                  <b-nav-item class="nav-item nav-link text-dark h6 mx-3 my-auto" @click="goprofile()">Profile</b-nav-item>
-                  <b-nav-item class="nav-item nav-link text-dark h6 mx-3 my-auto" v-if="isLoggedIn" @click="gologout()">Logout</b-nav-item>
-                  <b-nav-item class="nav-item nav-link text-dark h6 mx-3 my-auto" v-else @click="gologin()">Login</b-nav-item>
+                  <b-nav-item class="nav-item nav-link h6 mx-3 my-auto" @click="goabout()">About</b-nav-item>
+                  <b-nav-item class="nav-item nav-link h6 mx-3 my-auto" @click="goprofile()">Profile</b-nav-item>
+                  <b-nav-item class="nav-item nav-link h6 mx-3 my-auto" v-if="isLoggedIn" @click="gologout()">Logout</b-nav-item>
+                  <b-nav-item class="nav-item nav-link h6 mx-3 my-auto" v-else @click="gologin()">Login</b-nav-item>
                   <div @click="gocart(email)" class="cart"><img src="@/assets/cart.jpeg" alt="" height="50px" width="50px"></div>
               </div>
         </div>
@@ -76,8 +76,8 @@ export default {
 </script>
 
 <style scoped>
-img{
-    border-radius: 50%;
+#home img{
+  border-radius:5%;
 }
 .main-navbar{
     margin-bottom: 100px;
@@ -87,5 +87,14 @@ img{
 }
 #home{
   cursor: pointer;
+}
+.navbar{
+background-color:#5D001E;
+}
+.cart img{
+  border-radius:50%;
+}
+a.nav-link{
+  color:#E3E2DF;
 }
 </style>
