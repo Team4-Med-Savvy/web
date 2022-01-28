@@ -4,7 +4,7 @@
         <div><SubNavbar/></div>
     <div class="row mt-5 pb-5 px-5" v-if="productDescription">
         <div class="col-4">
-            <img :src="productDescription.image" alt="" height="450px" >
+            <img :src="productDescription.image" alt="" height="450px"  width="300px">
         </div>
         <div class="col-8">
             <h1>Product Title - {{productDescription.title}}</h1>
@@ -21,7 +21,7 @@
                 <span class="glyphicon> glyphicon-shopping-cart"></span>
                 <i class="fas fa-shopping-cart"></i>
                 <b> Add to Cart </b>
-            </button>
+            </button>&nbsp;&nbsp;&nbsp;
 
         </div>
         <Merchants/>
