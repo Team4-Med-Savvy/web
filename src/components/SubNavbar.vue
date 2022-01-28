@@ -40,19 +40,23 @@ img{
     border-radius: 50%;
     height: 75px;
     width: 75px;
-    border: 3px solid black;
 }
 p{
     margin-top: 5px;
     font-weight: 500;
     font-size: 15px;
-    font-family:Georgia, 'Times New Roman', Times, serif
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-align :center;
+    color:#EE4C7C;
 }
 .subnav-bar{
     display: flex;
     justify-content: space-between;
     margin-left: 75px;
     margin-right: 75px;
+    padding-top:30px;
+    padding-left:50px;
+    padding-right:50px;
 }
 .category-image{
     cursor: pointer;

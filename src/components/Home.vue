@@ -97,4 +97,7 @@ export default {
 .cover{
     display: flex;
 }
+.main-body{
+    background-color:#E3E2DF;
+}
 </style>
