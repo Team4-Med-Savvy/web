@@ -10,11 +10,11 @@
                 <h3 class="h3class">Log in</h3>
                 <form @submit="postData" method="post">
                   <div class="form-group">
-                    <div style="margin-bottom:10px"><label>Email address:</label></div>
+                    <div style="margin-bottom:10px" id="data"><label>Email address:</label></div>
                     <input type="email" class="form-control" placeholder="Enter email" required v-model="posts.username"/>
                   </div>
                   <div class="form-group">
-                    <div style="margin-bottom:10px"><label>Password: </label></div>
+                    <div style="margin-bottom:10px" id="data"><label>Password: </label></div>
                     <input type="password" class="form-control" placeholder="Enter Password" required v-model="posts.password"/>
                   </div>
                   <!-- <div class="form-group">
@@ -22,22 +22,23 @@
                     <input type="password" class="form-control" placeholder="Re Enter Password" required/>
                   </div> -->
                   <div class="submit-button">
-                    <button type="submit" class="btn btn-secondary">Log in</button>
+                    <button type="submit" class="btn btn-secondary" id="button">Log in</button>
                   </div>
                   <hr />
                   <div style="text-align:center">or</div>
                   <hr/>
                   <div class="submit-button">
-                    <button class="btn btn-secondary" @click="login()">
+                    <button class="btn btn-secondary" id="button" @click="login()">
                       <img src="@/assets/google.png" />&nbsp;&nbsp;Login with Google
                     </button>
                   </div>
                   <div>
                     <hr />
                     <div style="text-align:center">
-                      <span>New to MedSavvy ?</span>
+                      <span class="text">New to MedSavvy ?</span>
                     </div>
-                    <a class="nav-item nav-link text-dark h6 mx-3 my-auto text-center" id="register-button" href="/#/signup">Create A New MedSavvy Account</a>
+                    <a class="nav-item nav-link text-dark h6 mx-3 my-auto text-center" id="register-button" href="/#/signup"><i class="fas fa-hand-point-right"></i> Create A New MedSavvy Account
+</a>
                   </div>
                 </form>
               </div>
@@ -105,6 +106,9 @@ export default {
 }
 .h3class {
   text-align: center;
+  color: #9a1750;
+  font-weight: bold;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .form-group {
   margin-bottom: 20px;
@@ -112,4 +116,25 @@ export default {
 a{
   margin-left: 200px;
 }
+#data{
+  color: #ee4c7c;
+}
+.main-body{
+  background-color:#E3E2DF;
+}
+#button{
+  background-color: #9a1750;
+  color: #E3E2DF;
+}
+hr{
+  color: #ee4c7c;
+}
+.text{
+  color: #ee4c7c;
+}
+a{
+  font-weight: bold;
+  font-style: italic;
+}
+
 </style>

@@ -1,31 +1,32 @@
 <template>
-    <div>
+    <div class="main-body">
         <div><Navbar/></div>
+        <div><SubNavbar/></div>
             <div class="container py-5">
                 <div class="d-flex justify-content-center">
                     <div class="col-md-5">
                         <div class="card shadow">
                             <div class="card-body">
-                                <h3 class="text-center">Sign Up</h3>
+                                <h3 class="text-center" id="signup">Sign Up</h3>
                                 <form @submit="postData" method="post">
                                     <div class="form-group">
-                                        <label>Full Name: </label>
+                                        <label id="detail">Full Name: </label>
                                         <input type="text" class="form-control" id="name" placeholder="Enter Full name" required v-model="posts.name">
                                     </div>
                                     <div class="form-group mt-3">
-                                        <label>Email</label>
+                                        <label id="detail">Email</label>
                                         <input type="email" class="form-control" id="email" placeholder="Enter Email" required v-model="posts.email">
                                     </div>
                                     <div class="form-group mt-3">
-                                        <label>Password:</label>
+                                        <label id="detail">Password:</label>
                                         <input type="password" class="form-control" id="password" placeholder="Enter Password" required v-model="posts.password">
                                     </div>
                                     <div class="form-group mt-3">
-                                        <label>Confirm Password:</label>
+                                        <label id="detail">Confirm Password:</label>
                                         <input type="password" class="form-control" placeholder="Re Enter Password" required>
                                     </div>
                                     <div class="text-center">
-                                        <button type="submit" class="btn btn-primary mt-3">Submit</button>
+                                        <button type="submit" class="btn mt-3">Submit</button>
                                     </div>
                                 </form>
                             </div>
@@ -79,3 +80,21 @@ export default {
   }
 }
 </script>
+<style scoped>
+.main-body{
+  background-color:#E3E2DF;
+}
+#signup{
+  color: #9a1750;
+  font-weight: bold;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.btn{
+  background-color: #9a1750;
+  color: #E3E2DF;
+
+}
+#detail{
+  color: #ee4c7c;
+}
+</style>
