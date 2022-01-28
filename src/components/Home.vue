@@ -40,7 +40,7 @@
                 </div>
         </div>
         <div>
-            <h1 class="font-weight-light text-center my-3 pt-5 text-info" style="font-family: 'Trebuchet MS', sans-serif;">Recommendations</h1>
+            <h1 class="my-3 pt-5" id="rec">Recommendations</h1>
             <div class="cover">
             <recommendation v-for="recom in recommendations" :key="recom.id" :recom="recom"/>
             </div>
@@ -80,7 +80,7 @@ export default {
 .main-carousel{
     margin-top:45px;
     margin-left:100px;
-    margin-right:100px
+    margin-right:100px;
 }
 .footer{
     margin-top:75px;
@@ -99,5 +99,11 @@ export default {
 }
 .main-body{
     background-color:#E3E2DF;
+}
+#rec{
+    font-family: 'Trebuchet MS', sans-serif;
+    color:#EE4C7C;
+    font-weight: lighter;
+    text-align: center;
 }
 </style>
