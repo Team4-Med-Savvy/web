@@ -37,7 +37,6 @@
 <script>
 
 import {mapGetters} from 'vuex'
-// import axios from 'axios'
 import Navbar from './Navbar.vue'
 import SubNavbar from './SubNavbar.vue'
 import Footer from './Footer.vue'
@@ -55,7 +54,6 @@ export default {
   computed: {
     ...mapGetters(['productDescription'])},
   mounted () {
-    // let id = this.$route.params.id
     this.$store.dispatch('getProductDescription', this.id)
   },
   components: {
@@ -70,8 +68,6 @@ export default {
   },
   methods: {
     clickCart () {
-      console.log('Hi')
-      console.log(this.currentUrl.split('/')[5], 'heelo')
       this.$store.dispatch('addToCart', {
         productDescription: this.productDescription,
         quantity: 1,

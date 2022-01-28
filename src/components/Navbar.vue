@@ -16,7 +16,8 @@
                   <button type="submit" class="btn btn-secondary"><i class="fa fa-search"></i></button>
                   <b-nav-item class="nav-item nav-link text-dark h6 mx-3 my-auto" @click="goabout()">About</b-nav-item>
                   <b-nav-item class="nav-item nav-link text-dark h6 mx-3 my-auto" @click="goprofile()">Profile</b-nav-item>
-                  <b-nav-item class="nav-item nav-link text-dark h6 mx-3 my-auto" @click="gologin()">Login</b-nav-item>
+                  <b-nav-item class="nav-item nav-link text-dark h6 mx-3 my-auto" v-if="isLoggedIn" @click="gologout()">Logout</b-nav-item>
+                  <b-nav-item class="nav-item nav-link text-dark h6 mx-3 my-auto" v-else @click="gologin()">Login</b-nav-item>
                   <div @click="gocart(email)" class="cart"><img src="@/assets/cart.jpeg" alt="" height="50px" width="50px"></div>
               </div>
         </div>
@@ -28,14 +29,10 @@
 <script>
 export default {
   name: 'Navbar',
-  data () {
-    return {
-      email: null
+  computed: {
+    isLoggedIn () {
+      return window.sessionStorage.getItem('email')
     }
-  },
-  created () {
-    this.email = sessionStorage.getItem('email')
-    console.log(this.email)
   },
   methods: {
     goabout () {
@@ -55,9 +52,16 @@ export default {
       console.log(this.$router)
     },
     gocart (email) {
-      console.log(this.email, 'helloooo')
+      console.log(this.email, 'cart navbar')
       this.$router.push('/cart/email/' + email)
       console.log(this.$router)
+    },
+    gologout () {
+      localStorage.removeItem('token')
+      sessionStorage.removeItem('email')
+      sessionStorage.removeItem('name')
+      sessionStorage.removeItem('points')
+      this.$router.push('/login')
     }
   }
 }

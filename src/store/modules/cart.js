@@ -17,10 +17,7 @@ const getters = {
 
 const actions = {
   async addToCart ({commit}, {productDescription, quantity, email, currentUrl}) {
-    commit('setToCart', {productDescription, quantity})
     axios.post('http://localhost:8186/cart/' + email + '/inc', {
-      // productId: this.$route.params.productId,
-      // path: window.location.pathname,
       productId: currentUrl,
       merchantId: productDescription.merchant[0],
       price: productDescription.price
@@ -49,17 +46,6 @@ const actions = {
 
 }
 const mutations = {
-  setToCart: (state, {productDescription, quantity}) => {
-    let productInCart = state.cart.find(item => {
-      return item.productDescription._links.self.href.split('/')[4] === productDescription._links.self.href.split('/')[4]
-    })
-
-    if (productInCart) {
-      productInCart.quantity += quantity
-      return
-    }
-    state.cart.push({productDescription, quantity})
-  },
   removeFromCart: (state, productDescription) => {
     state.cart = state.cart.filter(item => {
       return item.productDescription._links.self.href.split('/')[4] !== productDescription._links.self.href.split('/')[4]

@@ -4,9 +4,9 @@
         <div><SubNavbar/></div>
         <div class="content-body">
             <div class="user-profile">
-                    <div class="username"><h4>Name: {{name}}</h4><p> &nbsp;</p></div>
-                <div class="username"><h4>Email :- {{email}}</h4><p> &nbsp;</p></div>
-                <div class="username"><h4>Points :-{{points}}</h4><p> &nbsp;</p></div>
+                    <div class="username"><h4>Name: {{user.name}}</h4><p> &nbsp;</p></div>
+                <div class="username"><h4>Email :- {{user.email}}</h4><p> &nbsp;</p></div>
+                <div class="username"><h4>Points :-{{user.points}}</h4><p> &nbsp;</p></div>
                 <div class="username"><h4>Membership :-</h4><p> &nbsp;</p></div>
                 </div>
             </div>
@@ -33,6 +33,16 @@ import ProfileProduct from './ProductInfo.vue'
 
 export default {
   name: 'profile',
+  data () {
+    return {
+      user: {
+        name: '',
+        email: '',
+        points: ''
+      }
+
+    }
+  },
   components: {
     Navbar,
     SubNavbar,
@@ -41,18 +51,10 @@ export default {
     OrderHistory,
     ProfileProduct
   },
-  data () {
-    return {
-      name: null,
-      email: null,
-      points: null
-
-    }
-  },
   created () {
-    this.name = sessionStorage.getItem('name')
-    this.email = sessionStorage.getItem('email')
-    this.points = sessionStorage.getItem('points')
+    this.user.name = sessionStorage.getItem('name')
+    this.user.email = sessionStorage.getItem('email')
+    this.user.points = sessionStorage.getItem('points')
   }
 }
 </script>

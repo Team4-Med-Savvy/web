@@ -12,17 +12,18 @@
           <th>Total</th>
           <th>Remove</th>
         </tr>
-        <tr class="center-content" v-for="item in cart" :key="item.productDescription._links.self.href.split('/')[4]">
-          <td><img :src="item.productDescription.image" height="100px" width="100px"></td>
-          <td>Title - {{item.productDescription.title}} - {{item.productDescription.completed}}</td>
-          <td>Price - {{item.productDescription.price}}</td>
-          <td><button type="button" id="up" class="btn btn-secondary text-black" @click="increment(item.productDescription,item.quantity)">+</button>
-            <span id='myNumber'>{{item.quantity}}</span>
+        <tr class="center-content" v-for="item in cart" :key="item.id">
+          <td><img src="@/assets/gandhi.jpeg" height="100px" width="100px"></td>
+          <!-- <td>Title - {{item.productList}} - {{item.productDescription.completed}}</td> -->
+          <td>Price - {{item.email}}</td>
+          <!-- <td><button type="button" id="up" class="btn btn-secondary text-black" @click="increment(item.id,item.id)">+</button>
+            <span id='myNumber'>{{item.quantity}}</span> -->
             <!-- <input class="qty-value" id="myNumber" type="text" value="1"> -->
-            <button type="button" id="down" class="btn btn-secondary text-black" @click="decrement(item.productDescription,item.quantity)">-</button>
-          </td>
+            <button type="button" id="down" class="btn btn-secondary text-black" @click="decrement(item.id,item.id)">-</button>
+          <!-- </td> -->
           <td>Total Price</td>
-          <td><button type="button" @click.prevent="removeProduct(item.productDescription)" class="btn btn-danger text-black">Remove</button></td>
+          <td><button type="button" class="btn btn-danger text-black">Remove</button></td>
+          <!-- <td><button type="button" @click.prevent="removeProduct(item.productDescription)" class="btn btn-danger text-black">Remove</button></td> -->
         </tr>
      </table>
      <div class="container center-content">
@@ -54,15 +55,14 @@ import Footer from './Footer.vue'
 import swal from 'sweetalert'
 export default {
   name: 'navigation-bar',
-  data () {
-    return {
-      email: null,
-      currentUrl: null
-    }
-  },
+  // data () {
+  //   return {
+  //     email: null
+  //   }
+  // },
   computed: {
-    ...mapGetters(['cart']),
-    ...mapGetters(['cartTotalPrice'])
+    ...mapGetters(['cart'])
+    // ...mapGetters(['cartTotalPrice'])
   },
   components: {
     Navbar,
@@ -70,11 +70,9 @@ export default {
     Footer
   },
   created () {
-    this.email = sessionStorage.getItem('email')
-    this.currentUrl = window.location.href
-    console.log(this.currentUrl, 'hi')
+    // this.email = sessionStorage.getItem('email')
     let cartEmail = this.$route.params.email
-    console.log(cartEmail, 'cart')
+    console.log(cartEmail, 'created method')
     this.$store.dispatch('getCartItems', cartEmail)
   },
   methods: {
