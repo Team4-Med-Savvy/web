@@ -12,18 +12,17 @@
           <th>Total</th>
           <th>Remove</th>
         </tr>
-        <tr class="center-content" v-for="item in cart" :key="item.id">
-          <td><img src="@/assets/gandhi.jpeg" height="100px" width="100px"></td>
-          <!-- <td>Title - {{item.productList}} - {{item.productDescription.completed}}</td> -->
-          <td>Price - {{item.email}}</td>
-          <!-- <td><button type="button" id="up" class="btn btn-secondary text-black" @click="increment(item.id,item.id)">+</button>
-            <span id='myNumber'>{{item.quantity}}</span> -->
-            <!-- <input class="qty-value" id="myNumber" type="text" value="1"> -->
-            <button type="button" id="down" class="btn btn-secondary text-black" @click="decrement(item.id,item.id)">-</button>
-          <!-- </td> -->
+        <tr class="center-content" v-for="item in cart.productList" :key="item.merchantId">
+          <td><img :src="item.name" height="100px" width="100px"></td>
+          <td>Title - {{item.title}}</td>
+          <td>Price - {{item.price}}</td>
+          <td><button type="button" id="up" @click="increment(item.merchantId,item.quantity,item.productId,item.id, item.price)" class="btn btn-secondary text-black">+</button>
+            <span id='myNumber'>{{item.quantity}}</span>
+            <button type="button" id="down" @click="decrement(item.merchantId,item.quantity,item.productId,item.id, item.price)" class="btn btn-secondary text-black" >-</button>
+          </td>
           <td>Total Price</td>
-          <td><button type="button" class="btn btn-danger text-black">Remove</button></td>
-          <!-- <td><button type="button" @click.prevent="removeProduct(item.productDescription)" class="btn btn-danger text-black">Remove</button></td> -->
+          <!-- <td><button type="button" class="btn btn-danger text-black">Remove</button></td> -->
+          <td><button type="button" @click.prevent="removeProduct(item.productList)" class="btn btn-danger text-black">Remove</button></td>
         </tr>
      </table>
      <div class="container center-content">
@@ -36,7 +35,7 @@
                        <tr>
                        <tr>
                         <td>Total</td>
-                        <!-- <td id="total">Price : {{cartTotalPrice}}</td> -->
+                        <td id="total">Price : {{cartTotalPrice}}</td>
                        </tr>
                     </table>
                     <button type="button" class="btn btn-success" @click="checkout()">Checkout</button>
@@ -55,14 +54,9 @@ import Footer from './Footer.vue'
 import swal from 'sweetalert'
 export default {
   name: 'navigation-bar',
-  // data () {
-  //   return {
-  //     email: null
-  //   }
-  // },
   computed: {
-    ...mapGetters(['cart'])
-    // ...mapGetters(['cartTotalPrice'])
+    ...mapGetters(['cart']),
+    ...mapGetters(['cartTotalPrice'])
   },
   components: {
     Navbar,
@@ -79,12 +73,15 @@ export default {
     removeProduct (productDescription) {
       this.$store.dispatch('removeProduct', productDescription)
     },
-    increment (productDescription, quantity, email, currentUrl) {
-      console.log(this.currentUrl.split('/')[5], 'heelo')
-      this.$store.dispatch('increment', {productDescription, quantity, email, currentUrl})
+    increment (merchantId, quantity, productId, id, price) {
+      let email = this.$route.params.email
+      console.log(merchantId, quantity, productId, email, id, price)
+      this.$store.dispatch('increment', {merchantId, quantity, productId, email, id, price})
     },
-    decrement (productDescription, quantity) {
-      this.$store.dispatch('decrement', {productDescription, quantity})
+    decrement (merchantId, quantity, productId, id, price) {
+      let email = this.$route.params.email
+      console.log(merchantId, quantity, productId, email, id, price)
+      this.$store.dispatch('decrement', {merchantId, quantity, productId, email, id, price})
     },
     sweetAlert () {
       this.$swal('Congratulations', 'Your order was placed successfully', 'OK')

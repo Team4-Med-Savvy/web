@@ -5,14 +5,14 @@ const state = {
 }
 
 const getters = {
-  cart: state => state.cart
-  // cartTotalPrice: state => {
-  //   let sum = 0
-  //   state.cart.forEach(item => {
-  //     sum += item.productDescription.price * item.quantity
-  //   })
-  //   return sum
-  // }
+  cart: state => state.cart,
+  cartTotalPrice: state => {
+    let sum = 0
+    state.cart.productList.forEach(item => {
+      sum += item.price * item.quantity
+    })
+    return sum
+  }
 }
 
 const actions = {
@@ -26,19 +26,20 @@ const actions = {
   async removeProduct ({commit}, productDescription) {
     commit('removeFromCart', productDescription)
   },
-  async increment ({commit}, {productDescription, quantity, email, currentUrl}) {
-    commit('incrementQuantity', {productDescription, quantity})
+  async increment ({commit}, {merchantId, quantity, productId, email, id, price}) {
+    commit('incrementQuantity', {id, quantity})
     axios.post('http://localhost:8186/cart/' + email + '/inc', {
-      productId: currentUrl,
-      merchantId: productDescription.merchant[0],
-      price: productDescription.price
-    }).then((res) => console.log('sent'))
+      productId: productId,
+      merchantId: merchantId,
+      price: price
+    }).then((res) => console.log('increment done'))
   },
-  async decrement ({commit}, {productDescription, quantity}) {
-    commit('decrementQuantity', {productDescription, quantity})
+  async decrement ({commit}, {merchantId, quantity, productId, email, id, price}) {
+    commit('decrementQuantity', {id, quantity})
+    axios.post('http://localhost:8186/cart/' + email + '/' + productId + '/dec').then((res) => console.log('increment done'))
   },
   async getCartItems ({commit}, cartEmail) {
-    console.log(cartEmail, 'action')
+    console.log(cartEmail, 'action start')
     const response = await axios.get(`http://localhost:8186/cart/email/${cartEmail}`)
     commit('setCartItems', response.data)
     console.log('Action end', response.data)
@@ -51,17 +52,17 @@ const mutations = {
       return item.productDescription._links.self.href.split('/')[4] !== productDescription._links.self.href.split('/')[4]
     })
   },
-  incrementQuantity: (state, {productDescription, quantity}) => {
-    let productInCart = state.cart.find(item => {
-      return item.productDescription._links.self.href.split('/')[4] === productDescription._links.self.href.split('/')[4]
+  incrementQuantity: (state, {id, quantity}) => {
+    let productInCart = state.cart.productList.find(item => {
+      return item.id === id
     })
     if (productInCart) {
       productInCart.quantity += 1
     }
   },
-  decrementQuantity: (state, {productDescription, quantity}) => {
-    let productInCart = state.cart.find(item => {
-      return item.productDescription._links.self.href.split('/')[4] === productDescription._links.self.href.split('/')[4]
+  decrementQuantity: (state, {id, quantity}) => {
+    let productInCart = state.cart.productList.find(item => {
+      return item.id === id
     })
     if (productInCart) {
       productInCart.quantity -= 1

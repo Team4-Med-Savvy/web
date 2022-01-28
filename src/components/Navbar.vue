@@ -29,6 +29,14 @@
 <script>
 export default {
   name: 'Navbar',
+  data () {
+    return {
+      email: ''
+    }
+  },
+  created () {
+    this.email = sessionStorage.getItem('email')
+  },
   computed: {
     isLoggedIn () {
       return window.sessionStorage.getItem('email')
