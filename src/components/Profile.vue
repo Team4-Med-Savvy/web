@@ -3,21 +3,23 @@
         <div><Navbar/></div>
         <div><SubNavbar/></div>
         <div class="content-body">
-            <div class="user-profile">
-                    <div class="username"><h4>Name: {{user.name}}</h4><p> &nbsp;</p></div>
-                <div class="username"><h4>Email :- {{user.email}}</h4><p> &nbsp;</p></div>
-                <div class="username"><h4>Points :-{{user.points}}</h4><p> &nbsp;</p></div>
-                <div class="username"><h4>Membership :-</h4><p> &nbsp;</p></div>
-                </div>
+<div class="user-profile">
+<div class="username"><h4>Name : {{user.name}}</h4><p> &nbsp;</p></div>
+<div class="username"><h4>Email : {{user.email}}</h4><p> &nbsp;</p></div>
+<div class="username"><h4>Points :{{user.points}}</h4><p> &nbsp;</p></div>
+<div class="username"><h4>Membership :</h4><p> &nbsp;</p></div>
+</div>
+
+ <div class="order-history">
+                <OrderHistory class="pb-4"/>
+                <OrderHistory class="pb-4"/>
+                <OrderHistory class="pb-4"/>
+                <OrderHistory class="pb-4"/>
+                <OrderHistory class="pb-4"/>
+                <OrderHistory class="pb-4"/>
+                <OrderHistory class="pb-4"/>
+
             </div>
-            <div class="order-history">
-                <OrderHistory class="pb-4"/>
-                <OrderHistory class="pb-4"/>
-                <OrderHistory class="pb-4"/>
-                <OrderHistory class="pb-4"/>
-                <OrderHistory class="pb-4"/>
-                <OrderHistory class="pb-4"/>
-                <OrderHistory class="pb-4"/>
 
             </div>
             <div class="footer"><Footer/></div>
@@ -73,8 +75,8 @@ export default {
     padding-right: 50px;
     width: 450px;
     height: 30%;
-    border: blue dotted 2px;
-    border-radius: 5%;
+    background-color: #5D001E;
+    color:whitesmoke;
     position: -webkit-sticky;
     position: sticky;
     top: 130px;
@@ -96,5 +98,14 @@ p{
 }
 .main-body{
   background-color:#E3E2DF;
+}
+.header {
+    height: 30%;
+    background: red;
+    color: black;
+    text-align: center;
+}
+.container {
+    padding: 2px 16px;
 }
 </style>

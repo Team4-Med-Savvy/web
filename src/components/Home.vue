@@ -8,7 +8,7 @@
         </div>
         <div class="main-carousel">
             <div class="carousel">
-                <b-carousel
+                <!-- <b-carousel
                     id="carousel-fade"
                     style="text-shadow: 0px 0px 2px #000"
                     fade="true"
@@ -36,7 +36,7 @@
                     caption="Personal Care"
                     img-src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGVyc29uYWwlMjBjYXJlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60"
                     ></b-carousel-slide></div>
-                </b-carousel>
+                </b-carousel> -->
                 </div>
         </div>
         <div>

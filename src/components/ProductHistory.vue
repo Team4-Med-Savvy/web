@@ -3,12 +3,6 @@
         <div><Navbar/></div>
         <div><SubNavbar/></div>
         <div class="content-body">
-            <div class="user-profile">
-                <div class="username"><h4>Username :-</h4><p> &nbsp; Gandhi Boi</p></div>
-                <div class="username"><h4>Email :-</h4><p> &nbsp; gandhihatesgodse@gmail.com</p></div>
-                <div class="username"><h4>Points :-</h4><p> &nbsp; 1000</p></div>
-                <div class="username"><h4>Membership :-</h4><p> &nbsp; Platinum</p></div>
-            </div>
             <div class="product-info">
                 <ProductInfo/>
 

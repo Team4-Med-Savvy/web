@@ -35,6 +35,9 @@ export default {
 }
 </script>
 <style scoped>
+footer{
+  margin-top:50px;
+}
 p{
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   color: #e3e2df;
