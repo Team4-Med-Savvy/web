@@ -94,4 +94,7 @@ p{
     margin-top: 80px;
     margin-bottom: 45px;
 }
+.main-body{
+  background-color:#E3E2DF;
+}
 </style>
