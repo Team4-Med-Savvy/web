@@ -53,15 +53,21 @@ export default {
         'email': null,
         'password': null,
         'merchant': false,
-        'points': '1000'
+        'points': 1000
+      },
+      prodl: {
+        'email': sessionStorage.getItem('email'),
+        'productList': []
       }
     }
   },
   methods: {
     postData (e) {
-      this.axios.post('http://localhost:8080/user/register', this.posts)
+      this.axios.post('http://localhost:8183/user/register', this.posts)
         .then((result) => {
           console.warn(result)
+          this.prodl.email = this.posts.email
+          this.axios.post('http://localhost:8186/cart', this.prodl)
         })
       e.preventDefault()
     }

@@ -10,29 +10,6 @@
                 <div class="username"><h4>Membership :-</h4><p> &nbsp;</p></div>
                 </div>
             </div>
-<<<<<<< HEAD
-            <!-- <div class="product-history mt-5">
-                <ProductHistory/>
-                <ProductHistory/>
-                <ProductHistory/>
-                <ProductHistory/>
-                <ProductHistory/>
-                <ProductHistory/>
-                <ProductHistory/>
-                <ProductHistory/>
-                <ProductHistory/>
-                <ProductHistory/>
-                <ProductHistory/>
-                <ProductHistory/>
-                <ProductHistory/>
-                <ProductHistory/>
-                <ProductHistory/>
-                <ProductHistory/>
-                <ProductHistory/>
-                <ProductHistory/>
-                <ProductHistory/>
-            </div> -->
-=======
             <div class="order-history">
                 <OrderHistory class="pb-4"/>
                 <OrderHistory class="pb-4"/>
@@ -43,10 +20,8 @@
                 <OrderHistory class="pb-4"/>
 
             </div>
+            <div class="footer"><Footer/></div>
         </div>
->>>>>>> 22c0d80dea217222a704c00c5c998ef3c9f607e6
-        <div class="footer"><Footer/></div>
-    </div>
 </template>
 <script>
 import Navbar from './Navbar'
@@ -62,25 +37,22 @@ export default {
     Navbar,
     SubNavbar,
     Footer,
-<<<<<<< HEAD
-    ProductHistory
+    ProductHistory,
+    OrderHistory,
+    ProfileProduct
   },
   data () {
     return {
       name: null,
       email: null,
       points: null
+
     }
   },
   created () {
     this.name = sessionStorage.getItem('name')
     this.email = sessionStorage.getItem('email')
     this.points = sessionStorage.getItem('points')
-=======
-    ProductHistory,
-    OrderHistory,
-    ProfileProduct
->>>>>>> 22c0d80dea217222a704c00c5c998ef3c9f607e6
   }
 }
 </script>

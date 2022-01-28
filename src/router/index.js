@@ -11,10 +11,6 @@ import Profile from '@/components/Profile'
 import ProductHistory from '@/components/ProductHistory'
 import Test from '@/components/test'
 import ProductTrial from '@/components/ProductTrial'
-import AyurvedicCare from '@/components/AyurvedicCare'
-import Surgicals from '@/components/Surgicals'
-import SkinCare from '@/components/SkinCare'
-import PersonalCare from '@/components/PersonalCare'
 
 Vue.use(Router)
 
@@ -31,34 +27,15 @@ export default new Router({
       component: Signup
     },
     {
-      path: '/cart',
+      path: '/cart/email/:email',
       name: 'Cart',
       component: Cart
     },
     {
-      path: '/productlist',
+      path: '/product/findlist/:category',
       name: 'ProductList',
-      component: ProductList
-    },
-    {
-      path: '/ayurvediccare',
-      name: 'AyurvedicCare',
-      component: AyurvedicCare
-    },
-    {
-      path: '/surgicals',
-      name: 'Surgicals',
-      component: Surgicals
-    },
-    {
-      path: '/skincare',
-      name: 'SkinCare',
-      component: SkinCare
-    },
-    {
-      path: '/personal',
-      name: 'PersonalCare',
-      component: PersonalCare
+      component: ProductList,
+      props: true
     },
     {
       path: '/',

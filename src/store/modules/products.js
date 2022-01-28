@@ -13,18 +13,14 @@ const getters = {
 }
 
 const actions = {
-  async getProducts ({commit}) {
-    const response = await axios.get('http://localhost:8184/products/')
+  async getProducts ({commit}, category) {
+    const response = await axios.get(`http://localhost:8184/product/findlist/${category}`)
     commit('setProducts', response.data)
   },
   async getProductDescription ({commit}, id) {
     const response = await axios.get(`http://localhost:8184/products/${id}`)
     commit('setProductDescription', response.data)
   }
-  // async getCategories ({commit}) {
-  //   const response = await axios.get(' http://localhost:8184/products/')
-  //   commit('setCategories', response.data)
-  // }
 
 }
 const mutations = {

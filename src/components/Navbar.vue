@@ -17,7 +17,7 @@
                   <b-nav-item class="nav-item nav-link text-dark h6 mx-3 my-auto" @click="goabout()">About</b-nav-item>
                   <b-nav-item class="nav-item nav-link text-dark h6 mx-3 my-auto" @click="goprofile()">Profile</b-nav-item>
                   <b-nav-item class="nav-item nav-link text-dark h6 mx-3 my-auto" @click="gologin()">Login</b-nav-item>
-                  <div @click="gocart()" class="cart"><img src="@/assets/cart.jpeg" alt="" height="50px" width="50px"></div>
+                  <div @click="gocart(email)" class="cart"><img src="@/assets/cart.jpeg" alt="" height="50px" width="50px"></div>
               </div>
         </div>
       </div>
@@ -28,6 +28,15 @@
 <script>
 export default {
   name: 'Navbar',
+  data () {
+    return {
+      email: null
+    }
+  },
+  created () {
+    this.email = sessionStorage.getItem('email')
+    console.log(this.email)
+  },
   methods: {
     goabout () {
       this.$router.push('/about')
@@ -45,8 +54,9 @@ export default {
       this.$router.push('/')
       console.log(this.$router)
     },
-    gocart () {
-      this.$router.push('/cart')
+    gocart (email) {
+      console.log(this.email, 'cartcall')
+      this.$router.push('/cart/email' + email)
       console.log(this.$router)
     }
   }

@@ -13,7 +13,7 @@
           <th>Remove</th>
         </tr>
         <tr class="center-content" v-for="item in cart" :key="item.productDescription._links.self.href.split('/')[4]">
-          <td><img src="@/assets/productimg.jpeg"></td>
+          <td><img :src="item.productDescription.image" height="100px" width="100px"></td>
           <td>Title - {{item.productDescription.title}} - {{item.productDescription.completed}}</td>
           <td>Price - {{item.productDescription.price}}</td>
           <td><button type="button" id="up" class="btn btn-secondary text-black" @click="increment(item.productDescription,item.quantity)">+</button>
@@ -38,7 +38,7 @@
                         <td id="total">Price : {{cartTotalPrice}}</td>
                        </tr>
                     </table>
-                    <button type="button" class="btn btn-success" @click="sweetAlert()">Checkout</button>
+                    <button type="button" class="btn btn-success" @click="checkout()">Checkout</button>
                 </div>
             </div>
       </div>
@@ -51,8 +51,15 @@ import {mapGetters} from 'vuex'
 import Navbar from './Navbar'
 import SubNavbar from './SubNavbar.vue'
 import Footer from './Footer.vue'
+import swal from 'sweetalert'
 export default {
   name: 'navigation-bar',
+  data () {
+    return {
+      email: null,
+      currentUrl: null
+    }
+  },
   computed: {
     ...mapGetters(['cart']),
     ...mapGetters(['cartTotalPrice'])
@@ -62,18 +69,34 @@ export default {
     SubNavbar,
     Footer
   },
+  created () {
+    this.email = sessionStorage.getItem('email')
+    this.currentUrl = window.location.href
+    console.log(this.currentUrl, 'hi')
+  },
+  mounted () {
+    this.$store.dispatch('getCartItems')
+  },
   methods: {
     removeProduct (productDescription) {
       this.$store.dispatch('removeProduct', productDescription)
     },
-    increment (productDescription, quantity) {
-      this.$store.dispatch('increment', {productDescription, quantity})
+    increment (productDescription, quantity, email, currentUrl) {
+      console.log(this.currentUrl.split('/')[5], 'heelo')
+      this.$store.dispatch('increment', {productDescription, quantity, email, currentUrl})
     },
     decrement (productDescription, quantity) {
       this.$store.dispatch('decrement', {productDescription, quantity})
     },
     sweetAlert () {
       this.$swal('Congratulations', 'Your order was placed successfully', 'OK')
+    },
+    checkout () {
+      swal('Congratulations', 'Your order was placed successfully!', 'success').then(
+        value => {
+          window.location.href = '/cart'
+        }
+      )
     },
     types: ['vue-sweetalert2']
   }

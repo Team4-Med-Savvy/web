@@ -1,4 +1,4 @@
-// import axios from 'axios'
+import axios from 'axios'
 
 const state = {
   cart: []
@@ -16,17 +16,33 @@ const getters = {
 }
 
 const actions = {
-  async addToCart ({commit}, {productDescription, quantity}) {
+  async addToCart ({commit}, {productDescription, quantity, email, currentUrl}) {
     commit('setToCart', {productDescription, quantity})
+    axios.post('http://localhost:8186/cart/' + email + '/inc', {
+      // productId: this.$route.params.productId,
+      // path: window.location.pathname,
+      productId: currentUrl,
+      merchantId: productDescription.merchant[0],
+      price: productDescription.price
+    }).then((res) => console.log('sent'))
   },
   async removeProduct ({commit}, productDescription) {
     commit('removeFromCart', productDescription)
   },
-  async increment ({commit}, {productDescription, quantity}) {
+  async increment ({commit}, {productDescription, quantity, email, currentUrl}) {
     commit('incrementQuantity', {productDescription, quantity})
+    axios.post('http://localhost:8186/cart/' + email + '/inc', {
+      productId: currentUrl,
+      merchantId: productDescription.merchant[0],
+      price: productDescription.price
+    }).then((res) => console.log('sent'))
   },
   async decrement ({commit}, {productDescription, quantity}) {
     commit('decrementQuantity', {productDescription, quantity})
+  },
+  async getCartItems ({commit}) {
+    const response = await axios.get(`http://localhost:8186/cart/email/:email`)
+    commit('setProducts', response.data)
   }
 
 }
@@ -62,7 +78,8 @@ const mutations = {
     if (productInCart) {
       productInCart.quantity -= 1
     }
-  }
+  },
+  setCartItems: (state, cart) => (state.cart = cart)
 }
 
 export default {

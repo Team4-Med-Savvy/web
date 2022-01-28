@@ -3,7 +3,7 @@
         <div><Navbar/></div>
         <div><SubNavbar/></div>
         <div class="container text-center d-flex align-items-strech flex-wrap" >
-            <product-item v-for="product in allProducts._embedded.products" :key="product.id" :product="product"/>
+            <product-item v-for="product in allProducts" :key="product.id" :product="product"/>
         </div>
         <div><Footer/></div>
     </div>
@@ -23,8 +23,10 @@ export default {
     ProductItem
   },
   computed: mapGetters(['allProducts']),
-  mounted () {
-    this.$store.dispatch('getProducts')
+  created () {
+    console.log('category -- ', this.$route.params.category)
+    // let category = this.$route.params.category
+    // this.$store.dispatch('getProducts', category)
   }
 }
 </script>
