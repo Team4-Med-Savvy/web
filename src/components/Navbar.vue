@@ -55,8 +55,8 @@ export default {
       console.log(this.$router)
     },
     gocart (email) {
-      console.log(this.email, 'cartcall')
-      this.$router.push('/cart/email' + email)
+      console.log(this.email, 'helloooo')
+      this.$router.push('/cart/email/' + email)
       console.log(this.$router)
     }
   }

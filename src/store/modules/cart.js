@@ -5,14 +5,14 @@ const state = {
 }
 
 const getters = {
-  cart: state => state.cart,
-  cartTotalPrice: state => {
-    let sum = 0
-    state.cart.forEach(item => {
-      sum += item.productDescription.price * item.quantity
-    })
-    return sum
-  }
+  cart: state => state.cart
+  // cartTotalPrice: state => {
+  //   let sum = 0
+  //   state.cart.forEach(item => {
+  //     sum += item.productDescription.price * item.quantity
+  //   })
+  //   return sum
+  // }
 }
 
 const actions = {
@@ -40,9 +40,11 @@ const actions = {
   async decrement ({commit}, {productDescription, quantity}) {
     commit('decrementQuantity', {productDescription, quantity})
   },
-  async getCartItems ({commit}) {
-    const response = await axios.get(`http://localhost:8186/cart/email/:email`)
-    commit('setProducts', response.data)
+  async getCartItems ({commit}, cartEmail) {
+    console.log(cartEmail, 'action')
+    const response = await axios.get(`http://localhost:8186/cart/email/${cartEmail}`)
+    commit('setCartItems', response.data)
+    console.log('Action end', response.data)
   }
 
 }

@@ -40,7 +40,10 @@
                 </div>
         </div>
         <div>
-            <Recommendation/>
+            <h1 class="font-weight-light text-center my-3 pt-5 text-info" style="font-family: 'Trebuchet MS', sans-serif;">Recommendations</h1>
+            <div class="cover">
+            <recommendation v-for="recom in recommendations" :key="recom.id" :recom="recom"/>
+            </div>
         </div>
         <div class="footer">
             <Footer/>
@@ -48,6 +51,7 @@
     </div>
 </template>
 <script>
+import {mapGetters} from 'vuex'
 import Navbar from './Navbar'
 import SubNavbar from './SubNavbar.vue'
 import Footer from './Footer.vue'
@@ -65,7 +69,11 @@ export default {
       this.$router.push('/productlist')
       console.log(this.$router)
     }
-  }
+  },
+  mounted () {
+    this.$store.dispatch('getRecommendations')
+  },
+  computed: mapGetters(['recommendations'])
 }
 </script>
 <style scoped>
@@ -85,5 +93,8 @@ export default {
     cursor:pointer;
     width: 100%;
   height: 200px;
+}
+.cover{
+    display: flex;
 }
 </style>

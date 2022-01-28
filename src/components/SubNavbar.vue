@@ -5,7 +5,7 @@
             <p>Covid Essentials</p>
         </div>
         <div class="category-image">
-            <div @click="goproductlist('Ayurvedic')"><img src="@/assets/category_image/ayurvedic_care.jpeg" alt=""></div>
+            <div @click="goproductlist('Ayurvedic care')"><img src="@/assets/category_image/ayurvedic_care.jpeg" alt=""></div>
             <p>Ayurvedic Care</p>
         </div>
         <div class="category-image">

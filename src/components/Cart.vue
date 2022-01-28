@@ -35,7 +35,7 @@
                        <tr>
                        <tr>
                         <td>Total</td>
-                        <td id="total">Price : {{cartTotalPrice}}</td>
+                        <!-- <td id="total">Price : {{cartTotalPrice}}</td> -->
                        </tr>
                     </table>
                     <button type="button" class="btn btn-success" @click="checkout()">Checkout</button>
@@ -73,9 +73,9 @@ export default {
     this.email = sessionStorage.getItem('email')
     this.currentUrl = window.location.href
     console.log(this.currentUrl, 'hi')
-  },
-  mounted () {
-    this.$store.dispatch('getCartItems')
+    let cartEmail = this.$route.params.email
+    console.log(cartEmail, 'cart')
+    this.$store.dispatch('getCartItems', cartEmail)
   },
   methods: {
     removeProduct (productDescription) {
