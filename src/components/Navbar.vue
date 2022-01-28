@@ -60,9 +60,14 @@ export default {
       console.log(this.$router)
     },
     gocart (email) {
-      console.log(this.email, 'cart navbar')
-      this.$router.push('/cart/email/' + email)
-      console.log(this.$router)
+      console.log(email, 'cart navbar')
+      if (!email) {
+        console.log(email)
+        this.$router.push('/empty')
+      } else {
+        this.$router.push('/cart/email/' + email)
+        console.log(this.$router)
+      }
     },
     gologout () {
       localStorage.removeItem('token')

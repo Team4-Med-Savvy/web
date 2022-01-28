@@ -11,6 +11,7 @@ import Profile from '@/components/Profile'
 import ProductHistory from '@/components/ProductHistory'
 import Test from '@/components/test'
 import ProductTrial from '@/components/ProductTrial'
+import EmptyCart from '@/components/EmptyCart'
 
 Vue.use(Router)
 
@@ -73,6 +74,11 @@ export default new Router({
       path: '/trail',
       name: 'ProductTrial',
       component: ProductTrial
+    },
+    {
+      path: '/empty',
+      name: 'EmptyCart',
+      component: EmptyCart
     }
   ]
 })
