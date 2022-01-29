@@ -27,7 +27,7 @@ const actions = {
     commit('removeFromCart', productDescription)
   },
   async increment ({commit}, {merchantId, quantity, productId, email, id, price}) {
-    commit('incrementQuantity', {id, quantity})
+    commit('incrementQuantity', {id, quantity, price})
     axios.post('http://localhost:8186/cart/' + email + '/inc', {
       productId: productId,
       merchantId: merchantId,
@@ -43,6 +43,17 @@ const actions = {
     const response = await axios.get(`http://localhost:8186/cart/email/${cartEmail}`)
     commit('setCartItems', response.data)
     console.log('Action end', response.data)
+  },
+  async checkout ({commit}, {userId, date, totalPrice, p}) {
+    console.log(userId, date, totalPrice, p)
+    console.log('price', totalPrice)
+    console.log('date', date)
+    axios.post('http://localhost:8187/order', {
+      userId: userId,
+      timeStamp: date,
+      total: totalPrice,
+      products: p
+    }).then((res) => console.log('checkout done'))
   }
 
 }

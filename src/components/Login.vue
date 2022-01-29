@@ -85,6 +85,7 @@ export default {
           sessionStorage.setItem('name', result.data.name)
           sessionStorage.setItem('email', result.data.email)
           sessionStorage.setItem('points', result.data.points)
+          sessionStorage.setItem('userId', result.data.id)
           this.$router.push('/')
           console.warn(result)
         })

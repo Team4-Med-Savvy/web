@@ -1,6 +1,6 @@
 <template>
     <div class="cover">
-    <div class="container">
+     <div class="container">
         <div class="row text-center py-5 d-flex flex-nowrap overflow-auto scrollbar">
             <div class="col-12 col-md-4">
                 <div class="card shadow h-100 item">
@@ -8,16 +8,15 @@
                     <div class="card-body">
                         <div class="card-title" ><h4>Name- {{recom.title}}</h4></div>
                         <div class="card-text" style="font-family: 'Trebuchet MS', sans-serif;">{{recom.price}}</div>
-                        <!-- <div><button type="button" class="btn btn-success mt-2">More...</button></div> -->
                     </div>
                     <a href="#" class="stretched-link"></a>
                 </div>
             </div>
         </div>
     </div>
-    <div class="container text-center d-flex align-items-strech flex-wrap" >
+     <!-- <div class="container text-center d-flex align-items-strech flex-wrap" >
             <product-item v-for="product in allProducts" :key="product.id" :product="product"/>
-        </div>
+        </div> -->
     </div>
 </template>
 <script>
@@ -32,6 +31,8 @@ export default {
 }
 .container{
     margin-bottom:100px;
+    position: -webkit-sticky;
+    position: sticky;
 }
 .item{
     width:300px;
