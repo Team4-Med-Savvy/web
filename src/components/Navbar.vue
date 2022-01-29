@@ -12,7 +12,8 @@
         </button>
             <div class="collapse navbar-collapse flex-grow-0" id="collapseNav">
                 <div class="navbar-nav"  >
-                  <input class="form-control my-0 py-1 amber-border" type="text" placeholder="Search.." name="search">
+                  <input class="form-control my-0 py-1 amber-border" type="text" placeholder="Search.." name="search" size="50">
+                  <div>&nbsp;&nbsp;&nbsp;</div>
                   <button type="submit" class="btn btn-secondary"><i class="fa fa-search"></i></button>
                   <b-nav-item class="nav-item nav-link h6 mx-3 my-auto" @click="goabout()">About</b-nav-item>
                   <!-- <b-nav-item class="nav-item nav-link h6 mx-3 my-auto" @click="goprofile()">Profile</b-nav-item> -->
@@ -109,4 +110,5 @@ a.nav-link{
 .fas{
   color: whitesmoke;
 }
+
 </style>
