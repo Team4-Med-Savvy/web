@@ -24,43 +24,32 @@
     >
       <!-- Text slides with image -->
       <b-carousel-slide
-        caption="First slide"
+        caption="Covid Essentials"
         text="Nulla vitae elit libero, a pharetra augue mollis interdum."
-        img-src="@/assets/category_image/Covid_essential.jpg"
+        img-src="https://www.linkpicture.com/q/Covid_essential.jpg"
       ></b-carousel-slide>
 
       <!-- Slides with custom text -->
-      <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=54">
-        <h1>Hello world!</h1>
+      <b-carousel-slide img-src="https://www.linkpicture.com/q/Webp.net-resizeimage_47.jpg"
+        caption="Ayurvedic Care"
+        text="Nulla vitae elit libero, a pharetra augue mollis interdum.">
       </b-carousel-slide>
 
       <!-- Slides with image only -->
-      <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=58"></b-carousel-slide>
+      <b-carousel-slide img-src="https://www.linkpicture.com/q/Webp.net-resizeimage-1_1.jpg"
+      caption="Surgicals"
+       text="Nulla vitae elit libero, a pharetra augue mollis interdum."
+      ></b-carousel-slide>
 
-      <!-- Slides with img slot -->
-      <!-- Note the classes .d-block and .img-fluid to prevent browser default image alignment -->
-      <b-carousel-slide>
-        <template #img>
-          <img
-            class="d-block img-fluid w-100"
-            width="1024"
-            height="480"
-            src="https://picsum.photos/1024/480/?image=55"
-            alt="image slot"
-          >
-        </template>
-      </b-carousel-slide>
+      <b-carousel-slide img-src="https://www.linkpicture.com/q/Webp.net-resizeimage-3.jpg"
+      caption="Skin Care"
+       text="Nulla vitae elit libero, a pharetra augue mollis interdum."
+      ></b-carousel-slide>
 
-      <!-- Slide with blank fluid image to maintain slide aspect ratio -->
-      <b-carousel-slide caption="Blank Image" img-blank img-alt="Blank image">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eros felis, tincidunt
-          a tincidunt eget, convallis vel est. Ut pellentesque ut lacus vel interdum.
-        </p>
-      </b-carousel-slide>
-      <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=54">
-        <h1>Hello world!</h1>
-      </b-carousel-slide>
+      <b-carousel-slide img-src="https://www.linkpicture.com/q/Webp.net-resizeimage-5_3.jpg"
+      caption="Pet Care"
+       text="Nulla vitae elit libero, a pharetra augue mollis interdum."
+      ></b-carousel-slide>
     </b-carousel>
 
     <!-- <p class="mt-4">
