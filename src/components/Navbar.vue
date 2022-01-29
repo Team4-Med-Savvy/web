@@ -15,9 +15,10 @@
                   <input class="form-control my-0 py-1 amber-border" type="text" placeholder="Search.." name="search">
                   <button type="submit" class="btn btn-secondary"><i class="fa fa-search"></i></button>
                   <b-nav-item class="nav-item nav-link h6 mx-3 my-auto" @click="goabout()">About</b-nav-item>
-                  <b-nav-item class="nav-item nav-link h6 mx-3 my-auto" @click="goprofile()">Profile</b-nav-item>
+                  <!-- <b-nav-item class="nav-item nav-link h6 mx-3 my-auto" @click="goprofile()">Profile</b-nav-item> -->
+                  <div @click="goprofile()" class="cart"><img src="@/assets/user.jpeg" alt="" height="50px" width="50px"></div>
                   <b-nav-item class="nav-item nav-link h6 mx-3 my-auto" v-if="isLoggedIn" @click="gologout()">Logout</b-nav-item>
-                  <b-nav-item class="nav-item nav-link h6 mx-3 my-auto" v-else @click="gologin()">Login <i class="fas fa-sign-in-alt"></i></b-nav-item>
+                  <b-nav-item class="nav-item nav-link h6 mx-3 my-auto" v-else @click="gologin()">Login</b-nav-item>
                   <div @click="gocart(email)" class="cart"><img src="@/assets/cart.jpeg" alt="" height="50px" width="50px"></div>
               </div>
         </div>
@@ -104,5 +105,8 @@ a.nav-link{
 }
 .user-image{
   border-radius: 50%;
+}
+.fas{
+  color: whitesmoke;
 }
 </style>
