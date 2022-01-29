@@ -5,7 +5,8 @@ const state = {
   productDescription: [],
   categories: [],
   recommendations: [],
-  orders: []
+  orders: [],
+  productHistory: []
 }
 
 const getters = {
@@ -13,7 +14,8 @@ const getters = {
   productDescription: state => state.productDescription,
   allCategories: state => state.categories,
   recommendations: state => state.recommendations,
-  allOrders: state => state.orders
+  allOrders: state => state.orders,
+  productHistory: state => state.productHistory
 }
 
 const actions = {
@@ -33,6 +35,11 @@ const actions = {
     console.log('userid action', userId)
     const response = await axios.get(`http://localhost:8187/order/user/${userId}`)
     commit('setOrderHistory', response.data)
+  },
+  async getProductHistory ({commit}, orderId) {
+    console.log('orderid action', orderId)
+    const response = await axios.get(`http://localhost:8187/orderedproducts/${orderId}`)
+    commit('setProductHistory', response.data)
   }
 
 }
@@ -41,7 +48,8 @@ const mutations = {
   setProductDescription: (state, productDescription) => (state.productDescription = productDescription),
   setCategories: (state, categories) => (state.categories = categories),
   setRecommendations: (state, recommendations) => (state.recommendations = recommendations),
-  setOrderHistory: (state, orders) => (state.orders = orders)
+  setOrderHistory: (state, orders) => (state.orders = orders),
+  setProductHistory: (state, productHistory) => (state.productHistory = productHistory)
 }
 
 export default {

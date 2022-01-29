@@ -3,10 +3,10 @@
         <div><Navbar/></div>
         <div><SubNavbar/></div>
         <div class="content-body">
-            <div class="product-info">
-                <ProductInfo/>
-
+              <div class="main" >
+                 <product-info v-for="i in productHistory" :key="i.productId" :i="i"/>
             </div>
+
         </div>
         <div class="footer"><Footer/></div>
     </div>
@@ -16,17 +16,27 @@ import Navbar from './Navbar'
 import SubNavbar from './SubNavbar.vue'
 import Footer from './Footer.vue'
 import ProductHistory from './ProductHistory.vue'
+import OrderHistory from './OrderHistory.vue'
 import ProductInfo from './ProductInfo.vue'
+import {mapGetters} from 'vuex'
 
 export default {
   name: 'profile',
+  props: ['id'],
   components: {
     Navbar,
     SubNavbar,
     Footer,
     ProductHistory,
+    OrderHistory,
     ProductInfo
-  }
+  },
+  created () {
+    let orderId = this.$route.params.id
+    console.log(orderId)
+    this.$store.dispatch('getProductHistory', orderId)
+  },
+  computed: mapGetters(['productHistory'])
 }
 </script>
 <style scoped>
@@ -59,10 +69,6 @@ h4{
 p{
     font-family: cursive;
     font-size: 20px;
-}
-.product-info{
-    margin-left: 50px;
-    margin-top: 40px;
 }
 
 </style>

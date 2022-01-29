@@ -8,8 +8,8 @@
                         </div>
                         <div class="card-text text-center" style="font-family: Georgia, serif; font-size:20px">Time stamp :{{item.timeStamp}}</div>
                     </div>
-                    <router-link :to="{name: 'ProductHistory'}" class="stretched-link"></router-link>
-                    <!-- <a href="/#/product" class="stretched-link"></a> -->
+                    <router-link :to="{name: 'ProductHistory', params: {id: item.id}}" class="stretched-link"></router-link>
+                    <!-- <a href="/#/producthistory" class="stretched-link" @click="productHistory(item.id)"></a> -->
                 </div>
         </div>
 </template>

@@ -1,16 +1,17 @@
 <template>
     <div class="product-info">
-        <span><img src="@/assets/gandhi.jpeg" alt="" height="140px" width="140px"></span>
+        <span><img :src="i.imageUrl" alt="" height="140px" width="140px"></span>
         <div class="details">
-            <p>Product Name - </p>
-            <p>Price - </p>
-            <p>Merchant Name - </p>
+            <p>Product Name - {{i.name}} </p>
+            <p>Amount - {{i.amount}}</p>
+            <p>Quantity - {{i.quantity}}</p>
         </div>
     </div>
 </template>
 <script>
 export default {
-  name: 'ProductInfo'
+  name: 'ProductInfo',
+  props: ['i']
 }
 </script>
 <style scoped>
@@ -23,12 +24,18 @@ span{
 }
 .details{
     margin-left: 70px;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-bottom: 50px;
 }
 h4{
     padding-bottom: 15px;
 }
 p{
     font-size: 20px;
+}
+.product-info{
+    margin-left: 190px;
+    margin-top: 60px;
+    margin-bottom: 200px;
 }
 </style>
