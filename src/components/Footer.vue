@@ -23,7 +23,7 @@
                 </div>
             </div>
         <div class=" font-weight-bold py-1">
-                <p>Copyright © Medsavvy 2022</p>
+          <p>Copyright © Medsavvy 2022</p>
         </div>
       </div>
     </footer>

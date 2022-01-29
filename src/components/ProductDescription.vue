@@ -36,7 +36,6 @@ import Navbar from './Navbar.vue'
 import SubNavbar from './SubNavbar.vue'
 import Footer from './Footer.vue'
 import Merchants from './Merchants.vue'
-
 export default {
   name: 'ProductDescription',
   props: ['id'],
