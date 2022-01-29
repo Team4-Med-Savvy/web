@@ -36,7 +36,7 @@ import Navbar from './Navbar.vue'
 import SubNavbar from './SubNavbar.vue'
 import Footer from './Footer.vue'
 import Merchants from './Merchants.vue'
-
+import swal from 'sweetalert'
 export default {
   name: 'ProductDescription',
   props: ['id'],
@@ -69,6 +69,7 @@ export default {
         email: this.email,
         currentUrl: this.currentUrl.split('/')[5]
       })
+      swal('Congratulations', 'Item was added to your cart', 'success')
     }
   }
 }

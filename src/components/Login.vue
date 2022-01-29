@@ -87,7 +87,10 @@ export default {
           sessionStorage.setItem('points', result.data.points)
           sessionStorage.setItem('userId', result.data.id)
           this.$router.push('/')
-          console.warn(result)
+        })
+        .catch((err) => {
+          console.log(err.message)
+          return alert('Invalid Email/Password')
         })
       e.preventDefault()
     }
