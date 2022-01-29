@@ -120,6 +120,6 @@ th{
   background-color:#E3E2DF;
 }
 h1{
-  color:#EE4C7C;
+  color:#EE4C7C !important;
 }
 </style>

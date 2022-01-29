@@ -3,6 +3,7 @@
         <div><Navbar/></div>
         <div><SubNavbar/></div>
         <div class="content-body">
+
 <div class="user-profile">
 <div class="username"><h4>Name : {{user.name}}</h4><p> &nbsp;</p></div>
 <div class="username"><h4>Email : {{user.email}}</h4><p> &nbsp;</p></div>
@@ -10,16 +11,13 @@
 <div class="username"><h4>Membership :</h4><p> &nbsp;</p></div>
 </div>
 
- <div class="order-history">
-                <OrderHistory class="pb-4"/>
-                <OrderHistory class="pb-4"/>
-                <OrderHistory class="pb-4"/>
-                <OrderHistory class="pb-4"/>
-                <OrderHistory class="pb-4"/>
-                <OrderHistory class="pb-4"/>
-                <OrderHistory class="pb-4"/>
+ <!-- <div class="order-history">
+      <OrderHistory class="pb-4"/>
 
-            </div>
+  </div> -->
+  <div class="main" >
+      <order-history v-for="item in allOrders" :key="item.id" :item="item"/>
+  </div>
 
             </div>
             <div class="footer"><Footer/></div>
@@ -32,6 +30,7 @@ import Footer from './Footer.vue'
 import ProductHistory from './ProductHistory.vue'
 import OrderHistory from './OrderHistory.vue'
 import ProfileProduct from './ProductInfo.vue'
+import {mapGetters} from 'vuex'
 
 export default {
   name: 'profile',
@@ -40,7 +39,8 @@ export default {
       user: {
         name: '',
         email: '',
-        points: ''
+        points: '',
+        userId: ''
       }
 
     }
@@ -57,7 +57,11 @@ export default {
     this.user.name = sessionStorage.getItem('name')
     this.user.email = sessionStorage.getItem('email')
     this.user.points = sessionStorage.getItem('points')
-  }
+    this.user.userId = sessionStorage.getItem('userId')
+    console.log(this.user.userId)
+    this.$store.dispatch('getOrderHistory', this.user.userId)
+  },
+  computed: { ...mapGetters(['allOrders']) }
 }
 </script>
 <style scoped>
@@ -91,7 +95,7 @@ p{
     font-family: cursive;
     font-size: 20px;
 }
-.order-history{
+.main{
     margin-left: 150px;
     margin-top: 80px;
     margin-bottom: 45px;

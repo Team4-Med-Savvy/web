@@ -1,8 +1,5 @@
 <template>
-    <div class="cover">
-     <div class="container">
-        <div class="row text-center py-5 d-flex flex-nowrap overflow-auto scrollbar">
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-md-3 ">
                 <div class="card shadow h-100 item">
                   <img class="card-img-top img-fluid recomImg" :src="recom.image" alt="carrot">
                     <div class="card-body">
@@ -12,12 +9,6 @@
                     <a href="#" class="stretched-link"></a>
                 </div>
             </div>
-        </div>
-    </div>
-     <!-- <div class="container text-center d-flex align-items-strech flex-wrap" >
-            <product-item v-for="product in allProducts" :key="product.id" :product="product"/>
-        </div> -->
-    </div>
 </template>
 <script>
 export default {
