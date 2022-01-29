@@ -1,8 +1,8 @@
 <template>
-<div>
+<div class="main-body">
   <Navbar/>
   <div class="container">
-     <h1 class="text-center text-info py-3">Cart</h1>
+     <h1 class="text-center text-info py-3" id="cart">Cart</h1>
      <table class="table center-content">
         <tr>
           <th>Image</th>
@@ -103,5 +103,10 @@ th{
     background: rgb(243, 144, 114);
     font-size: 20px;
 }
-
+.main-body{
+  background-color:#E3E2DF;
+}
+h1{
+  color:#EE4C7C;
+}
 </style>

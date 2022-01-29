@@ -28,8 +28,8 @@ export default {
 </script>
 <style scoped>
 .scrollbar::-webkit-scrollbar{
-            display: none;
-        }
+    display: none;
+}
 .container{
     margin-bottom:100px;
 }
