@@ -9,7 +9,7 @@
     <div class="content-area">
       <div class="content">
         <h1>About Us</h1>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim incidunt minima, ratione iste veritatis voluptas, molestias facilis at sit quos dicta atque cupiditate architecto, magnam quaerat non accusamus modi adipisci?</p>
+        <p>MedSavvy. We help you look after your own health effortlessly as well as take care of loved ones wherever they may reside in India. You can buy and send medicines from any corner of the country - with just a few clicks of the mouse. At MedSavvy, we make a wide range of prescription medicines and other health products conveniently available all across India. We not only provide you with a wide range of medicines listed under various categories, we also offer a wide choice of OTC products including wellness products, vitamins, diet/fitness supplements, herbal products, pain relievers, diabetic care kits, baby/mother care products, beauty care products and surgical supplies.</p>
       </div>
       <div class="content-image">
         <img src="@/assets/logo2.png" class="company-logo" alt="" height="250px" width="300px">

@@ -25,30 +25,25 @@
       <!-- Text slides with image -->
       <b-carousel-slide
         caption="Covid Essentials"
-        text="Nulla vitae elit libero, a pharetra augue mollis interdum."
         img-src="https://www.linkpicture.com/q/Covid_essential.jpg"
       ></b-carousel-slide>
 
       <!-- Slides with custom text -->
       <b-carousel-slide img-src="https://www.linkpicture.com/q/Webp.net-resizeimage_47.jpg"
-        caption="Ayurvedic Care"
-        text="Nulla vitae elit libero, a pharetra augue mollis interdum.">
+        caption="Ayurvedic Care">
       </b-carousel-slide>
 
       <!-- Slides with image only -->
       <b-carousel-slide img-src="https://www.linkpicture.com/q/Webp.net-resizeimage-1_1.jpg"
       caption="Surgicals"
-       text="Nulla vitae elit libero, a pharetra augue mollis interdum."
       ></b-carousel-slide>
 
       <b-carousel-slide img-src="https://www.linkpicture.com/q/Webp.net-resizeimage-3.jpg"
       caption="Skin Care"
-       text="Nulla vitae elit libero, a pharetra augue mollis interdum."
       ></b-carousel-slide>
 
       <b-carousel-slide img-src="https://www.linkpicture.com/q/Webp.net-resizeimage-5_3.jpg"
       caption="Pet Care"
-       text="Nulla vitae elit libero, a pharetra augue mollis interdum."
       ></b-carousel-slide>
     </b-carousel>
 

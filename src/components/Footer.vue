@@ -12,10 +12,10 @@
                     <p class=" font-weight-bold pb-3 d-block">We are offering Helath Care Services of Five different Categories</p>
                 </div>
                 <div class="col-12 col-md-4 pb-5">
-                    <p class=" font-weight-bold pb-3 h5 d-block" id="heading">USEFUL LINKS</p>
-                    <a href="https://www.w3schools.com/css/" class=" font-weight-bold pb-3 d-block">Refer CSS Here</a>
+                    <!-- <p class=" font-weight-bold pb-3 h5 d-block" id="heading">USEFUL LINKS</p> -->
+                    <!-- <a href="https://www.w3schools.com/css/" class=" font-weight-bold pb-3 d-block">Refer CSS Here</a>
                     <a href="https://getbootstrap.com/" class=" font-weight-bold pb-3 d-block"> Refer BootStrap Here</a>
-                    <a href="https://vuejs.org/" class=" font-weight-bold pb-3 d-block">Refer VueJs Here</a>
+                    <a href="https://vuejs.org/" class=" font-weight-bold pb-3 d-block">Refer VueJs Here</a> -->
                 </div>
                 <div class="col-12 col-md-4 pb-5">
                   <p class=" font-weight-bold pb-3 h5 d-block" id="heading">SOURCE CODE</p>
