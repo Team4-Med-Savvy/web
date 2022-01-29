@@ -33,6 +33,6 @@ h4{
     font-family: cursive;
 }
 .card-body{
-    background: linear-gradient(to bottom left, #0099ff 0%, #ff99cc 100%);
+    background-color:#edc7b7;
 }
 </style>

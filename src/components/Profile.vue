@@ -75,7 +75,7 @@ export default {
     padding-right: 50px;
     width: 450px;
     height: 30%;
-    background-color: #5D001E;
+    background-color: #5a5660;
     color:whitesmoke;
     position: -webkit-sticky;
     position: sticky;
