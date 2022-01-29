@@ -17,41 +17,41 @@
     </div>
     <div class="namelist-2">
       <div class="container">
-      <img src="@/assets/gandhi.jpeg" alt="Avatar" class="image" height="50px" width="50px">
+      <img src="@/assets/user.jpeg" alt="Avatar" class="image" height="50px" width="50px">
       <div class="middle">
-        <div class="text">Gandhi</div>
+        <div class="text">Palak</div>
       </div>
     </div>
     <div class="container">
-      <img src="@/assets/gandhi.jpeg" alt="Avatar" class="image" height="50px" width="50px">
+      <img src="@/assets/user.jpeg" alt="Avatar" class="image" height="50px" width="50px">
       <div class="middle">
-        <div class="text">Gandhi</div>
+        <div class="text">Jahnavi</div>
       </div>
     </div>
     <div class="container">
-      <img src="@/assets/gandhi.jpeg" alt="Avatar" class="image" height="50px" width="50px">
+      <img src="@/assets/user.jpeg" alt="Avatar" class="image" height="50px" width="50px">
       <div class="middle">
-        <div class="text">Gandhi</div>
+        <div class="text">Vijaya</div>
       </div>
     </div>
     </div>
     <div class="namelist-1">
       <div class="container">
-      <img src="@/assets/gandhi.jpeg" alt="Avatar" class="image" height="50px" width="50px">
+      <img src="@/assets/user.jpeg" alt="Avatar" class="image" height="50px" width="50px">
       <div class="middle">
-        <div class="text">Gandhi</div>
+        <div class="text">Vinay</div>
       </div>
     </div>
     <div class="container">
-      <img src="@/assets/gandhi.jpeg" alt="Avatar" class="image" height="50px" width="50px">
+      <img src="@/assets/user.jpeg" alt="Avatar" class="image" height="50px" width="50px">
       <div class="middle">
-        <div class="text">Gandhi</div>
+        <div class="text">Anush</div>
       </div>
     </div>
     <div class="container">
-      <img src="@/assets/gandhi.jpeg" alt="Avatar" class="image" height="50px" width="50px">
+      <img src="@/assets/user.jpeg" alt="Avatar" class="image" height="50px" width="50px">
       <div class="middle">
-        <div class="text">Gandhi</div>
+        <div class="text">Saurav</div>
       </div>
     </div>
     </div>

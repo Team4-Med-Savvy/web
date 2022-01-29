@@ -3,10 +3,10 @@
                 <div class="card shadow h-100">
                     <div class="card-body">
                         <div class="card-title py-3" >
-                            <h4 class="px-5">Order ID : 1</h4>
-                            <p class="px-5">Total amount : 150</p>
+                            <h4 class="px-5">Order ID  - {{item.id}}</h4>
+                            <p class="px-5">Total amount :{{item.total}}</p>
                         </div>
-                        <div class="card-text text-center" style="font-family: Georgia, serif; font-size:20px">Time stamp : 2038-01-19 03:14:07</div>
+                        <div class="card-text text-center" style="font-family: Georgia, serif; font-size:20px">Time stamp :{{item.timeStamp}}</div>
                     </div>
                     <router-link :to="{name: 'ProductHistory'}" class="stretched-link"></router-link>
                     <!-- <a href="/#/product" class="stretched-link"></a> -->
@@ -15,7 +15,8 @@
 </template>
 <script>
 export default{
-  name: 'OrderHistory'
+  name: 'OrderHistory',
+  props: ['item']
 }
 </script>
 <style scoped>

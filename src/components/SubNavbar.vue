@@ -18,7 +18,7 @@
         </div>
         <div class="category-image">
             <div @click="goproductlist('Personal care')"><img src="@/assets/category_image/personal_care.jpeg" alt=""></div>
-            <p>Personal Care</p>
+            <p>Pet Care</p>
         </div>
     </div>
 </template>
