@@ -17,7 +17,7 @@
                   <b-nav-item class="nav-item nav-link h6 mx-3 my-auto" @click="goabout()">About</b-nav-item>
                   <b-nav-item class="nav-item nav-link h6 mx-3 my-auto" @click="goprofile()">Profile</b-nav-item>
                   <b-nav-item class="nav-item nav-link h6 mx-3 my-auto" v-if="isLoggedIn" @click="gologout()">Logout</b-nav-item>
-                  <b-nav-item class="nav-item nav-link h6 mx-3 my-auto" v-else @click="gologin()">Login</b-nav-item>
+                  <b-nav-item class="nav-item nav-link h6 mx-3 my-auto" v-else @click="gologin()">Login <i class="fas fa-sign-in-alt"></i></b-nav-item>
                   <div @click="gocart(email)" class="cart"><img src="@/assets/cart.jpeg" alt="" height="50px" width="50px"></div>
               </div>
         </div>
@@ -101,5 +101,8 @@ background-color:#5D001E;
 }
 a.nav-link{
   color:#E3E2DF;
+}
+.user-image{
+  border-radius: 50%;
 }
 </style>

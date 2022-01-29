@@ -7,18 +7,12 @@
         crossorigin="anonymous">
       <div class="container-fluid text-center" style="background-color: #9a1750">
           <div class="row pt-5" style="background-color: #9a1750;">
-                <div class="col-12 col-md-4 pb-5">
-                    <p class=" font-weight-bold pb-3 h5 d-block" id="heading">MEDSAVVY</p>
+                <div class="col-12 col-md-6 pb-5">
+                    <h3 class=" font-weight-bold pb-3 h5 d-block" id="heading">MEDSAVVY</h3>
                     <p class=" font-weight-bold pb-3 d-block">We are offering Helath Care Services of Five different Categories</p>
                 </div>
-                <div class="col-12 col-md-4 pb-5">
-                    <!-- <p class=" font-weight-bold pb-3 h5 d-block" id="heading">USEFUL LINKS</p> -->
-                    <!-- <a href="https://www.w3schools.com/css/" class=" font-weight-bold pb-3 d-block">Refer CSS Here</a>
-                    <a href="https://getbootstrap.com/" class=" font-weight-bold pb-3 d-block"> Refer BootStrap Here</a>
-                    <a href="https://vuejs.org/" class=" font-weight-bold pb-3 d-block">Refer VueJs Here</a> -->
-                </div>
-                <div class="col-12 col-md-4 pb-5">
-                  <p class=" font-weight-bold pb-3 h5 d-block" id="heading">SOURCE CODE</p>
+                <div class="col-12 col-md-6 pb-5">
+                  <h3 class=" font-weight-bold pb-3 h5 d-block" id="heading">SOURCE CODE</h3>
                   <a class="bg-white text-black fa-2x" href="https://github.com/Team4-Med-Savvy/web"><i class="fab fa-github"></i></a>
                 </div>
             </div>
