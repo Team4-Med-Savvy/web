@@ -56,6 +56,7 @@ import Footer from '@/components/Footer'
 import Vue from 'vue'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
+import swal from 'sweetalert'
 Vue.use(VueAxios, axios)
 export default {
   name: 'App',
@@ -90,7 +91,8 @@ export default {
         })
         .catch((err) => {
           console.log(err.message)
-          return alert('Invalid Email/Password')
+          // return alert('Invalid Email/Password')
+          return swal('', 'Invalid Email/Password', 'error')
         })
       e.preventDefault()
     }

@@ -43,6 +43,7 @@ import SubNavbar from './SubNavbar.vue'
 import Footer from './Footer.vue'
 import Vue from 'vue'
 import axios from 'axios'
+import swal from 'sweetalert'
 import VueAxios from 'vue-axios'
 Vue.use(VueAxios, axios)
 export default {
@@ -69,6 +70,10 @@ export default {
           console.warn(result)
           this.prodl.email = this.posts.email
           this.axios.post('http://localhost:8186/cart', this.prodl)
+        })
+        .catch((err) => {
+          console.log(err.message)
+          return swal('', 'Email already registered', 'error')
         })
       e.preventDefault()
     }
