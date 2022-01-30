@@ -26,7 +26,7 @@ const actions = {
     commit('setProducts', response.data)
   },
   async getProductDescription ({commit}, id) {
-    const response = await axios.get(`http://10.177.1.70:8184/products/${id}`)
+    const response = await axios.get(`http://10.177.1.70:8184/product/${id}`)
     commit('setProductDescription', response.data)
   },
   async getRecommendations ({commit}) {

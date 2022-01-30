@@ -17,7 +17,7 @@
                   <button type="submit" class="btn btn-secondary"><i class="fa fa-search"></i></button>
                   <b-nav-item class="nav-item nav-link h6 mx-3 my-auto" @click="goabout()">About</b-nav-item>
                   <!-- <b-nav-item class="nav-item nav-link h6 mx-3 my-auto" @click="goprofile()">Profile</b-nav-item> -->
-                  <div @click="goprofile()" class="cart"><img src="@/assets/user.jpeg" alt="" height="50px" width="50px"></div>
+                  <div v-if="isLoggedIn" @click="goprofile()" class="cart"><img src="@/assets/user.jpeg" alt="" height="50px" width="50px"></div>
                   <b-nav-item class="nav-item nav-link h6 mx-3 my-auto" v-if="isLoggedIn" @click="gologout()">Logout</b-nav-item>
                   <b-nav-item class="nav-item nav-link h6 mx-3 my-auto" v-else @click="gologin()">Login</b-nav-item>
                   <div @click="gocart(email)" class="cart"><img src="@/assets/cart.jpeg" alt="" height="50px" width="50px"></div>

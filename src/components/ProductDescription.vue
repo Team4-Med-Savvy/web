@@ -7,15 +7,15 @@
             <img :src="productDescription.image" alt="" height="450px"  width="300px">
           </div>
           <div class="col-8">
-            <h1>Product Title - {{productDescription.title}}</h1>
-            <h3>Product price - {{productDescription.price}}</h3>
-            <p>Product Description - {{productDescription.category}}</p>
-            <h2 class="pt-3">Rating</h2>
+            <h1>{{productDescription.title}}</h1>
+            <h3>Price:- ₹ {{productDescription.price}}</h3>
+            <p> <b>Product Description</b> - {{productDescription.description}}</p>
+            <!-- <h2 class="pt-3">Rating</h2>
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star"></span>
-                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span> -->
                 <br><br>
             <button type="button" @click="clickCart()" class="btn btn-info">
                 <span class="glyphicon> glyphicon-shopping-cart"></span>
@@ -50,7 +50,8 @@ export default {
   },
   computed: {
     ...mapGetters(['productDescription']),
-    ...mapGetters(['merchantList'])},
+    ...mapGetters(['merchantList']),
+    ...mapGetters(['cart'])},
   mounted () {
     this.$store.dispatch('getProductDescription', this.id)
     console.log('hiiii', this.id)
@@ -74,7 +75,11 @@ export default {
         email: this.email,
         currentUrl: this.currentUrl.split('/')[5]
       })
-      swal('Congratulations', 'Item was added to your cart', 'success')
+      if (sessionStorage.getItem('email')) {
+        swal('Congratulations', 'Item was added to your cart', 'success')
+      } else {
+        swal('Login/Stock Out', '', 'error')
+      }
     }
   }
 }
