@@ -61,7 +61,7 @@ export default new Router({
       component: Profile
     },
     {
-      path: '/producthistory',
+      path: '/producthistory/:id',
       name: 'ProductHistory',
       component: ProductHistory
     },

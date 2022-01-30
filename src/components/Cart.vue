@@ -11,16 +11,17 @@
           <th>Quantity</th>
           <th>Total</th>
         </tr>
-        <tr class="center-content" v-for="item in cart.productList" :key="item.merchantId">
-          <td><img :src="item.name" height="100px" width="100px"></td>
+           <tr class="center-content" v-for="item in cart.productList" :key="item.id">
+          <td><img :src="item.image" height="100px" width="100px"></td>
           <td>Title - {{item.title}}</td>
           <td>Price - {{item.price}}</td>
           <td><button type="button" id="up" @click="increment(item.merchantId,item.quantity,item.productId,item.id, item.price)" class="btn btn-secondary text-black">+</button>
             <span id='myNumber'>{{item.quantity}}</span>
             <button type="button" id="down" @click="decrement(item.merchantId,item.quantity,item.productId,item.id, item.price)" class="btn btn-secondary text-black" >-</button>
           </td>
-          <td>{{item.price}}</td>
+          <td>{{productTotal(item.id, item.price, item.quantity)}}</td>
         </tr>
+
      </table>
      <div class="container center-content">
             <div class="row">
@@ -99,6 +100,9 @@ export default {
           window.location.href = '/cart'
         }
       )
+    },
+    productTotal (id, price, quantity) {
+      return price * quantity
     },
     types: ['vue-sweetalert2']
   }

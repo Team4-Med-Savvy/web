@@ -1,12 +1,12 @@
 <template>
-    <div>
+    <div class="main-body">
         <div><Navbar/></div>
         <div><SubNavbar/></div>
-    <div class="row mt-5 pb-5 px-5" v-if="productDescription">
-        <div class="col-4">
+        <div class="row mt-5 pb-5 px-5" v-if="productDescription">
+          <div class="col-4">
             <img :src="productDescription.image" alt="" height="450px"  width="300px">
-        </div>
-        <div class="col-8">
+          </div>
+          <div class="col-8">
             <h1>Product Title - {{productDescription.title}}</h1>
             <h3>Product price - {{productDescription.price}}</h3>
             <p>Product Description - {{productDescription.category}}</p>
@@ -22,12 +22,14 @@
                 <i class="fas fa-shopping-cart"></i>
                 <b> Add to Cart </b>
             </button>&nbsp;&nbsp;&nbsp;
-
-        </div>
-        <Merchants/>
-    </div>
-    <div><Footer/></div>
-    </div>
+            <!-- {{merchantList}} -->
+            <b-dropdown id="dropdown-header" text="Try Other Merchants" class="m-2">
+              <b-dropdown-item-button aria-describedby="dropdown-header-label"> <div v-for="merchant in merchantList.merchantProductDetailDtos" :key="merchant.id">Merchant: {{merchant.merchantId}}</div></b-dropdown-item-button>
+              </b-dropdown>
+            </div>
+          </div>
+          <div><Footer/></div>
+      </div>
 </template>
 <script>
 
@@ -47,9 +49,12 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(['productDescription'])},
+    ...mapGetters(['productDescription']),
+    ...mapGetters(['merchantList'])},
   mounted () {
     this.$store.dispatch('getProductDescription', this.id)
+    console.log('hiiii', this.id)
+    this.$store.dispatch('getMerchantList', this.id)
   },
   components: {
     Navbar,
@@ -74,3 +79,8 @@ export default {
   }
 }
 </script>
+<style scoped>
+.main-body{
+  background-color:#E3E2DF;
+}
+</style>

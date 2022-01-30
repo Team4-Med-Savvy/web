@@ -28,7 +28,6 @@ import SubNavbar from './SubNavbar.vue'
 import Footer from './Footer.vue'
 import ProductHistory from './ProductHistory.vue'
 import OrderHistory from './OrderHistory.vue'
-import ProfileProduct from './ProductInfo.vue'
 import {mapGetters} from 'vuex'
 
 export default {
@@ -49,8 +48,7 @@ export default {
     SubNavbar,
     Footer,
     ProductHistory,
-    OrderHistory,
-    ProfileProduct
+    OrderHistory
   },
   created () {
     this.user.name = sessionStorage.getItem('name')
