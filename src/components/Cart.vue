@@ -11,7 +11,7 @@
           <th>Quantity</th>
           <th>Total</th>
         </tr>
-           <tr class="center-content" v-for="item in cart.productList" :key="item.id">
+        <tr class="center-content" v-for="item in cart.productList" :key="item.id">
           <td><img :src="item.image" height="100px" width="100px"></td>
           <td>Title - {{item.title}}</td>
           <td>Price - {{item.price}}</td>
@@ -21,7 +21,6 @@
           </td>
           <td>{{productTotal(item.id, item.price, item.quantity)}}</td>
         </tr>
-
      </table>
      <div class="container center-content">
             <div class="row">
@@ -71,7 +70,7 @@ export default {
   created () {
     this.userId = sessionStorage.getItem('userId')
     console.log(this.userId)
-    this.date = Date.now().toString()
+    this.date = Date.now().toLocaleString()
     console.log('date', this.date)
     let cartEmail = this.$route.params.email
     console.log(cartEmail, 'created method')
@@ -97,7 +96,7 @@ export default {
       console.log('date', date)
       swal('Congratulations', 'Your order was placed successfully!', 'success').then(
         value => {
-          window.location.href = '/cart'
+          window.location.href = '#'
         }
       )
     },

@@ -3,7 +3,7 @@
         <span><img :src="i.imageUrl" alt="" height="140px" width="140px"></span>
         <div class="details px-5">
             <p>Product Name - {{i.name}} </p>
-            <p>Amount - {{i.amount}}</p>
+            <!-- <p>Amount - {{i.amount}}</p> -->
             <p>Quantity - {{i.quantity}}</p>
         </div>
     </div>
