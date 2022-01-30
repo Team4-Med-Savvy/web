@@ -77,9 +77,7 @@ const mutations = {
       return item.id === id
     })
     if (productInCart) {
-      // if(productInCart.quantity <= 0){
-      // }
-      // productInCart.price -= productInCart.price
+      productInCart.quantity -= 1
     }
   },
   setCartItems: (state, cart) => (state.cart = cart)
