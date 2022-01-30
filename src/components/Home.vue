@@ -19,32 +19,34 @@
       @sliding-end="onSlideEnd"
     >
       <!-- Text slides with image -->
-      <b-carousel-slide
+      <div @click="goproductlist('Covid essentials')"><b-carousel-slide
         caption="Covid Essentials"
         img-src="https://www.linkpicture.com/q/Covid_essential.jpg"
-      ></b-carousel-slide>
+      ></b-carousel-slide></div>
 
       <!-- Slides with custom text -->
-      <b-carousel-slide img-src="https://www.linkpicture.com/q/Webp.net-resizeimage_47.jpg"
+      <div @click="goproductlist('Ayurvedic care')"><b-carousel-slide img-src="https://www.linkpicture.com/q/Webp.net-resizeimage_47.jpg"
         caption="Ayurvedic Care">
-      </b-carousel-slide>
+      </b-carousel-slide></div>
 
       <!-- Slides with image only -->
-      <b-carousel-slide img-src="https://www.linkpicture.com/q/Webp.net-resizeimage-1_1.jpg"
+      <div @click="goproductlist('Surgical')"><b-carousel-slide img-src="https://www.linkpicture.com/q/Webp.net-resizeimage-1_1.jpg"
       caption="Surgicals"
-      ></b-carousel-slide>
+      ></b-carousel-slide></div>
 
-      <b-carousel-slide img-src="https://www.linkpicture.com/q/Webp.net-resizeimage-3.jpg"
+      <div @click="goproductlist('Skin care')"><b-carousel-slide img-src="https://www.linkpicture.com/q/Webp.net-resizeimage-3.jpg"
       caption="Skin Care"
-      ></b-carousel-slide>
+      ></b-carousel-slide></div>
 
-      <b-carousel-slide img-src="https://www.linkpicture.com/q/Webp.net-resizeimage-5_3.jpg"
+      <div @click="goproductlist('Personal care')">
+          <b-carousel-slide img-src="https://www.linkpicture.com/q/Webp.net-resizeimage-5_3.jpg"
       caption="Pet Care"
       ></b-carousel-slide>
+      </div>
     </b-carousel>
 
   </div>
-                </div>
+    </div>
         </div>
         <div>
             <h1 class="my-3 pt-5" id="rec">Recommendations</h1>
@@ -78,15 +80,17 @@ export default {
     }
   },
   methods: {
-    goproductlist () {
-      this.$router.push('/productlist')
-      console.log(this.$router)
-    },
     onSlideStart (slide) {
       this.sliding = true
     },
     onSlideEnd (slide) {
       this.sliding = false
+    },
+    goproductlist (category) {
+      this.$router.push('/product/findlist/' + category)
+      let categ = this.$route.params.category
+      this.$store.dispatch('getProducts', categ)
+      console.log(this.$router)
     }
   },
   mounted () {

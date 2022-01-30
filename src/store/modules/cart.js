@@ -77,7 +77,8 @@ const mutations = {
       return item.id === id
     })
     if (productInCart) {
-      productInCart.quantity -= 1
+      // if(productInCart.quantity <= 0){
+      // }
       // productInCart.price -= productInCart.price
     }
   },

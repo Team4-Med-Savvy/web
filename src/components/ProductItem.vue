@@ -1,7 +1,7 @@
 <template>
         <div class="col-12 col-md-3 my-3 px-2">
                 <div class="card shadow h-100">
-                  <img class="card-img-top img-fluid" :src="product.image" alt="carrot" height="200px">
+                  <img class="card-img-top " :src="product.image" alt="carrot" height="200px">
                     <div class="card-body">
                         <div class="card-title" ><h5>Title : {{product.title}}</h5></div>
                         <div class="card-text" style="font-family: 'Trebuchet MS', sans-serif;">Price - {{product.price}}</div>
