@@ -7,16 +7,16 @@
             <img :src="productDescription.image" alt="" height="450px"  width="300px">
           </div>
           <div class="col-8">
-            <h1>Product Title - {{productDescription.title}}</h1>
-            <h3>Product price - {{price}}</h3>
-            <p>Product Description - {{productDescription.category}}</p>
-            <h2 class="pt-3">Rating</h2>
+            <h1>{{productDescription.title}}</h1>
+            <h3>Price -  ₹ {{price}}</h3>
+            <p>Product Description - {{productDescription.description}}</p>
+            <!-- <h2 class="pt-3">Rating</h2>
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star"></span>
                 <span class="fa fa-star"></span>
-                <br><br>
+                <br><br> -->
             <button type="button" @click="clickCart()" class="btn btn-info">
                 <span class="glyphicon> glyphicon-shopping-cart"></span>
                 <i class="fas fa-shopping-cart"></i>

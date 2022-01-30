@@ -4,7 +4,7 @@
                   <img class="card-img-top img-fluid recomImg" :src="recom.image" alt="carrot">
                     <div class="card-body">
                         <div class="card-title" ><h4>Name- {{recom.title}}</h4></div>
-                        <div class="card-text" style="font-family: 'Trebuchet MS', sans-serif;">{{recom.price}}</div>
+                        <div class="card-text" style="font-family: 'Trebuchet MS', sans-serif;">₹ {{recom.price}}</div>
                     </div>
                     <a href="#" class="stretched-link"></a>
                 </div>
