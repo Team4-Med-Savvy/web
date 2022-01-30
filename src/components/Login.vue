@@ -80,7 +80,7 @@ export default {
       this.isLogin = this.$gAuth.isAuthorized
     },
     postData (e) {
-      this.axios.post('http://localhost:8183/user/authenticate', this.posts)
+      this.axios.post('http://10.177.1.70:8183/user/authenticate', this.posts)
         .then((result) => {
           localStorage.setItem('jwtToken', result.data.token)
           sessionStorage.setItem('name', result.data.name)

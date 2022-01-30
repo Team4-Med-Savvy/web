@@ -8,7 +8,7 @@
 // }
 // const actions = {
 //   async getUsers ({commit}, users) {
-//     const response = await axios.post('http://localhost:8081/user/authenticate', users)
+//     const response = await axios.post('http://10.177.1.70:8081/user/authenticate', users)
 //     commit('newUser', response.data)
 //   }
 // }

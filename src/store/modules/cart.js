@@ -17,7 +17,7 @@ const getters = {
 
 const actions = {
   async addToCart ({commit}, {productDescription, quantity, email, currentUrl}) {
-    axios.post('http://localhost:8186/cart/' + email + '/inc', {
+    axios.post('http://10.177.1.70:8186/cart/' + email + '/inc', {
       productId: currentUrl,
       merchantId: productDescription.merchant[0],
       price: productDescription.price
@@ -28,7 +28,7 @@ const actions = {
   },
   async increment ({commit}, {merchantId, quantity, productId, email, id, price}) {
     commit('incrementQuantity', {id, quantity, price})
-    axios.post('http://localhost:8186/cart/' + email + '/inc', {
+    axios.post('http://10.177.1.70:8186/cart/' + email + '/inc', {
       productId: productId,
       merchantId: merchantId,
       price: price
@@ -36,11 +36,11 @@ const actions = {
   },
   async decrement ({commit}, {merchantId, quantity, productId, email, id, price}) {
     commit('decrementQuantity', {id, quantity})
-    axios.post('http://localhost:8186/cart/' + email + '/' + productId + '/dec').then((res) => console.log('increment done'))
+    axios.post('http://10.177.1.70:8186/cart/' + email + '/' + productId + '/dec').then((res) => console.log('increment done'))
   },
   async getCartItems ({commit}, cartEmail) {
     console.log(cartEmail, 'action start')
-    const response = await axios.get(`http://localhost:8186/cart/email/${cartEmail}`)
+    const response = await axios.get(`http://10.177.1.70:8186/cart/email/${cartEmail}`)
     commit('setCartItems', response.data)
     console.log('Action end', response.data)
   },
@@ -48,7 +48,7 @@ const actions = {
     console.log(userId, date, totalPrice, p)
     console.log('price', totalPrice)
     console.log('date', date)
-    axios.post('http://localhost:8187/order', {
+    axios.post('http://10.177.1.70:8187/order', {
       userId: userId,
       timeStamp: date,
       total: totalPrice,

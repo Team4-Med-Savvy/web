@@ -11,7 +11,7 @@
           <th>Quantity</th>
           <th>Total</th>
         </tr>
-        <tr class="center-content" v-for="item in cart.productList" :key="item.id">
+           <tr class="center-content" v-for="item in cart.productList" :key="item.id">
           <td><img :src="item.image" height="100px" width="100px"></td>
           <td>Title - {{item.title}}</td>
           <td>Price - {{item.price}}</td>
@@ -21,6 +21,7 @@
           </td>
           <td>{{productTotal(item.id, item.price, item.quantity)}}</td>
         </tr>
+
      </table>
      <div class="container center-content">
             <div class="row">

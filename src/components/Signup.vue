@@ -65,11 +65,11 @@ export default {
   },
   methods: {
     postData (e) {
-      this.axios.post('http://localhost:8183/user/register', this.posts)
+      this.axios.post('http://10.177.1.70:8183/user/register', this.posts)
         .then((result) => {
           console.warn(result)
           this.prodl.email = this.posts.email
-          this.axios.post('http://localhost:8186/cart', this.prodl)
+          this.axios.post('http://10.177.1.70:8186/cart', this.prodl)
         })
         .catch((err) => {
           console.log(err.message)
