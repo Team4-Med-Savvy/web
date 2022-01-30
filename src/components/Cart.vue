@@ -13,11 +13,12 @@
         </tr>
         <tr class="center-content" v-for="item in cart.productList" :key="item.id">
           <td><img :src="item.image" height="100px" width="100px"></td>
-          <td>Title - {{item.title}}</td>
-          <td>Price - {{item.price}}</td>
-          <td><button type="button" id="up" @click="increment(item.merchantId,item.quantity,item.productId,item.id, item.price)" class="btn btn-secondary text-black">+</button>
+          <td>{{item.title}}</td>
+          <td>{{item.price}}</td>
+          <td>
+          <button type="button" id="down" @click="decrement(item.merchantId,item.quantity,item.productId,item.id, item.price)" class="btn btn-secondary text-black" >-</button>
             <span id='myNumber'>{{item.quantity}}</span>
-            <button type="button" id="down" @click="decrement(item.merchantId,item.quantity,item.productId,item.id, item.price)" class="btn btn-secondary text-black" >-</button>
+            <button type="button" id="up" @click="increment(item.merchantId,item.quantity,item.productId,item.id, item.price)" class="btn btn-secondary text-black">+</button>
           </td>
           <td>{{productTotal(item.id, item.price, item.quantity)}}</td>
         </tr>
@@ -96,7 +97,8 @@ export default {
       console.log('date', date)
       swal('Congratulations', 'Your order was placed successfully!', 'success').then(
         value => {
-          window.location.href = '#'
+          this.$route.push({name: 'EmptyCart'})
+          // window.location.href = '#'
         }
       )
     },

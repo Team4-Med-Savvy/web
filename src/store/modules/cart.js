@@ -69,7 +69,6 @@ const mutations = {
     })
     if (productInCart) {
       productInCart.quantity += 1
-      // productInCart.price += productInCart.price
     }
   },
   decrementQuantity: (state, {id, quantity}) => {
@@ -77,6 +76,11 @@ const mutations = {
       return item.id === id
     })
     if (productInCart) {
+      if (productInCart.quantity <= 0) {
+        state.cart = state.cart.filter(item => {
+          return item.id !== id
+        })
+      }
       productInCart.quantity -= 1
     }
   },

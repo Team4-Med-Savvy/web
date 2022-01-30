@@ -6,7 +6,7 @@
                         <div class="card-title" ><h4>Name- {{recom.title}}</h4></div>
                         <div class="card-text" style="font-family: 'Trebuchet MS', sans-serif;">₹ {{recom.price}}</div>
                     </div>
-                    <a href="#" class="stretched-link"></a>
+                    <router-link :to="{name: 'ProductDescription', params: {id: recom.id}}" class="stretched-link"></router-link>
                 </div>
             </div>
 </template>

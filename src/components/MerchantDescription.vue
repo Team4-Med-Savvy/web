@@ -22,10 +22,6 @@
                 <i class="fas fa-shopping-cart"></i>
                 <b> Add to Cart </b>
             </button>&nbsp;&nbsp;&nbsp;
-            <!-- {{merchantList}} -->
-            <!-- <b-dropdown id="dropdown-header" text="Try Other Merchants" class="m-2">
-              <b-dropdown-item> <div v-for="merchant in merchantList.merchantProductDetailDtos" :key="merchant.id">Merchant: {{merchant.merchantId}}</div></b-dropdown-item>
-              </b-dropdown> -->
 
               <select v-model="list">
                   <option v-for="merchant in merchantList.merchantProductDetailDtos" :key="merchant.id"> Merchant - {{merchant.merchantId}}</option>
