@@ -29,6 +29,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 export default {
   name: 'Navbar',
   data () {
@@ -42,7 +43,8 @@ export default {
   computed: {
     isLoggedIn () {
       return window.sessionStorage.getItem('email')
-    }
+    },
+    ...mapGetters(['cartTotalPrice'])
   },
   methods: {
     goabout () {
