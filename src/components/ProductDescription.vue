@@ -8,15 +8,15 @@
           </div>
           <div class="col-8">
             <h1>{{productDescription.title}}</h1>
-            <h3>Price -  ₹ {{price}}</h3>
-            <p>Product Description - {{productDescription.description}}</p>
+            <h3>Price:- ₹ {{productDescription.price}}</h3>
+            <p> <b>Product Description</b> - {{productDescription.description}}</p>
             <!-- <h2 class="pt-3">Rating</h2>
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star"></span>
-                <span class="fa fa-star"></span>
-                <br><br> -->
+                <span class="fa fa-star"></span> -->
+                <br><br>
             <button type="button" @click="clickCart()" class="btn btn-info">
                 <span class="glyphicon> glyphicon-shopping-cart"></span>
                 <i class="fas fa-shopping-cart"></i>
@@ -61,8 +61,8 @@ export default {
   },
   computed: {
     ...mapGetters(['productDescription']),
-    ...mapGetters(['merchantList'])
-  },
+    ...mapGetters(['merchantList']),
+    ...mapGetters(['cart'])},
   mounted () {
     this.$store.dispatch('getProductDescription', this.id)
     console.log('hiiii', this.id)

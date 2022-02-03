@@ -3,7 +3,6 @@
         <div><Navbar/></div>
         <div><SubNavbar/></div>
         <div class="content-body">
-
 <div class="user-profile">
 <div class="username"><h4>Name : {{user.name}}</h4><p> &nbsp;</p></div>
 <div class="username"><h4>Email : {{user.email}}</h4><p> &nbsp;</p></div>

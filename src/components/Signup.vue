@@ -79,6 +79,8 @@ export default {
           console.warn(result)
           this.prodl.email = this.posts.email
           this.axios.post('http://10.177.1.70:8186/cart', this.prodl)
+          swal('', 'Registeration Successful', 'success')
+          this.$router.push('/login')
         })
         .catch((err) => {
           console.log(err.message)

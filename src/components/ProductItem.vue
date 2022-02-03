@@ -4,7 +4,7 @@
                   <img class="card-img-top " :src="product.image" alt="carrot" height="200px">
                     <div class="card-body">
                         <div class="card-title" ><h5>Title : {{product.title}}</h5></div>
-                        <div class="card-text" style="font-family: 'Trebuchet MS', sans-serif;">Price - {{product.price}}</div>
+                        <div class="card-text" style="font-family: 'Trebuchet MS', sans-serif;">Price - ₹ {{product.price}}</div>
                         <div><button type="button" class="btn btn-success mt-2 py-1">More...</button></div>
                     </div>
                     <router-link :to="{name: 'ProductDescription', params: {id: product.id}}" class="stretched-link"></router-link>
