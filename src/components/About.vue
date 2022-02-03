@@ -17,19 +17,19 @@
     </div>
     <div class="namelist-2">
       <div class="container">
-      <img src="@/assets/user.jpeg" alt="Avatar" class="image" height="50px" width="50px">
+      <img src="@/assets/members/palak.jpeg" alt="Avatar" class="image" height="50px" width="50px">
       <div class="middle">
         <div class="text">Palak</div>
       </div>
     </div>
     <div class="container">
-      <img src="@/assets/user.jpeg" alt="Avatar" class="image" height="50px" width="50px">
+      <img src="@/assets/members/jahnavi.jpeg" alt="Avatar" class="image" height="50px" width="50px">
       <div class="middle">
         <div class="text">Jahnavi</div>
       </div>
     </div>
     <div class="container">
-      <img src="@/assets/user.jpeg" alt="Avatar" class="image" height="50px" width="50px">
+      <img src="@/assets/members/vijaya.jpeg" alt="Avatar" class="image" max-height="50px" width="50px">
       <div class="middle">
         <div class="text">Vijaya</div>
       </div>
@@ -37,19 +37,19 @@
     </div>
     <div class="namelist-1">
       <div class="container">
-      <img src="@/assets/user.jpeg" alt="Avatar" class="image" height="50px" width="50px">
+      <img src="@/assets/members/vinay.jpeg" alt="Avatar" class="image" max-height="50px" width="50px">
       <div class="middle">
         <div class="text">Vinay</div>
       </div>
     </div>
     <div class="container">
-      <img src="@/assets/user.jpeg" alt="Avatar" class="image" height="50px" width="50px">
+      <img src="@/assets/members/anush.jpeg" alt="Avatar" class="image" height="50px" width="50px">
       <div class="middle">
         <div class="text">Anush</div>
       </div>
     </div>
     <div class="container">
-      <img src="@/assets/user.jpeg" alt="Avatar" class="image" height="50px" width="50px">
+      <img src="@/assets/members/saurav.jpeg" alt="Avatar" class="image" height="50px" width="50px">
       <div class="middle">
         <div class="text">Saurav</div>
       </div>
@@ -109,7 +109,7 @@ p{
   opacity: 1;
   display: block;
   width: 50%;
-  height: auto;
+  height: 150px;
   transition: .5s ease;
   backface-visibility: hidden;
   border-radius: 50%;

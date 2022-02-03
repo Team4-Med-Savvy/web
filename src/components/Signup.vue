@@ -1,5 +1,7 @@
 <template>
     <div class="main-body">
+      <link rel="stylesheet" href="css/style.css">
+      <script src="js/index.js"></script>
         <div><Navbar/></div>
         <div><SubNavbar/></div>
             <div class="container py-5">
@@ -25,6 +27,13 @@
                                         <label id="detail">Confirm Password:</label>
                                         <input type="password" class="form-control" placeholder="Re Enter Password" required>
                                     </div>
+                                    <select multiple="multiple" id="myMulti">
+                                      <option>CSS</option>
+                                      <option>SCRIPT</option>
+                                      <option>COM</option>
+                                      <option>jQuery</option>
+                                      <option>HTML5</option>
+                                    </select>
                                     <div class="text-center">
                                         <button type="submit" class="btn mt-3">Submit</button>
                                     </div>
@@ -101,5 +110,17 @@ export default {
 }
 #detail{
   color: #ee4c7c;
+}
+#output {
+  padding: 20px;
+  background: #dadada;
+}
+
+form {
+  margin-top: 20px;
+}
+
+select {
+  width: 300px;
 }
 </style>
